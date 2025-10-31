@@ -1,0 +1,1778 @@
+[
+  {
+    "name": "Makar C.",
+    "position": "D",
+    "team": "Colorado",
+    "cena": 30.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Werenski Z.",
+    "position": "D",
+    "team": "Columbus",
+    "cena": 30.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Dahlin R.",
+    "position": "D",
+    "team": "Buffalo",
+    "cena": 28.6,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Ovechkin A.",
+    "position": "F",
+    "team": "Washington",
+    "cena": 28.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kaprizov K.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 28.1,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Thompson T.",
+    "position": "F",
+    "team": "Buffalo",
+    "cena": 28.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Holloway D.",
+    "position": "F",
+    "team": "St.Louis",
+    "cena": 26.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Tkachuk B.",
+    "position": "F",
+    "team": "Ottawa",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Boldy M.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Bouchard E.",
+    "position": "D",
+    "team": "Edmonton",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Weegar M.",
+    "position": "D",
+    "team": "Calgary",
+    "cena": 24.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kempe A.",
+    "position": "F",
+    "team": "Los Angeles",
+    "cena": 24.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Matthews A.",
+    "position": "F",
+    "team": "Toronto",
+    "cena": 24.6,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Eichel J.",
+    "position": "F",
+    "team": "Vegas",
+    "cena": 24.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Guenther D.",
+    "position": "F",
+    "team": "Utah",
+    "cena": 24.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Hughes J.",
+    "position": "F",
+    "team": "New Jersey",
+    "cena": 24.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kucherov N.",
+    "position": "F",
+    "team": "Tampa Bay",
+    "cena": 24.1,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Connor K.",
+    "position": "F",
+    "team": "Winnipeg",
+    "cena": 23.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Makar C.",
+    "position": "D",
+    "team": "Colorado",
+    "cena": 23.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Werenski Z.",
+    "position": "D",
+    "team": "Columbus",
+    "cena": 23.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Dahlin R.",
+    "position": "D",
+    "team": "Buffalo",
+    "cena": 30.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Ovechkin A.",
+    "position": "F",
+    "team": "Washington",
+    "cena": 30.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kaprizov K.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 28.6,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Thompson T.",
+    "position": "F",
+    "team": "Buffalo",
+    "cena": 28.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Holloway D.",
+    "position": "F",
+    "team": "St.Louis",
+    "cena": 28.1,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Tkachuk B.",
+    "position": "F",
+    "team": "Ottawa",
+    "cena": 28.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Boldy M.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 26.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Bouchard E.",
+    "position": "D",
+    "team": "Edmonton",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Weegar M.",
+    "position": "D",
+    "team": "Calgary",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kempe A.",
+    "position": "F",
+    "team": "Los Angeles",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Matthews A.",
+    "position": "F",
+    "team": "Toronto",
+    "cena": 24.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Eichel J.",
+    "position": "F",
+    "team": "Vegas",
+    "cena": 24.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Guenther D.",
+    "position": "F",
+    "team": "Utah",
+    "cena": 24.6,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Hughes J.",
+    "position": "F",
+    "team": "New Jersey",
+    "cena": 24.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kucherov N.",
+    "position": "F",
+    "team": "Tampa Bay",
+    "cena": 24.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Connor K.",
+    "position": "F",
+    "team": "Winnipeg",
+    "cena": 24.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Makar C.",
+    "position": "D",
+    "team": "Colorado",
+    "cena": 24.1,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Werenski Z.",
+    "position": "D",
+    "team": "Columbus",
+    "cena": 23.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Dahlin R.",
+    "position": "D",
+    "team": "Buffalo",
+    "cena": 23.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Ovechkin A.",
+    "position": "F",
+    "team": "Washington",
+    "cena": 23.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kaprizov K.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 30.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Thompson T.",
+    "position": "F",
+    "team": "Buffalo",
+    "cena": 30.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Holloway D.",
+    "position": "F",
+    "team": "St.Louis",
+    "cena": 28.6,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Tkachuk B.",
+    "position": "F",
+    "team": "Ottawa",
+    "cena": 28.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Boldy M.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 28.1,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Bouchard E.",
+    "position": "D",
+    "team": "Edmonton",
+    "cena": 28.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Weegar M.",
+    "position": "D",
+    "team": "Calgary",
+    "cena": 26.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kempe A.",
+    "position": "F",
+    "team": "Los Angeles",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Matthews A.",
+    "position": "F",
+    "team": "Toronto",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Eichel J.",
+    "position": "F",
+    "team": "Vegas",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Guenther D.",
+    "position": "F",
+    "team": "Utah",
+    "cena": 24.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Hughes J.",
+    "position": "F",
+    "team": "New Jersey",
+    "cena": 24.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kucherov N.",
+    "position": "F",
+    "team": "Tampa Bay",
+    "cena": 24.6,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Connor K.",
+    "position": "F",
+    "team": "Winnipeg",
+    "cena": 24.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Makar C.",
+    "position": "D",
+    "team": "Colorado",
+    "cena": 24.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Werenski Z.",
+    "position": "D",
+    "team": "Columbus",
+    "cena": 24.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Dahlin R.",
+    "position": "D",
+    "team": "Buffalo",
+    "cena": 24.1,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Ovechkin A.",
+    "position": "F",
+    "team": "Washington",
+    "cena": 23.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kaprizov K.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 23.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Thompson T.",
+    "position": "F",
+    "team": "Buffalo",
+    "cena": 23.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Holloway D.",
+    "position": "F",
+    "team": "St.Louis",
+    "cena": 30.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Tkachuk B.",
+    "position": "F",
+    "team": "Ottawa",
+    "cena": 30.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Boldy M.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 28.6,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Bouchard E.",
+    "position": "D",
+    "team": "Edmonton",
+    "cena": 28.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Weegar M.",
+    "position": "D",
+    "team": "Calgary",
+    "cena": 28.1,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kempe A.",
+    "position": "F",
+    "team": "Los Angeles",
+    "cena": 28.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Matthews A.",
+    "position": "F",
+    "team": "Toronto",
+    "cena": 26.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Eichel J.",
+    "position": "F",
+    "team": "Vegas",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Guenther D.",
+    "position": "F",
+    "team": "Utah",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Hughes J.",
+    "position": "F",
+    "team": "New Jersey",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kucherov N.",
+    "position": "F",
+    "team": "Tampa Bay",
+    "cena": 24.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Connor K.",
+    "position": "F",
+    "team": "Winnipeg",
+    "cena": 24.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Makar C.",
+    "position": "D",
+    "team": "Colorado",
+    "cena": 24.6,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Werenski Z.",
+    "position": "D",
+    "team": "Columbus",
+    "cena": 24.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Dahlin R.",
+    "position": "D",
+    "team": "Buffalo",
+    "cena": 24.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Ovechkin A.",
+    "position": "F",
+    "team": "Washington",
+    "cena": 24.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kaprizov K.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 24.1,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Thompson T.",
+    "position": "F",
+    "team": "Buffalo",
+    "cena": 23.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Holloway D.",
+    "position": "F",
+    "team": "St.Louis",
+    "cena": 23.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Tkachuk B.",
+    "position": "F",
+    "team": "Ottawa",
+    "cena": 23.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Boldy M.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 30.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Bouchard E.",
+    "position": "D",
+    "team": "Edmonton",
+    "cena": 30.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Weegar M.",
+    "position": "D",
+    "team": "Calgary",
+    "cena": 28.6,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kempe A.",
+    "position": "F",
+    "team": "Los Angeles",
+    "cena": 28.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Matthews A.",
+    "position": "F",
+    "team": "Toronto",
+    "cena": 28.1,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Eichel J.",
+    "position": "F",
+    "team": "Vegas",
+    "cena": 28.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Guenther D.",
+    "position": "F",
+    "team": "Utah",
+    "cena": 26.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Hughes J.",
+    "position": "F",
+    "team": "New Jersey",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kucherov N.",
+    "position": "F",
+    "team": "Tampa Bay",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Connor K.",
+    "position": "F",
+    "team": "Winnipeg",
+    "cena": 24.9,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Makar C.",
+    "position": "D",
+    "team": "Colorado",
+    "cena": 24.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Werenski Z.",
+    "position": "D",
+    "team": "Columbus",
+    "cena": 24.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Dahlin R.",
+    "position": "D",
+    "team": "Buffalo",
+    "cena": 24.6,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Ovechkin A.",
+    "position": "F",
+    "team": "Washington",
+    "cena": 24.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kaprizov K.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 24.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Thompson T.",
+    "position": "F",
+    "team": "Buffalo",
+    "cena": 24.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Holloway D.",
+    "position": "F",
+    "team": "St.Louis",
+    "cena": 24.1,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Tkachuk B.",
+    "position": "F",
+    "team": "Ottawa",
+    "cena": 23.7,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Boldy M.",
+    "position": "F",
+    "team": "Minnesota",
+    "cena": 23.5,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Bouchard E.",
+    "position": "D",
+    "team": "Edmonton",
+    "cena": 23.2,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Weegar M.",
+    "position": "D",
+    "team": "Calgary",
+    "cena": 0.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kempe A.",
+    "position": "F",
+    "team": "Los Angeles",
+    "cena": 0.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Matthews A.",
+    "position": "F",
+    "team": "Toronto",
+    "cena": 0.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Eichel J.",
+    "position": "F",
+    "team": "Vegas",
+    "cena": 0.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Guenther D.",
+    "position": "F",
+    "team": "Utah",
+    "cena": 0.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Hughes J.",
+    "position": "F",
+    "team": "New Jersey",
+    "cena": 0.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Kucherov N.",
+    "position": "F",
+    "team": "Tampa Bay",
+    "cena": 0.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Connor K.",
+    "position": "F",
+    "team": "Winnipeg - ?",
+    "cena": 0.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Makar C.",
+    "position": "D",
+    "team": "Colorado - ?",
+    "cena": 0.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Makar C.",
+    "position": "D",
+    "team": "Colorado - ?",
+    "cena": 0.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  },
+  {
+    "name": "Bouchard E.",
+    "position": "D",
+    "team": "Edmonton - ?",
+    "cena": 0.0,
+    "stats": {
+      "games": 0,
+      "fantasy_points": 0,
+      "goals": 0,
+      "assists": 0,
+      "shots": 0,
+      "hits": 0,
+      "blocked_shots": 0,
+      "plus_minus": 0
+    }
+  }
+]
