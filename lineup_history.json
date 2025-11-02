@@ -1,0 +1,912 @@
+[
+  {
+    "timestamp": "20251031_225509",
+    "cost": 99.80000000000001,
+    "points": 1625.6804924161374,
+    "lineup": [
+      {
+        "name": "Thompson L.",
+        "position": "G",
+        "team": "WSH",
+        "cost": 18.4,
+        "points": 39.0
+      },
+      {
+        "name": "Schaefer M.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 16.2,
+        "points": 228.68049241613738
+      },
+      {
+        "name": "Chychrun J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 21.3,
+        "points": 168.0
+      },
+      {
+        "name": "Strome R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 708.0
+      },
+      {
+        "name": "Horvat B.",
+        "position": "C",
+        "team": "NYI",
+        "cost": 16.7,
+        "points": 212.0
+      },
+      {
+        "name": "Larkin D.",
+        "position": "C",
+        "team": "DET",
+        "cost": 17.4,
+        "points": 270.0
+      },
+      {
+        "name": "Talbot C.",
+        "position": "G",
+        "team": "DET",
+        "cost": 15.0,
+        "points": 37.0
+      },
+      {
+        "name": "Carlson J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 19.7,
+        "points": 150.0
+      },
+      {
+        "name": "Trouba J.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 15.5,
+        "points": 117.0
+      },
+      {
+        "name": "Carlsson L.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 13.7,
+        "points": 196.0
+      },
+      {
+        "name": "Finnie E.",
+        "position": "C",
+        "team": "DET",
+        "cost": 11.1,
+        "points": 185.46274146712187
+      },
+      {
+        "name": "Drouin J.",
+        "position": "L",
+        "team": "NYI",
+        "cost": 9.6,
+        "points": 102.0
+      }
+    ]
+  },
+  {
+    "timestamp": "20251031_230745",
+    "cost": 99.80000000000001,
+    "points": 1731.6804924161374,
+    "lineup": [
+      {
+        "name": "Thompson L.",
+        "position": "G",
+        "team": "WSH",
+        "cost": 18.4,
+        "points": 145.0
+      },
+      {
+        "name": "Schaefer M.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 16.2,
+        "points": 228.68049241613738
+      },
+      {
+        "name": "Chychrun J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 21.3,
+        "points": 168.0
+      },
+      {
+        "name": "Strome R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 708.0
+      },
+      {
+        "name": "Horvat B.",
+        "position": "C",
+        "team": "NYI",
+        "cost": 16.7,
+        "points": 212.0
+      },
+      {
+        "name": "Larkin D.",
+        "position": "C",
+        "team": "DET",
+        "cost": 17.4,
+        "points": 270.0
+      },
+      {
+        "name": "Talbot C.",
+        "position": "G",
+        "team": "DET",
+        "cost": 15.0,
+        "points": 108.0
+      },
+      {
+        "name": "Carlson J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 19.7,
+        "points": 150.0
+      },
+      {
+        "name": "Trouba J.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 15.5,
+        "points": 117.0
+      },
+      {
+        "name": "Carlsson L.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 13.7,
+        "points": 196.0
+      },
+      {
+        "name": "Finnie E.",
+        "position": "C",
+        "team": "DET",
+        "cost": 11.1,
+        "points": 185.46274146712187
+      },
+      {
+        "name": "Drouin J.",
+        "position": "L",
+        "team": "NYI",
+        "cost": 9.6,
+        "points": 102.0
+      }
+    ]
+  },
+  {
+    "timestamp": "20251031_231006",
+    "cost": 99.80000000000001,
+    "points": 1731.6804924161374,
+    "lineup": [
+      {
+        "name": "Thompson L.",
+        "position": "G",
+        "team": "WSH",
+        "cost": 18.4,
+        "points": 145.0
+      },
+      {
+        "name": "Schaefer M.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 16.2,
+        "points": 228.68049241613738
+      },
+      {
+        "name": "Chychrun J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 21.3,
+        "points": 168.0
+      },
+      {
+        "name": "Strome R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 708.0
+      },
+      {
+        "name": "Horvat B.",
+        "position": "C",
+        "team": "NYI",
+        "cost": 16.7,
+        "points": 212.0
+      },
+      {
+        "name": "Larkin D.",
+        "position": "C",
+        "team": "DET",
+        "cost": 17.4,
+        "points": 270.0
+      },
+      {
+        "name": "Talbot C.",
+        "position": "G",
+        "team": "DET",
+        "cost": 15.0,
+        "points": 108.0
+      },
+      {
+        "name": "Carlson J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 19.7,
+        "points": 150.0
+      },
+      {
+        "name": "Trouba J.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 15.5,
+        "points": 117.0
+      },
+      {
+        "name": "Carlsson L.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 13.7,
+        "points": 196.0
+      },
+      {
+        "name": "Finnie E.",
+        "position": "C",
+        "team": "DET",
+        "cost": 11.1,
+        "points": 185.46274146712187
+      },
+      {
+        "name": "Drouin J.",
+        "position": "L",
+        "team": "NYI",
+        "cost": 9.6,
+        "points": 102.0
+      }
+    ]
+  },
+  {
+    "timestamp": "20251031_232255",
+    "cost": 99.80000000000001,
+    "points": 1731.6804924161374,
+    "lineup": [
+      {
+        "name": "Thompson L.",
+        "position": "G",
+        "team": "WSH",
+        "cost": 18.4,
+        "points": 145.0
+      },
+      {
+        "name": "Schaefer M.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 16.2,
+        "points": 228.68049241613738
+      },
+      {
+        "name": "Chychrun J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 21.3,
+        "points": 168.0
+      },
+      {
+        "name": "Strome R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 708.0
+      },
+      {
+        "name": "Horvat B.",
+        "position": "C",
+        "team": "NYI",
+        "cost": 16.7,
+        "points": 212.0
+      },
+      {
+        "name": "Larkin D.",
+        "position": "C",
+        "team": "DET",
+        "cost": 17.4,
+        "points": 270.0
+      },
+      {
+        "name": "Talbot C.",
+        "position": "G",
+        "team": "DET",
+        "cost": 15.0,
+        "points": 108.0
+      },
+      {
+        "name": "Carlson J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 19.7,
+        "points": 150.0
+      },
+      {
+        "name": "Trouba J.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 15.5,
+        "points": 117.0
+      },
+      {
+        "name": "Carlsson L.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 13.7,
+        "points": 196.0
+      },
+      {
+        "name": "Finnie E.",
+        "position": "C",
+        "team": "DET",
+        "cost": 11.1,
+        "points": 185.46274146712187
+      },
+      {
+        "name": "Drouin J.",
+        "position": "L",
+        "team": "NYI",
+        "cost": 9.6,
+        "points": 102.0
+      }
+    ]
+  },
+  {
+    "timestamp": "20251031_232559",
+    "cost": 93.80000000000001,
+    "points": 1538.6344498781255,
+    "lineup": [
+      {
+        "name": "Thompson L.",
+        "position": "G",
+        "team": "WSH",
+        "cost": 18.4,
+        "points": 114.53837209302324
+      },
+      {
+        "name": "Schaefer M.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 16.2,
+        "points": 186.0
+      },
+      {
+        "name": "Chychrun J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 21.3,
+        "points": 152.9972972972973
+      },
+      {
+        "name": "Strome R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 708.0
+      },
+      {
+        "name": "Sourdif J.",
+        "position": "R",
+        "team": "WSH",
+        "cost": 10.7,
+        "points": 193.4
+      },
+      {
+        "name": "Larkin D.",
+        "position": "C",
+        "team": "DET",
+        "cost": 17.4,
+        "points": 183.69878048780487
+      },
+      {
+        "name": "Sorokin I.",
+        "position": "G",
+        "team": "NYI",
+        "cost": 16.0,
+        "points": 112.29836065573771
+      },
+      {
+        "name": "Carlson J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 19.7,
+        "points": 131.73164556962024
+      },
+      {
+        "name": "Deangelo T.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 14.5,
+        "points": 110.98571428571428
+      },
+      {
+        "name": "Protas A.",
+        "position": "C",
+        "team": "WSH",
+        "cost": 12.8,
+        "points": 162.1157894736842
+      },
+      {
+        "name": "Drouin J.",
+        "position": "L",
+        "team": "NYI",
+        "cost": 9.6,
+        "points": 115.7953488372093
+      },
+      {
+        "name": "Holmstrom S.",
+        "position": "R",
+        "team": "NYI",
+        "cost": 7.9,
+        "points": 100.95333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "20251031_233939",
+    "cost": 93.80000000000001,
+    "points": 1538.6344498781255,
+    "lineup": [
+      {
+        "name": "Thompson L.",
+        "position": "G",
+        "team": "WSH",
+        "cost": 18.4,
+        "points": 114.53837209302324
+      },
+      {
+        "name": "Schaefer M.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 16.2,
+        "points": 186.0
+      },
+      {
+        "name": "Chychrun J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 21.3,
+        "points": 152.9972972972973
+      },
+      {
+        "name": "Strome R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 708.0
+      },
+      {
+        "name": "Sourdif J.",
+        "position": "R",
+        "team": "WSH",
+        "cost": 10.7,
+        "points": 193.4
+      },
+      {
+        "name": "Larkin D.",
+        "position": "C",
+        "team": "DET",
+        "cost": 17.4,
+        "points": 183.69878048780487
+      },
+      {
+        "name": "Sorokin I.",
+        "position": "G",
+        "team": "NYI",
+        "cost": 16.0,
+        "points": 112.29836065573771
+      },
+      {
+        "name": "Carlson J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 19.7,
+        "points": 131.73164556962024
+      },
+      {
+        "name": "Deangelo T.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 14.5,
+        "points": 110.98571428571428
+      },
+      {
+        "name": "Protas A.",
+        "position": "C",
+        "team": "WSH",
+        "cost": 12.8,
+        "points": 162.1157894736842
+      },
+      {
+        "name": "Drouin J.",
+        "position": "L",
+        "team": "NYI",
+        "cost": 9.6,
+        "points": 115.7953488372093
+      },
+      {
+        "name": "Holmstrom S.",
+        "position": "R",
+        "team": "NYI",
+        "cost": 7.9,
+        "points": 100.95333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "20251031_234332",
+    "cost": 93.80000000000001,
+    "points": 1538.6344498781255,
+    "lineup": [
+      {
+        "name": "Thompson L.",
+        "position": "G",
+        "team": "WSH",
+        "cost": 18.4,
+        "points": 114.53837209302324
+      },
+      {
+        "name": "Schaefer M.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 16.2,
+        "points": 186.0
+      },
+      {
+        "name": "Chychrun J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 21.3,
+        "points": 152.9972972972973
+      },
+      {
+        "name": "Strome R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 708.0
+      },
+      {
+        "name": "Sourdif J.",
+        "position": "R",
+        "team": "WSH",
+        "cost": 10.7,
+        "points": 193.4
+      },
+      {
+        "name": "Larkin D.",
+        "position": "C",
+        "team": "DET",
+        "cost": 17.4,
+        "points": 183.69878048780487
+      },
+      {
+        "name": "Sorokin I.",
+        "position": "G",
+        "team": "NYI",
+        "cost": 16.0,
+        "points": 112.29836065573771
+      },
+      {
+        "name": "Carlson J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 19.7,
+        "points": 131.73164556962024
+      },
+      {
+        "name": "Deangelo T.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 14.5,
+        "points": 110.98571428571428
+      },
+      {
+        "name": "Protas A.",
+        "position": "C",
+        "team": "WSH",
+        "cost": 12.8,
+        "points": 162.1157894736842
+      },
+      {
+        "name": "Drouin J.",
+        "position": "L",
+        "team": "NYI",
+        "cost": 9.6,
+        "points": 115.7953488372093
+      },
+      {
+        "name": "Holmstrom S.",
+        "position": "R",
+        "team": "NYI",
+        "cost": 7.9,
+        "points": 100.95333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "20251031_234513",
+    "cost": 95.6,
+    "points": 1247.82963977189,
+    "lineup": [
+      {
+        "name": "Dostal L.",
+        "position": "G",
+        "team": "ANA",
+        "cost": 22.2,
+        "points": 112.05555555555554
+      },
+      {
+        "name": "Lacombe J.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 15.8,
+        "points": 102.60000000000002
+      },
+      {
+        "name": "Zellweger O.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 15.5,
+        "points": 75.30322580645161
+      },
+      {
+        "name": "Strome R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 708.0
+      },
+      {
+        "name": "Terry T.",
+        "position": "R",
+        "team": "ANA",
+        "cost": 14.0,
+        "points": 133.52207792207793
+      },
+      {
+        "name": "Gauthier C.",
+        "position": "L",
+        "team": "ANA",
+        "cost": 18.3,
+        "points": 116.34878048780487
+      },
+      {
+        "name": "Mrazek P.",
+        "position": "G",
+        "team": "ANA",
+        "cost": 16.0,
+        "points": 44.95
+      },
+      {
+        "name": "Helleson D.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 12.5,
+        "points": 54.88035714285715
+      },
+      {
+        "name": "Mintyukov P.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 47.875
+      },
+      {
+        "name": "Carlsson L.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 13.7,
+        "points": 113.22368421052629
+      },
+      {
+        "name": "Killorn A.",
+        "position": "L",
+        "team": "ANA",
+        "cost": 11.0,
+        "points": 77.90243902439023
+      },
+      {
+        "name": "Poehling R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 8.2,
+        "points": 65.825
+      }
+    ]
+  },
+  {
+    "timestamp": "20251031_234708",
+    "cost": 91.0,
+    "points": 1247.82963977189,
+    "lineup": [
+      {
+        "name": "Dostal L.",
+        "position": "G",
+        "team": "ANA",
+        "cost": 17.6,
+        "points": 112.05555555555554
+      },
+      {
+        "name": "Lacombe J.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 15.8,
+        "points": 102.60000000000002
+      },
+      {
+        "name": "Zellweger O.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 15.5,
+        "points": 75.30322580645161
+      },
+      {
+        "name": "Strome R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 708.0
+      },
+      {
+        "name": "Terry T.",
+        "position": "R",
+        "team": "ANA",
+        "cost": 14.0,
+        "points": 133.52207792207793
+      },
+      {
+        "name": "Gauthier C.",
+        "position": "L",
+        "team": "ANA",
+        "cost": 18.3,
+        "points": 116.34878048780487
+      },
+      {
+        "name": "Mrazek P.",
+        "position": "G",
+        "team": "ANA",
+        "cost": 16.0,
+        "points": 44.95
+      },
+      {
+        "name": "Helleson D.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 12.5,
+        "points": 54.88035714285715
+      },
+      {
+        "name": "Mintyukov P.",
+        "position": "D",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 47.875
+      },
+      {
+        "name": "Carlsson L.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 13.7,
+        "points": 113.22368421052629
+      },
+      {
+        "name": "Killorn A.",
+        "position": "L",
+        "team": "ANA",
+        "cost": 11.0,
+        "points": 77.90243902439023
+      },
+      {
+        "name": "Poehling R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 8.2,
+        "points": 65.825
+      }
+    ]
+  },
+  {
+    "timestamp": "20251031_235005",
+    "cost": 93.80000000000001,
+    "points": 1538.6344498781255,
+    "lineup": [
+      {
+        "name": "Thompson L.",
+        "position": "G",
+        "team": "WSH",
+        "cost": 18.4,
+        "points": 114.53837209302324
+      },
+      {
+        "name": "Schaefer M.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 16.2,
+        "points": 186.0
+      },
+      {
+        "name": "Chychrun J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 21.3,
+        "points": 152.9972972972973
+      },
+      {
+        "name": "Strome R.",
+        "position": "C",
+        "team": "ANA",
+        "cost": 9.8,
+        "points": 708.0
+      },
+      {
+        "name": "Sourdif J.",
+        "position": "R",
+        "team": "WSH",
+        "cost": 10.7,
+        "points": 193.4
+      },
+      {
+        "name": "Larkin D.",
+        "position": "C",
+        "team": "DET",
+        "cost": 17.4,
+        "points": 183.69878048780487
+      },
+      {
+        "name": "Sorokin I.",
+        "position": "G",
+        "team": "NYI",
+        "cost": 16.0,
+        "points": 112.29836065573771
+      },
+      {
+        "name": "Carlson J.",
+        "position": "D",
+        "team": "WSH",
+        "cost": 19.7,
+        "points": 131.73164556962024
+      },
+      {
+        "name": "Deangelo T.",
+        "position": "D",
+        "team": "NYI",
+        "cost": 14.5,
+        "points": 110.98571428571428
+      },
+      {
+        "name": "Protas A.",
+        "position": "C",
+        "team": "WSH",
+        "cost": 12.8,
+        "points": 162.1157894736842
+      },
+      {
+        "name": "Drouin J.",
+        "position": "L",
+        "team": "NYI",
+        "cost": 9.6,
+        "points": 115.7953488372093
+      },
+      {
+        "name": "Holmstrom S.",
+        "position": "R",
+        "team": "NYI",
+        "cost": 7.9,
+        "points": 100.95333333333333
+      }
+    ]
+  }
+]

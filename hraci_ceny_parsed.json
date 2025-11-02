@@ -1,182 +1,154 @@
 [
   {
     "name": "Makar C.",
-    "price": 30.9
-  },
-  {
-    "name": "Werenski Z.",
-    "price": 30.2
-  },
-  {
-    "name": "Dahlin R.",
-    "price": 28.6
-  },
-  {
-    "name": "Ovechkin A.",
-    "price": 28.2
-  },
-  {
-    "name": "Kaprizov K.",
-    "price": 28.1
-  },
-  {
-    "name": "MacKinnon N.",
-    "price": 28.0
-  },
-  {
-    "name": "Thompson T.",
-    "price": 26.5
-  },
-  {
-    "name": "Holloway D.",
-    "price": 24.9
+    "price": 27.9
   },
   {
     "name": "Pastrňák D.",
-    "price": 24.9
+    "price": 27.2
   },
   {
-    "name": "Tkachuk B.",
-    "price": 24.9
+    "name": "Werenski Z.",
+    "price": 27.2
   },
   {
-    "name": "Boldy M.",
-    "price": 24.7
+    "name": "Dahlin R.",
+    "price": 26.5
+  },
+  {
+    "name": "MacKinnon N.",
+    "price": 25.4
+  },
+  {
+    "name": "Thompson T.",
+    "price": 25.4
+  },
+  {
+    "name": "Kaprizov K.",
+    "price": 25.0
   },
   {
     "name": "Bouchard E.",
-    "price": 24.7
-  },
-  {
-    "name": "Weegar M.",
-    "price": 24.6
+    "price": 24.9
   },
   {
     "name": "Kempe A.",
-    "price": 24.5
+    "price": 24.9
   },
   {
-    "name": "Matthews A.",
-    "price": 24.5
-  },
-  {
-    "name": "Eichel J.",
-    "price": 24.2
-  },
-  {
-    "name": "Guenther D.",
-    "price": 24.1
-  },
-  {
-    "name": "Hughes J.",
-    "price": 23.7
-  },
-  {
-    "name": "Kucherov N.",
-    "price": 23.5
-  },
-  {
-    "name": "Connor K.",
-    "price": 23.2
-  },
-  {
-    "name": "Sanderson J.",
-    "price": 23.0
-  },
-  {
-    "name": "Kyrou J.",
-    "price": 22.7
-  },
-  {
-    "name": "Fiala K.",
-    "price": 22.5
-  },
-  {
-    "name": "Hughes Q.",
-    "price": 22.5
-  },
-  {
-    "name": "Chychrun J.",
-    "price": 22.5
-  },
-  {
-    "name": "Parayko C.",
-    "price": 22.5
-  },
-  {
-    "name": "Stutzle T.",
-    "price": 22.0
-  },
-  {
-    "name": "McDavid C.",
-    "price": 21.9
-  },
-  {
-    "name": "Meier T.",
-    "price": 21.6
-  },
-  {
-    "name": "Fowler C.",
-    "price": 21.4
-  },
-  {
-    "name": "Bennett S.",
-    "price": 21.2
-  },
-  {
-    "name": "Faulk J.",
-    "price": 21.1
+    "name": "Ovechkin A.",
+    "price": 24.9
   },
   {
     "name": "Forsberg F.",
-    "price": 21.0
+    "price": 24.6
   },
   {
-    "name": "Sergachev M.",
-    "price": 21.0
+    "name": "Eichel J.",
+    "price": 23.2
   },
   {
-    "name": "Hanifin N.",
-    "price": 20.8
+    "name": "Tkachuk B.",
+    "price": 23.2
+  },
+  {
+    "name": "Hughes J.",
+    "price": 22.8
   },
   {
     "name": "Hyman Z.",
+    "price": 22.8
+  },
+  {
+    "name": "Boldy M.",
+    "price": 22.7
+  },
+  {
+    "name": "Matthews A.",
+    "price": 22.7
+  },
+  {
+    "name": "Josi R.",
+    "price": 22.3
+  },
+  {
+    "name": "McDavid C.",
+    "price": 22.3
+  },
+  {
+    "name": "Draisaitl L.",
+    "price": 22.2
+  },
+  {
+    "name": "Connor K.",
+    "price": 22.0
+  },
+  {
+    "name": "Kucherov N.",
+    "price": 22.0
+  },
+  {
+    "name": "Montour B.",
+    "price": 22.0
+  },
+  {
+    "name": "Fiala K.",
+    "price": 21.9
+  },
+  {
+    "name": "Guenther D.",
+    "price": 21.9
+  },
+  {
+    "name": "Tkachuk M.",
+    "price": 21.7
+  },
+  {
+    "name": "Weegar M.",
+    "price": 21.4
+  },
+  {
+    "name": "Chychrun J.",
+    "price": 21.3
+  },
+  {
+    "name": "Reinhart S.",
+    "price": 21.1
+  },
+  {
+    "name": "Verhaeghe C.",
+    "price": 21.0
+  },
+  {
+    "name": "Nurse D.",
+    "price": 20.9
+  },
+  {
+    "name": "Sanderson J.",
     "price": 20.8
+  },
+  {
+    "name": "Bennett S.",
+    "price": 20.7
   },
   {
     "name": "Krug T.",
     "price": 20.7
   },
   {
-    "name": "Thomas R.",
-    "price": 20.7
-  },
-  {
-    "name": "Kadri N.",
+    "name": "Hughes Q.",
     "price": 20.6
   },
   {
-    "name": "Keller C.",
-    "price": 20.6
-  },
-  {
-    "name": "Hedman V.",
-    "price": 20.5
-  },
-  {
-    "name": "Hughes L.",
-    "price": 20.5
-  },
-  {
-    "name": "Wilson T.",
-    "price": 20.5
-  },
-  {
-    "name": "DeBrincat A.",
+    "name": "Hamilton D.",
     "price": 20.4
   },
   {
-    "name": "Ek J.",
+    "name": "Marchand B.",
+    "price": 20.4
+  },
+  {
+    "name": "Meier T.",
     "price": 20.3
   },
   {
@@ -184,163 +156,115 @@
     "price": 20.3
   },
   {
-    "name": "Buchnevich P.",
-    "price": 20.2
+    "name": "Ekblad A.",
+    "price": 20.1
   },
   {
-    "name": "Cozens D.",
-    "price": 20.1
+    "name": "Kadri N.",
+    "price": 20.0
   },
   {
     "name": "Marchenko K.",
-    "price": 20.1
-  },
-  {
-    "name": "Pionk N.",
-    "price": 20.1
-  },
-  {
-    "name": "Seider M.",
-    "price": 20.1
-  },
-  {
-    "name": "Burns B.",
-    "price": 20.0
-  },
-  {
-    "name": "Schmaltz N.",
-    "price": 20.0
-  },
-  {
-    "name": "Hamilton D.",
     "price": 19.9
   },
   {
-    "name": "Draisaitl L.",
+    "name": "Ek J.",
     "price": 19.8
   },
   {
-    "name": "Marner M.",
-    "price": 19.8
-  },
-  {
-    "name": "Peterka J.",
-    "price": 19.8
-  },
-  {
-    "name": "Hertl T.",
-    "price": 19.7
-  },
-  {
-    "name": "Morrissey J.",
+    "name": "Barkov A.",
     "price": 19.7
   },
   {
     "name": "Carlson J.",
+    "price": 19.7
+  },
+  {
+    "name": "Hanifin N.",
+    "price": 19.7
+  },
+  {
+    "name": "Pionk N.",
+    "price": 19.7
+  },
+  {
+    "name": "Schmaltz N.",
+    "price": 19.7
+  },
+  {
+    "name": "Dunn V.",
     "price": 19.6
   },
   {
-    "name": "Caufield C.",
+    "name": "Stutzle T.",
     "price": 19.6
   },
   {
-    "name": "Chabot T.",
-    "price": 19.6
-  },
-  {
-    "name": "Jarvis S.",
-    "price": 19.5
-  },
-  {
-    "name": "Josi R.",
-    "price": 19.5
-  },
-  {
-    "name": "Sherwood K.",
-    "price": 19.5
-  },
-  {
-    "name": "Tkachuk M.",
-    "price": 19.5
-  },
-  {
-    "name": "Montour B.",
+    "name": "Sergachev M.",
     "price": 19.4
   },
   {
-    "name": "Nylander W.",
-    "price": 19.4
-  },
-  {
-    "name": "Walker N.",
-    "price": 19.4
+    "name": "Fox A.",
+    "price": 19.3
   },
   {
     "name": "Aho S.",
     "price": 19.1
   },
   {
-    "name": "Batherson D.",
-    "price": 19.1
-  },
-  {
-    "name": "Binnington J.",
-    "price": 19.1
-  },
-  {
-    "name": "Durzi S.",
-    "price": 19.1
-  },
-  {
-    "name": "Ekblad A.",
-    "price": 19.1
-  },
-  {
-    "name": "Nečas M.",
-    "price": 19.1
-  },
-  {
-    "name": "Reinhart S.",
-    "price": 19.1
-  },
-  {
-    "name": "Theodore S.",
-    "price": 19.1
-  },
-  {
-    "name": "Karlsson E.",
+    "name": "Celebrini M.",
     "price": 19.0
   },
   {
-    "name": "Schenn B.",
+    "name": "Tippett O.",
     "price": 19.0
   },
   {
-    "name": "Fox A.",
+    "name": "Bobrovsky S.",
     "price": 18.9
   },
   {
-    "name": "Stolarz A.",
+    "name": "Keller C.",
     "price": 18.9
   },
   {
-    "name": "Hellebuyck C.",
+    "name": "Merzlikins E.",
+    "price": 18.9
+  },
+  {
+    "name": "Sherwood K.",
+    "price": 18.9
+  },
+  {
+    "name": "DeBrincat A.",
     "price": 18.8
   },
   {
-    "name": "Suter P.",
+    "name": "Hughes L.",
     "price": 18.8
   },
   {
-    "name": "Thompson L.",
+    "name": "Walker S.",
     "price": 18.8
+  },
+  {
+    "name": "Seider M.",
+    "price": 18.7
+  },
+  {
+    "name": "Wilson T.",
+    "price": 18.7
   },
   {
     "name": "Cossa S.",
     "price": 18.6
   },
   {
-    "name": "Kane E.",
+    "name": "Jones S.",
+    "price": 18.6
+  },
+  {
+    "name": "Marchessault J.",
     "price": 18.6
   },
   {
@@ -352,7 +276,19 @@
     "price": 18.6
   },
   {
-    "name": "Manson J.",
+    "name": "Ekholm M.",
+    "price": 18.5
+  },
+  {
+    "name": "Jarvis S.",
+    "price": 18.5
+  },
+  {
+    "name": "Kuemper D.",
+    "price": 18.5
+  },
+  {
+    "name": "Walman J.",
     "price": 18.5
   },
   {
@@ -360,115 +296,71 @@
     "price": 18.4
   },
   {
-    "name": "Neighbours J.",
+    "name": "Caufield C.",
     "price": 18.4
   },
   {
-    "name": "Verhaeghe C.",
-    "price": 18.3
-  },
-  {
-    "name": "Crosby S.",
-    "price": 18.2
-  },
-  {
-    "name": "Harley T.",
-    "price": 18.2
-  },
-  {
-    "name": "Scheifele M.",
-    "price": 18.2
-  },
-  {
-    "name": "Walker S.",
-    "price": 18.2
-  },
-  {
-    "name": "Dobson N.",
-    "price": 18.1
-  },
-  {
-    "name": "Hildeby D.",
-    "price": 18.1
-  },
-  {
-    "name": "Kuemper D.",
-    "price": 18.1
-  },
-  {
-    "name": "Larkin D.",
-    "price": 18.1
-  },
-  {
-    "name": "Merzlikins E.",
-    "price": 18.1
-  },
-  {
-    "name": "Shesterkin I.",
-    "price": 18.1
-  },
-  {
-    "name": "Tavares J.",
-    "price": 18.1
-  },
-  {
-    "name": "Tucker T.",
-    "price": 18.1
-  },
-  {
-    "name": "Ullmark L.",
-    "price": 18.1
-  },
-  {
-    "name": "Walman J.",
-    "price": 18.1
-  },
-  {
-    "name": "Cooley L.",
-    "price": 18.0
-  },
-  {
-    "name": "Dorofeyev P.",
-    "price": 18.0
+    "name": "Greaves J.",
+    "price": 18.4
   },
   {
     "name": "Gustavsson F.",
-    "price": 18.0
+    "price": 18.4
   },
   {
-    "name": "Rakell R.",
-    "price": 18.0
+    "name": "Thompson L.",
+    "price": 18.4
   },
   {
-    "name": "Doughty D.",
+    "name": "Gauthier C.",
+    "price": 18.3
+  },
+  {
+    "name": "Morrissey J.",
+    "price": 18.3
+  },
+  {
+    "name": "Holloway D.",
+    "price": 18.1
+  },
+  {
+    "name": "Dorofeyev P.",
     "price": 17.9
   },
   {
-    "name": "Gostisbehere S.",
+    "name": "Hedman V.",
     "price": 17.9
   },
   {
-    "name": "Svechnikov A.",
-    "price": 17.9
-  },
-  {
-    "name": "Montembeault S.",
+    "name": "Cozens D.",
     "price": 17.8
   },
   {
-    "name": "Suzuki N.",
+    "name": "Dobeš J.",
     "price": 17.8
   },
   {
-    "name": "Bratt J.",
+    "name": "Forsling G.",
+    "price": 17.8
+  },
+  {
+    "name": "Hellebuyck C.",
+    "price": 17.8
+  },
+  {
+    "name": "Tavares J.",
+    "price": 17.8
+  },
+  {
+    "name": "Daccord J.",
     "price": 17.7
   },
   {
-    "name": "Horvat B.",
+    "name": "Hertl T.",
     "price": 17.7
   },
   {
-    "name": "Letang K.",
+    "name": "Marner M.",
     "price": 17.7
   },
   {
@@ -476,15 +368,11 @@
     "price": 17.7
   },
   {
-    "name": "Tuch A.",
+    "name": "Vladař D.",
     "price": 17.7
   },
   {
-    "name": "Wedgewood S.",
-    "price": 17.7
-  },
-  {
-    "name": "Dunn V.",
+    "name": "Dostál L.",
     "price": 17.6
   },
   {
@@ -492,47 +380,51 @@
     "price": 17.6
   },
   {
-    "name": "Greaves J.",
+    "name": "Kane E.",
     "price": 17.6
   },
   {
-    "name": "Knies M.",
+    "name": "Theodore S.",
     "price": 17.6
-  },
-  {
-    "name": "Toropchenko A.",
-    "price": 17.6
-  },
-  {
-    "name": "Barkov A.",
-    "price": 17.5
   },
   {
     "name": "Halverson B.",
     "price": 17.5
   },
   {
-    "name": "Hartman R.",
+    "name": "Peterka J.",
     "price": 17.5
   },
   {
-    "name": "Lauzon J.",
+    "name": "Shesterkin I.",
     "price": 17.5
   },
   {
-    "name": "Malinski S.",
+    "name": "Suzuki N.",
     "price": 17.5
   },
   {
-    "name": "Tippett O.",
-    "price": 17.5
-  },
-  {
-    "name": "Ekholm M.",
+    "name": "Batherson D.",
     "price": 17.4
   },
   {
-    "name": "Rust B.",
+    "name": "Dobson N.",
+    "price": 17.4
+  },
+  {
+    "name": "Durzi S.",
+    "price": 17.4
+  },
+  {
+    "name": "Larkin D.",
+    "price": 17.4
+  },
+  {
+    "name": "Samoskevich M.",
+    "price": 17.4
+  },
+  {
+    "name": "Svechnikov A.",
     "price": 17.4
   },
   {
@@ -540,63 +432,27 @@
     "price": 17.4
   },
   {
-    "name": "Dobeš J.",
+    "name": "Chabot T.",
     "price": 17.3
   },
   {
-    "name": "Hofer J.",
+    "name": "Karlsson E.",
     "price": 17.3
   },
   {
-    "name": "Schmid A.",
+    "name": "Lyon A.",
     "price": 17.3
   },
   {
-    "name": "Talbot C.",
-    "price": 17.3
-  },
-  {
-    "name": "Toews D.",
-    "price": 17.3
-  },
-  {
-    "name": "Vejmelka K.",
-    "price": 17.3
-  },
-  {
-    "name": "Byfield Q.",
+    "name": "McCann J.",
     "price": 17.2
-  },
-  {
-    "name": "Forsling G.",
-    "price": 17.2
-  },
-  {
-    "name": "Hutson L.",
-    "price": 17.2
-  },
-  {
-    "name": "Marchand B.",
-    "price": 17.2
-  },
-  {
-    "name": "Miner T.",
-    "price": 17.2
-  },
-  {
-    "name": "Nichushkin V.",
-    "price": 17.2
-  },
-  {
-    "name": "Nurse D.",
-    "price": 17.2
-  },
-  {
-    "name": "Bobrovsky S.",
-    "price": 17.1
   },
   {
     "name": "Divincentiis D.",
+    "price": 17.1
+  },
+  {
+    "name": "Ehlers N.",
     "price": 17.1
   },
   {
@@ -604,39 +460,19 @@
     "price": 17.1
   },
   {
-    "name": "Miller C.",
-    "price": 17.1
-  },
-  {
     "name": "Poulter I.",
     "price": 17.1
   },
   {
-    "name": "Primeau C.",
+    "name": "Stolarz A.",
     "price": 17.1
   },
   {
-    "name": "Samberg D.",
+    "name": "Tarasov D.",
     "price": 17.1
   },
   {
-    "name": "Broberg P.",
-    "price": 17.0
-  },
-  {
-    "name": "Comrie E.",
-    "price": 17.0
-  },
-  {
-    "name": "Hagel B.",
-    "price": 17.0
-  },
-  {
-    "name": "Jones S.",
-    "price": 17.0
-  },
-  {
-    "name": "Lindgren C.",
+    "name": "Konecny T.",
     "price": 17.0
   },
   {
@@ -644,11 +480,15 @@
     "price": 17.0
   },
   {
-    "name": "Robertson J.",
+    "name": "Nylander W.",
     "price": 17.0
   },
   {
-    "name": "Celebrini M.",
+    "name": "Oettinger J.",
+    "price": 17.0
+  },
+  {
+    "name": "Cooley L.",
     "price": 16.9
   },
   {
@@ -656,39 +496,27 @@
     "price": 16.9
   },
   {
-    "name": "McBain J.",
-    "price": 16.9
-  },
-  {
-    "name": "Perfetti C.",
-    "price": 16.9
-  },
-  {
-    "name": "Schenn L.",
-    "price": 16.9
-  },
-  {
-    "name": "Coleman B.",
+    "name": "Hutson L.",
     "price": 16.8
   },
   {
-    "name": "Ehlers N.",
+    "name": "Kyrou J.",
     "price": 16.8
   },
   {
-    "name": "Hill A.",
+    "name": "Miller K.",
     "price": 16.8
   },
   {
-    "name": "Rielly M.",
+    "name": "Nugent-Hopkins R.",
     "price": 16.8
   },
   {
-    "name": "Slafkovský J.",
+    "name": "Rodrigues E.",
     "price": 16.8
   },
   {
-    "name": "Zuccarello M.",
+    "name": "Skjei B.",
     "price": 16.8
   },
   {
@@ -700,7 +528,23 @@
     "price": 16.7
   },
   {
-    "name": "Matheson M.",
+    "name": "Byfield Q.",
+    "price": 16.7
+  },
+  {
+    "name": "Demko T.",
+    "price": 16.7
+  },
+  {
+    "name": "Forsberg A.",
+    "price": 16.7
+  },
+  {
+    "name": "Horvat B.",
+    "price": 16.7
+  },
+  {
+    "name": "Lindgren C.",
     "price": 16.7
   },
   {
@@ -708,23 +552,43 @@
     "price": 16.7
   },
   {
+    "name": "Saros J.",
+    "price": 16.7
+  },
+  {
     "name": "Sautner A.",
     "price": 16.7
   },
   {
-    "name": "Demko T.",
+    "name": "Zuccarello M.",
+    "price": 16.7
+  },
+  {
+    "name": "Burns B.",
     "price": 16.6
   },
   {
-    "name": "Kane P.",
+    "name": "Gibson J.",
     "price": 16.6
   },
   {
-    "name": "Silovs A.",
+    "name": "Gostisbehere S.",
     "price": 16.6
   },
   {
-    "name": "Andersen F.",
+    "name": "McAvoy C.",
+    "price": 16.6
+  },
+  {
+    "name": "Robertson J.",
+    "price": 16.6
+  },
+  {
+    "name": "Wallstedt J.",
+    "price": 16.6
+  },
+  {
+    "name": "Bratt J.",
     "price": 16.5
   },
   {
@@ -732,15 +596,7 @@
     "price": 16.5
   },
   {
-    "name": "Guentzel J.",
-    "price": 16.5
-  },
-  {
     "name": "Harenstam L.",
-    "price": 16.5
-  },
-  {
-    "name": "Heiskanen M.",
     "price": 16.5
   },
   {
@@ -748,15 +604,15 @@
     "price": 16.5
   },
   {
-    "name": "Oettinger J.",
+    "name": "Lundell A.",
     "price": 16.5
   },
   {
-    "name": "Stone M.",
+    "name": "Schmid A.",
     "price": 16.5
   },
   {
-    "name": "Vasilevskiy A.",
+    "name": "Tuch A.",
     "price": 16.5
   },
   {
@@ -764,67 +620,43 @@
     "price": 16.5
   },
   {
-    "name": "Mailloux L.",
+    "name": "Faber B.",
     "price": 16.4
   },
   {
-    "name": "Merilainen L.",
+    "name": "Harley T.",
     "price": 16.4
   },
   {
-    "name": "Quick J.",
+    "name": "Nečas M.",
     "price": 16.4
   },
   {
-    "name": "Snuggerud J.",
+    "name": "Ullmark L.",
     "price": 16.4
   },
   {
-    "name": "Dostál L.",
-    "price": 16.3
-  },
-  {
-    "name": "Foegele W.",
-    "price": 16.3
-  },
-  {
-    "name": "Forsberg A.",
-    "price": 16.3
-  },
-  {
-    "name": "Gauthier C.",
-    "price": 16.3
+    "name": "Wolf D.",
+    "price": 16.4
   },
   {
     "name": "Kahkonen K.",
     "price": 16.3
   },
   {
-    "name": "Niederreiter N.",
+    "name": "Vasilevskiy A.",
     "price": 16.3
   },
   {
-    "name": "Wallstedt J.",
+    "name": "Vejmelka K.",
     "price": 16.3
   },
   {
-    "name": "Konecny T.",
+    "name": "Schaefer M.",
     "price": 16.2
   },
   {
-    "name": "Lyon A.",
-    "price": 16.2
-  },
-  {
-    "name": "Markstrom J.",
-    "price": 16.2
-  },
-  {
-    "name": "McMann B.",
-    "price": 16.2
-  },
-  {
-    "name": "Shepard H.",
+    "name": "Scheifele M.",
     "price": 16.2
   },
   {
@@ -832,11 +664,7 @@
     "price": 16.2
   },
   {
-    "name": "Wolf D.",
-    "price": 16.2
-  },
-  {
-    "name": "Woll J.",
+    "name": "Swayman J.",
     "price": 16.2
   },
   {
@@ -848,11 +676,15 @@
     "price": 16.1
   },
   {
-    "name": "Clifton C.",
+    "name": "Comrie E.",
     "price": 16.1
   },
   {
     "name": "Gaudet M.",
+    "price": 16.1
+  },
+  {
+    "name": "Geekie M.",
     "price": 16.1
   },
   {
@@ -861,10 +693,6 @@
   },
   {
     "name": "Johannesson S.",
-    "price": 16.1
-  },
-  {
-    "name": "Joseph M.",
     "price": 16.1
   },
   {
@@ -892,7 +720,7 @@
     "price": 16.1
   },
   {
-    "name": "Power O.",
+    "name": "Montembeault S.",
     "price": 16.1
   },
   {
@@ -900,27 +728,23 @@
     "price": 16.1
   },
   {
-    "name": "Raymond L.",
-    "price": 16.1
-  },
-  {
-    "name": "Schmidt N.",
-    "price": 16.1
-  },
-  {
     "name": "Skinner H.",
     "price": 16.1
   },
   {
-    "name": "Zucker J.",
-    "price": 16.1
-  },
-  {
-    "name": "Bussi B.",
+    "name": "Crosby S.",
     "price": 16.0
   },
   {
-    "name": "Colton R.",
+    "name": "Ersson S.",
+    "price": 16.0
+  },
+  {
+    "name": "Grubauer P.",
+    "price": 16.0
+  },
+  {
+    "name": "Hill A.",
     "price": 16.0
   },
   {
@@ -928,27 +752,63 @@
     "price": 16.0
   },
   {
+    "name": "Letang K.",
+    "price": 16.0
+  },
+  {
+    "name": "Miner T.",
+    "price": 16.0
+  },
+  {
+    "name": "Mrázek P.",
+    "price": 16.0
+  },
+  {
     "name": "Pietrangelo A.",
     "price": 16.0
   },
   {
-    "name": "Toffoli T.",
+    "name": "Ristolainen R.",
     "price": 16.0
   },
   {
-    "name": "Hronek F.",
-    "price": 15.9
-  },
-  {
-    "name": "Malkin E.",
-    "price": 15.9
-  },
-  {
-    "name": "Romanov A.",
-    "price": 15.9
-  },
-  {
     "name": "Sorokin I.",
+    "price": 16.0
+  },
+  {
+    "name": "Cooley D.",
+    "price": 15.9
+  },
+  {
+    "name": "Hildeby D.",
+    "price": 15.9
+  },
+  {
+    "name": "Luostarinen E.",
+    "price": 15.9
+  },
+  {
+    "name": "Merilainen L.",
+    "price": 15.9
+  },
+  {
+    "name": "Miller J.",
+    "price": 15.9
+  },
+  {
+    "name": "Podkolzin V.",
+    "price": 15.9
+  },
+  {
+    "name": "Quick J.",
+    "price": 15.9
+  },
+  {
+    "name": "Stone M.",
+    "price": 15.9
+  },
+  {
+    "name": "Zadorov N.",
     "price": 15.9
   },
   {
@@ -956,23 +816,23 @@
     "price": 15.8
   },
   {
-    "name": "Allen J.",
-    "price": 15.8
-  },
-  {
     "name": "Black C.",
     "price": 15.8
   },
   {
-    "name": "Daccord J.",
+    "name": "Hartman R.",
     "price": 15.8
   },
   {
-    "name": "DeMelo D.",
+    "name": "Jenner B.",
     "price": 15.8
   },
   {
-    "name": "Ottavainen V.",
+    "name": "LaCombe J.",
+    "price": 15.8
+  },
+  {
+    "name": "Nikishin A.",
     "price": 15.8
   },
   {
@@ -984,27 +844,27 @@
     "price": 15.8
   },
   {
-    "name": "Sogaard M.",
+    "name": "Toffoli T.",
     "price": 15.8
   },
   {
-    "name": "Spence J.",
+    "name": "Trenin Y.",
     "price": 15.8
   },
   {
-    "name": "Gibson J.",
+    "name": "Vaněček V.",
+    "price": 15.8
+  },
+  {
+    "name": "Cuylle W.",
     "price": 15.7
   },
   {
-    "name": "Guhle K.",
+    "name": "Heiskanen M.",
     "price": 15.7
   },
   {
-    "name": "Lehkonen A.",
-    "price": 15.7
-  },
-  {
-    "name": "Monahan S.",
+    "name": "Luukkonen U.",
     "price": 15.7
   },
   {
@@ -1012,43 +872,43 @@
     "price": 15.7
   },
   {
-    "name": "Barzal M.",
+    "name": "Silovs A.",
+    "price": 15.7
+  },
+  {
+    "name": "Stamkos S.",
+    "price": 15.7
+  },
+  {
+    "name": "Bedard C.",
     "price": 15.6
   },
   {
-    "name": "Crouse L.",
+    "name": "Doughty D.",
     "price": 15.6
   },
   {
-    "name": "McCann J.",
+    "name": "Hagel B.",
     "price": 15.6
   },
   {
-    "name": "Miller K.",
+    "name": "Parayko C.",
     "price": 15.6
   },
   {
-    "name": "Ristolainen R.",
+    "name": "Schwartz J.",
     "price": 15.6
   },
   {
-    "name": "Vaněček V.",
-    "price": 15.6
-  },
-  {
-    "name": "Copley P.",
+    "name": "Andersen F.",
     "price": 15.5
   },
   {
-    "name": "Kesselring M.",
+    "name": "Lauzon J.",
     "price": 15.5
   },
   {
-    "name": "Nelson B.",
-    "price": 15.5
-  },
-  {
-    "name": "Pinto S.",
+    "name": "Primeau C.",
     "price": 15.5
   },
   {
@@ -1056,15 +916,23 @@
     "price": 15.5
   },
   {
-    "name": "Strome D.",
+    "name": "Provorov I.",
     "price": 15.5
   },
   {
-    "name": "Tarasov D.",
+    "name": "Samberg D.",
     "price": 15.5
   },
   {
-    "name": "Vilardi G.",
+    "name": "Trouba J.",
+    "price": 15.5
+  },
+  {
+    "name": "Zellweger O.",
+    "price": 15.5
+  },
+  {
+    "name": "Zibanejad M.",
     "price": 15.5
   },
   {
@@ -1080,7 +948,7 @@
     "price": 15.4
   },
   {
-    "name": "Cuylle W.",
+    "name": "DeSmith C.",
     "price": 15.4
   },
   {
@@ -1096,23 +964,11 @@
     "price": 15.4
   },
   {
-    "name": "Jenner B.",
+    "name": "McTavish M.",
     "price": 15.4
   },
   {
-    "name": "Kasper M.",
-    "price": 15.4
-  },
-  {
-    "name": "Korczak K.",
-    "price": 15.4
-  },
-  {
-    "name": "Miller J.",
-    "price": 15.4
-  },
-  {
-    "name": "Point B.",
+    "name": "Perfetti C.",
     "price": 15.4
   },
   {
@@ -1120,7 +976,11 @@
     "price": 15.4
   },
   {
-    "name": "Rodrigues E.",
+    "name": "Romanov A.",
+    "price": 15.4
+  },
+  {
+    "name": "Slafkovský J.",
     "price": 15.4
   },
   {
@@ -1128,15 +988,15 @@
     "price": 15.4
   },
   {
-    "name": "Zetterlund F.",
-    "price": 15.4
-  },
-  {
-    "name": "Bjugstad N.",
+    "name": "Chinakhov Y.",
     "price": 15.3
   },
   {
-    "name": "Blackwood M.",
+    "name": "Jarry T.",
+    "price": 15.3
+  },
+  {
+    "name": "Nichushkin V.",
     "price": 15.3
   },
   {
@@ -1148,19 +1008,23 @@
     "price": 15.3
   },
   {
-    "name": "Lindbom C.",
+    "name": "Barzal M.",
     "price": 15.2
   },
   {
-    "name": "Saros J.",
+    "name": "Kesselring M.",
+    "price": 15.2
+  },
+  {
+    "name": "Kolosov A.",
+    "price": 15.2
+  },
+  {
+    "name": "Murray M.",
     "price": 15.2
   },
   {
     "name": "Spurgeon J.",
-    "price": 15.2
-  },
-  {
-    "name": "Swayman J.",
     "price": 15.2
   },
   {
@@ -1172,7 +1036,23 @@
     "price": 15.2
   },
   {
-    "name": "Goldsmith T.",
+    "name": "Zucker J.",
+    "price": 15.2
+  },
+  {
+    "name": "Allen J.",
+    "price": 15.1
+  },
+  {
+    "name": "Annunen J.",
+    "price": 15.1
+  },
+  {
+    "name": "Bussi B.",
+    "price": 15.1
+  },
+  {
+    "name": "Guhle K.",
     "price": 15.1
   },
   {
@@ -1180,23 +1060,35 @@
     "price": 15.1
   },
   {
-    "name": "Chinakhov Y.",
+    "name": "Kane P.",
     "price": 15.1
   },
   {
-    "name": "Knight S.",
+    "name": "Knies M.",
     "price": 15.1
   },
   {
-    "name": "Norris J.",
+    "name": "Lankinen K.",
     "price": 15.1
   },
   {
-    "name": "Sundqvist O.",
+    "name": "Matheson M.",
     "price": 15.1
   },
   {
-    "name": "Tanev B.",
+    "name": "Michkov M.",
+    "price": 15.1
+  },
+  {
+    "name": "Miller C.",
+    "price": 15.1
+  },
+  {
+    "name": "Schmidt N.",
+    "price": 15.1
+  },
+  {
+    "name": "Wedgewood S.",
     "price": 15.1
   },
   {
@@ -1204,11 +1096,19 @@
     "price": 15.0
   },
   {
-    "name": "Danford B.",
+    "name": "Blankenburg N.",
     "price": 15.0
   },
   {
-    "name": "Hayton B.",
+    "name": "Coleman B.",
+    "price": 15.0
+  },
+  {
+    "name": "Copley P.",
+    "price": 15.0
+  },
+  {
+    "name": "Danford B.",
     "price": 15.0
   },
   {
@@ -1216,27 +1116,23 @@
     "price": 15.0
   },
   {
-    "name": "Jarry T.",
-    "price": 15.0
-  },
-  {
-    "name": "Johansson J.",
-    "price": 15.0
-  },
-  {
     "name": "Keller A.",
     "price": 15.0
   },
   {
-    "name": "LaCombe J.",
+    "name": "Manson J.",
     "price": 15.0
   },
   {
-    "name": "Lankinen K.",
+    "name": "Marchment M.",
     "price": 15.0
   },
   {
     "name": "McCleary R.",
+    "price": 15.0
+  },
+  {
+    "name": "Monahan S.",
     "price": 15.0
   },
   {
@@ -1252,15 +1148,23 @@
     "price": 15.0
   },
   {
-    "name": "Raddysh D.",
-    "price": 15.0
-  },
-  {
     "name": "Sharpe C.",
     "price": 15.0
   },
   {
     "name": "Smith B.",
+    "price": 15.0
+  },
+  {
+    "name": "Sogaard M.",
+    "price": 15.0
+  },
+  {
+    "name": "Talbot C.",
+    "price": 15.0
+  },
+  {
+    "name": "Vatrano F.",
     "price": 15.0
   },
   {
@@ -1272,35 +1176,35 @@
     "price": 15.0
   },
   {
-    "name": "Bolduc Z.",
+    "name": "Askarov Y.",
     "price": 14.9
   },
   {
-    "name": "DeSmith C.",
+    "name": "Doan J.",
     "price": 14.9
   },
   {
-    "name": "Faber B.",
+    "name": "Ellis C.",
     "price": 14.9
   },
   {
-    "name": "Schaefer M.",
+    "name": "Fowler C.",
     "price": 14.9
   },
   {
-    "name": "Slavin J.",
+    "name": "Niederreiter N.",
     "price": 14.9
   },
   {
-    "name": "Barbashev I.",
-    "price": 14.8
+    "name": "Orlov D.",
+    "price": 14.9
+  },
+  {
+    "name": "Shepard H.",
+    "price": 14.9
   },
   {
     "name": "Carfagna D.",
-    "price": 14.8
-  },
-  {
-    "name": "Fehérváry M.",
     "price": 14.8
   },
   {
@@ -1312,31 +1216,15 @@
     "price": 14.8
   },
   {
-    "name": "Marchessault J.",
+    "name": "Raymond L.",
     "price": 14.8
   },
   {
-    "name": "Mrázek P.",
+    "name": "Slavin J.",
     "price": 14.8
   },
   {
-    "name": "Nugent-Hopkins R.",
-    "price": 14.8
-  },
-  {
-    "name": "Olofsson V.",
-    "price": 14.8
-  },
-  {
-    "name": "Samoskevich M.",
-    "price": 14.8
-  },
-  {
-    "name": "Thornton A.",
-    "price": 14.8
-  },
-  {
-    "name": "Trenin Y.",
+    "name": "Tolvanen E.",
     "price": 14.8
   },
   {
@@ -1344,39 +1232,19 @@
     "price": 14.8
   },
   {
-    "name": "Andersson R.",
-    "price": 14.7
-  },
-  {
-    "name": "Beauvillier A.",
-    "price": 14.7
-  },
-  {
-    "name": "Cooley D.",
-    "price": 14.7
-  },
-  {
-    "name": "Coronato M.",
-    "price": 14.7
-  },
-  {
-    "name": "Ellis C.",
-    "price": 14.7
-  },
-  {
     "name": "Georgiev A.",
     "price": 14.7
   },
   {
-    "name": "Luukkonen U.",
+    "name": "Johansson J.",
     "price": 14.7
   },
   {
-    "name": "McTavish M.",
+    "name": "Johnston W.",
     "price": 14.7
   },
   {
-    "name": "Myers P.",
+    "name": "Korpisalo J.",
     "price": 14.7
   },
   {
@@ -1384,19 +1252,15 @@
     "price": 14.7
   },
   {
-    "name": "Simashev D.",
+    "name": "Woll J.",
     "price": 14.7
   },
   {
-    "name": "Zadorov N.",
-    "price": 14.7
-  },
-  {
-    "name": "Fleury M.",
+    "name": "Crouse L.",
     "price": 14.6
   },
   {
-    "name": "Gudas R.",
+    "name": "Fleury M.",
     "price": 14.6
   },
   {
@@ -1404,11 +1268,27 @@
     "price": 14.6
   },
   {
-    "name": "Whitecloud Z.",
+    "name": "Norris J.",
     "price": 14.6
   },
   {
-    "name": "Foerster T.",
+    "name": "Rakell R.",
+    "price": 14.6
+  },
+  {
+    "name": "Andersson R.",
+    "price": 14.5
+  },
+  {
+    "name": "DeAngelo T.",
+    "price": 14.5
+  },
+  {
+    "name": "Ekman-Larsson O.",
+    "price": 14.5
+  },
+  {
+    "name": "Knight S.",
     "price": 14.5
   },
   {
@@ -1416,11 +1296,19 @@
     "price": 14.5
   },
   {
-    "name": "McNabb B.",
+    "name": "Nedeljkovic A.",
     "price": 14.5
   },
   {
-    "name": "Myers T.",
+    "name": "Pettersson E.",
+    "price": 14.5
+  },
+  {
+    "name": "Power O.",
+    "price": 14.5
+  },
+  {
+    "name": "Rittich D.",
     "price": 14.5
   },
   {
@@ -1428,7 +1316,23 @@
     "price": 14.5
   },
   {
+    "name": "Thomas R.",
+    "price": 14.5
+  },
+  {
+    "name": "Foegele W.",
+    "price": 14.4
+  },
+  {
+    "name": "Granlund M.",
+    "price": 14.4
+  },
+  {
     "name": "Gustafsson E.",
+    "price": 14.4
+  },
+  {
+    "name": "Chatfield J.",
     "price": 14.4
   },
   {
@@ -1436,23 +1340,11 @@
     "price": 14.4
   },
   {
-    "name": "Lindholm E.",
+    "name": "Strome D.",
     "price": 14.4
   },
   {
-    "name": "McAvoy C.",
-    "price": 14.4
-  },
-  {
-    "name": "Orlov D.",
-    "price": 14.4
-  },
-  {
-    "name": "Rittich D.",
-    "price": 14.4
-  },
-  {
-    "name": "Blomqvist J.",
+    "name": "Binnington J.",
     "price": 14.3
   },
   {
@@ -1460,11 +1352,11 @@
     "price": 14.3
   },
   {
-    "name": "Dumba M.",
+    "name": "Faulk J.",
     "price": 14.3
   },
   {
-    "name": "Grubauer P.",
+    "name": "Gaizo M.",
     "price": 14.3
   },
   {
@@ -1476,59 +1368,51 @@
     "price": 14.3
   },
   {
-    "name": "Kelly P.",
-    "price": 14.3
-  },
-  {
     "name": "Muggli L.",
     "price": 14.3
   },
   {
-    "name": "Carrier W.",
-    "price": 14.2
-  },
-  {
-    "name": "Ekman-Larsson O.",
-    "price": 14.2
-  },
-  {
-    "name": "Girard S.",
-    "price": 14.2
-  },
-  {
-    "name": "Kochetkov P.",
-    "price": 14.2
-  },
-  {
-    "name": "Lundell A.",
-    "price": 14.2
-  },
-  {
-    "name": "Michkov M.",
-    "price": 14.2
-  },
-  {
-    "name": "Provorov I.",
-    "price": 14.2
+    "name": "Rielly M.",
+    "price": 14.3
   },
   {
     "name": "Roy M.",
+    "price": 14.3
+  },
+  {
+    "name": "Trocheck V.",
+    "price": 14.3
+  },
+  {
+    "name": "Colton R.",
     "price": 14.2
   },
   {
-    "name": "Sanheim T.",
+    "name": "Eklund W.",
     "price": 14.2
   },
   {
-    "name": "Texier A.",
+    "name": "Fehérváry M.",
     "price": 14.2
   },
   {
-    "name": "Vatrano F.",
+    "name": "Malinski S.",
     "price": 14.2
   },
   {
-    "name": "Zibanejad M.",
+    "name": "Moore T.",
+    "price": 14.2
+  },
+  {
+    "name": "Pinto S.",
+    "price": 14.2
+  },
+  {
+    "name": "Rust B.",
+    "price": 14.2
+  },
+  {
+    "name": "Toews D.",
     "price": 14.2
   },
   {
@@ -1536,7 +1420,7 @@
     "price": 14.1
   },
   {
-    "name": "Gallagher B.",
+    "name": "Guentzel J.",
     "price": 14.1
   },
   {
@@ -1544,15 +1428,11 @@
     "price": 14.1
   },
   {
-    "name": "Nikishin A.",
+    "name": "Lindbom C.",
     "price": 14.1
   },
   {
-    "name": "Olivier M.",
-    "price": 14.1
-  },
-  {
-    "name": "Sandin R.",
+    "name": "Lindholm E.",
     "price": 14.1
   },
   {
@@ -1560,47 +1440,31 @@
     "price": 14.1
   },
   {
+    "name": "Spence J.",
+    "price": 14.1
+  },
+  {
     "name": "Attard R.",
     "price": 14.0
   },
   {
-    "name": "Kleven T.",
+    "name": "McBain J.",
     "price": 14.0
   },
   {
-    "name": "Kopitar A.",
+    "name": "Olivier M.",
     "price": 14.0
   },
   {
-    "name": "Kulich J.",
+    "name": "Terry T.",
     "price": 14.0
   },
   {
-    "name": "Moore T.",
+    "name": "Vilardi G.",
     "price": 14.0
   },
   {
-    "name": "Trouba J.",
-    "price": 14.0
-  },
-  {
-    "name": "Zellweger O.",
-    "price": 14.0
-  },
-  {
-    "name": "Bedard C.",
-    "price": 13.9
-  },
-  {
-    "name": "Carcone M.",
-    "price": 13.9
-  },
-  {
-    "name": "Daws N.",
-    "price": 13.9
-  },
-  {
-    "name": "DeAngelo T.",
+    "name": "Buchnevich P.",
     "price": 13.9
   },
   {
@@ -1608,23 +1472,11 @@
     "price": 13.9
   },
   {
-    "name": "Ersson S.",
+    "name": "Hofer J.",
     "price": 13.9
   },
   {
-    "name": "Geekie M.",
-    "price": 13.9
-  },
-  {
-    "name": "Hutton B.",
-    "price": 13.9
-  },
-  {
-    "name": "Chiarot B.",
-    "price": 13.9
-  },
-  {
-    "name": "Karlsson W.",
+    "name": "Kulich J.",
     "price": 13.9
   },
   {
@@ -1636,7 +1488,7 @@
     "price": 13.9
   },
   {
-    "name": "O'Brien L.",
+    "name": "Seeler N.",
     "price": 13.9
   },
   {
@@ -1644,15 +1496,19 @@
     "price": 13.9
   },
   {
-    "name": "Trocheck V.",
+    "name": "Voronkov D.",
     "price": 13.9
   },
   {
-    "name": "Annunen J.",
+    "name": "Beniers M.",
     "price": 13.8
   },
   {
-    "name": "Fabbro D.",
+    "name": "Garland C.",
+    "price": 13.8
+  },
+  {
+    "name": "Hronek F.",
     "price": 13.8
   },
   {
@@ -1660,7 +1516,7 @@
     "price": 13.8
   },
   {
-    "name": "Korpisalo J.",
+    "name": "Mikkola N.",
     "price": 13.8
   },
   {
@@ -1668,15 +1524,7 @@
     "price": 13.8
   },
   {
-    "name": "Paul N.",
-    "price": 13.8
-  },
-  {
-    "name": "Timmins C.",
-    "price": 13.8
-  },
-  {
-    "name": "Zub A.",
+    "name": "Rossi M.",
     "price": 13.8
   },
   {
@@ -1688,19 +1536,19 @@
     "price": 13.7
   },
   {
-    "name": "Buium Z.",
+    "name": "Carlsson L.",
     "price": 13.7
   },
   {
-    "name": "Couturier S.",
+    "name": "Daws N.",
     "price": 13.7
   },
   {
-    "name": "Doan J.",
+    "name": "Fabbro D.",
     "price": 13.7
   },
   {
-    "name": "Garland C.",
+    "name": "Foerster T.",
     "price": 13.7
   },
   {
@@ -1708,31 +1556,27 @@
     "price": 13.7
   },
   {
+    "name": "Kasper M.",
+    "price": 13.7
+  },
+  {
+    "name": "Kopitar A.",
+    "price": 13.7
+  },
+  {
     "name": "Lee J.",
     "price": 13.7
   },
   {
-    "name": "Pettersson E.",
+    "name": "Malkin E.",
     "price": 13.7
   },
   {
-    "name": "Pospíšil M.",
-    "price": 13.7
-  },
-  {
-    "name": "Schneider B.",
-    "price": 13.7
-  },
-  {
-    "name": "Soderblom A.",
+    "name": "Rinzel S.",
     "price": 13.7
   },
   {
     "name": "Varlamov S.",
-    "price": 13.7
-  },
-  {
-    "name": "Willander T.",
     "price": 13.7
   },
   {
@@ -1744,7 +1588,11 @@
     "price": 13.6
   },
   {
-    "name": "Gaizo M.",
+    "name": "Eberle J.",
+    "price": 13.6
+  },
+  {
+    "name": "Heineman E.",
     "price": 13.6
   },
   {
@@ -1752,7 +1600,11 @@
     "price": 13.6
   },
   {
-    "name": "Marchment M.",
+    "name": "Johansson M.",
+    "price": 13.6
+  },
+  {
+    "name": "Markstrom J.",
     "price": 13.6
   },
   {
@@ -1760,11 +1612,15 @@
     "price": 13.6
   },
   {
+    "name": "Morrow S.",
+    "price": 13.6
+  },
+  {
     "name": "Motte T.",
     "price": 13.6
   },
   {
-    "name": "Murray M.",
+    "name": "Palmieri K.",
     "price": 13.6
   },
   {
@@ -1772,11 +1628,15 @@
     "price": 13.6
   },
   {
-    "name": "Solovyov I.",
-    "price": 13.6
+    "name": "Barbashev I.",
+    "price": 13.5
   },
   {
     "name": "Barlow C.",
+    "price": 13.5
+  },
+  {
+    "name": "Blomqvist J.",
     "price": 13.5
   },
   {
@@ -1784,15 +1644,7 @@
     "price": 13.5
   },
   {
-    "name": "Dean Z.",
-    "price": 13.5
-  },
-  {
-    "name": "Dubois P.",
-    "price": 13.5
-  },
-  {
-    "name": "Gudbranson E.",
+    "name": "Edmundson J.",
     "price": 13.5
   },
   {
@@ -1800,15 +1652,11 @@
     "price": 13.5
   },
   {
-    "name": "Nedeljkovic A.",
+    "name": "Larsson A.",
     "price": 13.5
   },
   {
-    "name": "Tolvanen E.",
-    "price": 13.5
-  },
-  {
-    "name": "Vladař D.",
+    "name": "Lee A.",
     "price": 13.5
   },
   {
@@ -1820,6 +1668,10 @@
     "price": 13.5
   },
   {
+    "name": "Wilsby A.",
+    "price": 13.5
+  },
+  {
     "name": "Yager B.",
     "price": 13.5
   },
@@ -1828,19 +1680,31 @@
     "price": 13.5
   },
   {
-    "name": "Boeser B.",
+    "name": "Clarke B.",
     "price": 13.4
   },
   {
-    "name": "Greig R.",
+    "name": "Coronato M.",
     "price": 13.4
   },
   {
-    "name": "Iafallo A.",
+    "name": "Frederic T.",
     "price": 13.4
   },
   {
-    "name": "McIlrath D.",
+    "name": "Greenway J.",
+    "price": 13.4
+  },
+  {
+    "name": "O'Reilly R.",
+    "price": 13.4
+  },
+  {
+    "name": "Olofsson V.",
+    "price": 13.4
+  },
+  {
+    "name": "Sandin R.",
     "price": 13.4
   },
   {
@@ -1848,19 +1712,23 @@
     "price": 13.4
   },
   {
-    "name": "Vaccari M.",
+    "name": "Thornton A.",
     "price": 13.4
   },
   {
-    "name": "Ahcan J.",
-    "price": 13.3
+    "name": "Vaccari M.",
+    "price": 13.4
   },
   {
     "name": "Booth A.",
     "price": 13.3
   },
   {
-    "name": "Brodin J.",
+    "name": "Buium Z.",
+    "price": 13.3
+  },
+  {
+    "name": "DeMelo D.",
     "price": 13.3
   },
   {
@@ -1872,6 +1740,10 @@
     "price": 13.3
   },
   {
+    "name": "Kochetkov P.",
+    "price": 13.3
+  },
+  {
     "name": "Kuzmenko A.",
     "price": 13.3
   },
@@ -1880,7 +1752,7 @@
     "price": 13.3
   },
   {
-    "name": "McCabe J.",
+    "name": "Lehkonen A.",
     "price": 13.3
   },
   {
@@ -1888,36 +1760,68 @@
     "price": 13.3
   },
   {
-    "name": "Stankoven L.",
+    "name": "Roslovic J.",
     "price": 13.3
   },
   {
-    "name": "Askarov Y.",
-    "price": 13.2
-  },
-  {
-    "name": "Greenway J.",
-    "price": 13.2
-  },
-  {
-    "name": "Johnson K.",
-    "price": 13.2
-  },
-  {
-    "name": "Johnston W.",
-    "price": 13.2
-  },
-  {
-    "name": "Kolesar K.",
-    "price": 13.2
-  },
-  {
-    "name": "Podkolzin V.",
-    "price": 13.2
-  },
-  {
     "name": "Tarasenko V.",
+    "price": 13.3
+  },
+  {
+    "name": "Barron J.",
     "price": 13.2
+  },
+  {
+    "name": "Dubois P.",
+    "price": 13.2
+  },
+  {
+    "name": "Foligno M.",
+    "price": 13.2
+  },
+  {
+    "name": "Gatcomb M.",
+    "price": 13.2
+  },
+  {
+    "name": "Gudas R.",
+    "price": 13.2
+  },
+  {
+    "name": "Kapanen K.",
+    "price": 13.2
+  },
+  {
+    "name": "Korczak K.",
+    "price": 13.2
+  },
+  {
+    "name": "Kulikov D.",
+    "price": 13.2
+  },
+  {
+    "name": "Malenstyn B.",
+    "price": 13.2
+  },
+  {
+    "name": "Soderblom A.",
+    "price": 13.2
+  },
+  {
+    "name": "Stankoven L.",
+    "price": 13.2
+  },
+  {
+    "name": "Whitecloud Z.",
+    "price": 13.2
+  },
+  {
+    "name": "Arvidsson V.",
+    "price": 13.1
+  },
+  {
+    "name": "Beauvillier A.",
+    "price": 13.1
   },
   {
     "name": "Behrens S.",
@@ -1928,15 +1832,7 @@
     "price": 13.1
   },
   {
-    "name": "Edmundson J.",
-    "price": 13.1
-  },
-  {
-    "name": "Edvinsson S.",
-    "price": 13.1
-  },
-  {
-    "name": "Foligno M.",
+    "name": "Clifton C.",
     "price": 13.1
   },
   {
@@ -1944,19 +1840,23 @@
     "price": 13.1
   },
   {
-    "name": "Lucic M.",
+    "name": "Chiarot B.",
     "price": 13.1
   },
   {
-    "name": "McMichael C.",
+    "name": "McNabb B.",
     "price": 13.1
   },
   {
-    "name": "Palmieri K.",
+    "name": "Pospíšil M.",
     "price": 13.1
   },
   {
-    "name": "Seeler N.",
+    "name": "Regula A.",
+    "price": 13.1
+  },
+  {
+    "name": "Smith W.",
     "price": 13.1
   },
   {
@@ -1968,11 +1868,11 @@
     "price": 13.0
   },
   {
-    "name": "Bjorkstrand O.",
+    "name": "Blackwood M.",
     "price": 13.0
   },
   {
-    "name": "Brossoit L.",
+    "name": "Carcone M.",
     "price": 13.0
   },
   {
@@ -1980,15 +1880,23 @@
     "price": 13.0
   },
   {
-    "name": "Coyle C.",
-    "price": 13.0
-  },
-  {
-    "name": "Dewar C.",
-    "price": 13.0
-  },
-  {
     "name": "Gahagen P.",
+    "price": 13.0
+  },
+  {
+    "name": "Gallagher B.",
+    "price": 13.0
+  },
+  {
+    "name": "Gudbranson E.",
+    "price": 13.0
+  },
+  {
+    "name": "Haula E.",
+    "price": 13.0
+  },
+  {
+    "name": "Karlsson W.",
     "price": 13.0
   },
   {
@@ -1996,47 +1904,19 @@
     "price": 13.0
   },
   {
-    "name": "Laughton S.",
-    "price": 13.0
-  },
-  {
-    "name": "Mikkola N.",
-    "price": 13.0
-  },
-  {
-    "name": "Quinn J.",
-    "price": 13.0
-  },
-  {
-    "name": "Smith W.",
-    "price": 13.0
-  },
-  {
-    "name": "Valimaki J.",
-    "price": 13.0
-  },
-  {
-    "name": "Voronkov D.",
-    "price": 13.0
-  },
-  {
-    "name": "Anderson M.",
+    "name": "Bolduc Z.",
     "price": 12.9
   },
   {
-    "name": "Barron M.",
+    "name": "Couturier S.",
     "price": 12.9
   },
   {
-    "name": "Cernak E.",
+    "name": "Coyle C.",
     "price": 12.9
   },
   {
-    "name": "Howden B.",
-    "price": 12.9
-  },
-  {
-    "name": "Chytil F.",
+    "name": "Hague N.",
     "price": 12.9
   },
   {
@@ -2044,19 +1924,31 @@
     "price": 12.9
   },
   {
-    "name": "Laine P.",
-    "price": 12.9
-  },
-  {
     "name": "Marrelli L.",
     "price": 12.9
   },
   {
-    "name": "Middleton J.",
+    "name": "Mayo D.",
     "price": 12.9
   },
   {
-    "name": "Robertson N.",
+    "name": "Quinn J.",
+    "price": 12.9
+  },
+  {
+    "name": "Sanheim T.",
+    "price": 12.9
+  },
+  {
+    "name": "Schenn L.",
+    "price": 12.9
+  },
+  {
+    "name": "Timmins C.",
+    "price": 12.9
+  },
+  {
+    "name": "Zegras T.",
     "price": 12.9
   },
   {
@@ -2064,11 +1956,11 @@
     "price": 12.8
   },
   {
-    "name": "Carbonneau J.",
+    "name": "Boeser B.",
     "price": 12.8
   },
   {
-    "name": "Frederic T.",
+    "name": "Carbonneau J.",
     "price": 12.8
   },
   {
@@ -2076,11 +1968,7 @@
     "price": 12.8
   },
   {
-    "name": "Giroux C.",
-    "price": 12.8
-  },
-  {
-    "name": "Hall T.",
+    "name": "Johnson K.",
     "price": 12.8
   },
   {
@@ -2092,15 +1980,11 @@
     "price": 12.8
   },
   {
-    "name": "Kudryavtsev K.",
+    "name": "Kulak B.",
     "price": 12.8
   },
   {
-    "name": "Luostarinen E.",
-    "price": 12.8
-  },
-  {
-    "name": "Marino J.",
+    "name": "McIlrath D.",
     "price": 12.8
   },
   {
@@ -2124,6 +2008,14 @@
     "price": 12.8
   },
   {
+    "name": "Protas A.",
+    "price": 12.8
+  },
+  {
+    "name": "Reilly M.",
+    "price": 12.8
+  },
+  {
     "name": "Robertsson S.",
     "price": 12.8
   },
@@ -2144,11 +2036,11 @@
     "price": 12.8
   },
   {
-    "name": "Clarke B.",
+    "name": "Boqvist J.",
     "price": 12.7
   },
   {
-    "name": "DeSimone N.",
+    "name": "Byram B.",
     "price": 12.7
   },
   {
@@ -2156,19 +2048,15 @@
     "price": 12.7
   },
   {
-    "name": "Fleury H.",
-    "price": 12.7
-  },
-  {
     "name": "Goos M.",
     "price": 12.7
   },
   {
-    "name": "Hamonic T.",
+    "name": "Henrique A.",
     "price": 12.7
   },
   {
-    "name": "Chatfield J.",
+    "name": "Kreider C.",
     "price": 12.7
   },
   {
@@ -2176,7 +2064,11 @@
     "price": 12.7
   },
   {
-    "name": "Pelech A.",
+    "name": "Middleton J.",
+    "price": 12.7
+  },
+  {
+    "name": "Perbix N.",
     "price": 12.7
   },
   {
@@ -2184,19 +2076,23 @@
     "price": 12.7
   },
   {
-    "name": "Staal J.",
-    "price": 12.7
+    "name": "Broberg P.",
+    "price": 12.6
   },
   {
     "name": "Clang C.",
     "price": 12.6
   },
   {
-    "name": "Hayden J.",
+    "name": "Hayton B.",
     "price": 12.6
   },
   {
-    "name": "Kessel M.",
+    "name": "Hutton B.",
+    "price": 12.6
+  },
+  {
+    "name": "Krys L.",
     "price": 12.6
   },
   {
@@ -2204,27 +2100,19 @@
     "price": 12.6
   },
   {
-    "name": "Perron D.",
+    "name": "Lindholm H.",
     "price": 12.6
   },
   {
-    "name": "Protas A.",
+    "name": "McMann B.",
     "price": 12.6
   },
   {
-    "name": "Reilly M.",
-    "price": 12.6
+    "name": "Backlund M.",
+    "price": 12.5
   },
   {
-    "name": "Rinzel S.",
-    "price": 12.6
-  },
-  {
-    "name": "Schwartz J.",
-    "price": 12.6
-  },
-  {
-    "name": "Benoit S.",
+    "name": "Balinskis U.",
     "price": 12.5
   },
   {
@@ -2232,7 +2120,7 @@
     "price": 12.5
   },
   {
-    "name": "Byram B.",
+    "name": "Brossoit L.",
     "price": 12.5
   },
   {
@@ -2240,7 +2128,11 @@
     "price": 12.5
   },
   {
-    "name": "Hathaway G.",
+    "name": "Gavrikov V.",
+    "price": 12.5
+  },
+  {
+    "name": "Helleson D.",
     "price": 12.5
   },
   {
@@ -2252,11 +2144,31 @@
     "price": 12.5
   },
   {
-    "name": "Koepke C.",
+    "name": "Leonard R.",
     "price": 12.5
   },
   {
-    "name": "Landeskog G.",
+    "name": "Lohrei M.",
+    "price": 12.5
+  },
+  {
+    "name": "McMichael C.",
+    "price": 12.5
+  },
+  {
+    "name": "Pellikka A.",
+    "price": 12.5
+  },
+  {
+    "name": "Petry J.",
+    "price": 12.5
+  },
+  {
+    "name": "Severson D.",
+    "price": 12.5
+  },
+  {
+    "name": "Walker N.",
     "price": 12.5
   },
   {
@@ -2264,15 +2176,15 @@
     "price": 12.4
   },
   {
-    "name": "Cole I.",
+    "name": "Bunting M.",
     "price": 12.4
   },
   {
-    "name": "Danault P.",
+    "name": "Carrier W.",
     "price": 12.4
   },
   {
-    "name": "Johansson M.",
+    "name": "Fensore D.",
     "price": 12.4
   },
   {
@@ -2280,11 +2192,15 @@
     "price": 12.4
   },
   {
-    "name": "Klapka A.",
+    "name": "Laine P.",
     "price": 12.4
   },
   {
     "name": "Livingstone J.",
+    "price": 12.4
+  },
+  {
+    "name": "Myers T.",
     "price": 12.4
   },
   {
@@ -2296,27 +2212,23 @@
     "price": 12.4
   },
   {
-    "name": "Samuelsson M.",
+    "name": "Sebrango D.",
     "price": 12.4
   },
   {
-    "name": "Skjei B.",
+    "name": "Smith C.",
     "price": 12.4
   },
   {
-    "name": "Cirelli A.",
-    "price": 12.3
+    "name": "Zetterlund F.",
+    "price": 12.4
   },
   {
     "name": "Donovan J.",
     "price": 12.3
   },
   {
-    "name": "Dvorsky D.",
-    "price": 12.3
-  },
-  {
-    "name": "Eklund W.",
+    "name": "Evangelista L.",
     "price": 12.3
   },
   {
@@ -2328,23 +2240,11 @@
     "price": 12.3
   },
   {
-    "name": "Joshua D.",
+    "name": "Parekh Z.",
     "price": 12.3
   },
   {
-    "name": "Lafreniere A.",
-    "price": 12.3
-  },
-  {
-    "name": "Mantha A.",
-    "price": 12.3
-  },
-  {
-    "name": "Rifai M.",
-    "price": 12.3
-  },
-  {
-    "name": "Severson D.",
+    "name": "Santini S.",
     "price": 12.3
   },
   {
@@ -2352,7 +2252,11 @@
     "price": 12.3
   },
   {
-    "name": "Stenlund K.",
+    "name": "Staal J.",
+    "price": 12.3
+  },
+  {
+    "name": "Tanev B.",
     "price": 12.3
   },
   {
@@ -2368,23 +2272,11 @@
     "price": 12.2
   },
   {
-    "name": "Backlund M.",
-    "price": 12.2
-  },
-  {
-    "name": "Blais S.",
-    "price": 12.2
-  },
-  {
-    "name": "Blake J.",
-    "price": 12.2
-  },
-  {
     "name": "Bonk O.",
     "price": 12.2
   },
   {
-    "name": "Brunicke H.",
+    "name": "Ceci C.",
     "price": 12.2
   },
   {
@@ -2392,7 +2284,23 @@
     "price": 12.2
   },
   {
-    "name": "Frost M.",
+    "name": "Donato R.",
+    "price": 12.2
+  },
+  {
+    "name": "Emberson T.",
+    "price": 12.2
+  },
+  {
+    "name": "Gadjovich J.",
+    "price": 12.2
+  },
+  {
+    "name": "Hall T.",
+    "price": 12.2
+  },
+  {
+    "name": "Howden B.",
     "price": 12.2
   },
   {
@@ -2401,10 +2309,6 @@
   },
   {
     "name": "Johannes H.",
-    "price": 12.2
-  },
-  {
-    "name": "Krebs P.",
     "price": 12.2
   },
   {
@@ -2420,23 +2324,27 @@
     "price": 12.2
   },
   {
-    "name": "Mercer D.",
+    "name": "Neighbours J.",
     "price": 12.2
   },
   {
-    "name": "Pellikka A.",
+    "name": "Paul N.",
     "price": 12.2
   },
   {
-    "name": "Rossi M.",
+    "name": "Point B.",
     "price": 12.2
   },
   {
-    "name": "Samson E.",
+    "name": "Samuelsson M.",
     "price": 12.2
   },
   {
     "name": "Sawchyn G.",
+    "price": 12.2
+  },
+  {
+    "name": "Schneider B.",
     "price": 12.2
   },
   {
@@ -2452,15 +2360,19 @@
     "price": 12.2
   },
   {
-    "name": "Terry T.",
-    "price": 12.2
-  },
-  {
     "name": "Vilmanis S.",
     "price": 12.2
   },
   {
-    "name": "Aspirot J.",
+    "name": "Wood M.",
+    "price": 12.2
+  },
+  {
+    "name": "Anderson M.",
+    "price": 12.1
+  },
+  {
+    "name": "Brink B.",
     "price": 12.1
   },
   {
@@ -2468,19 +2380,31 @@
     "price": 12.1
   },
   {
-    "name": "Gavrikov V.",
+    "name": "Cates N.",
     "price": 12.1
   },
   {
-    "name": "Chibrikov N.",
+    "name": "Danault P.",
     "price": 12.1
   },
   {
-    "name": "Lee A.",
+    "name": "Frost M.",
     "price": 12.1
   },
   {
-    "name": "Lorentz S.",
+    "name": "Greig R.",
+    "price": 12.1
+  },
+  {
+    "name": "Klingberg J.",
+    "price": 12.1
+  },
+  {
+    "name": "Lafreniere A.",
+    "price": 12.1
+  },
+  {
+    "name": "Mateychuk D.",
     "price": 12.1
   },
   {
@@ -2488,27 +2412,39 @@
     "price": 12.1
   },
   {
-    "name": "Struble J.",
+    "name": "O'Brien L.",
     "price": 12.1
   },
   {
-    "name": "Tomasino P.",
+    "name": "Schenn B.",
     "price": 12.1
   },
   {
-    "name": "Anderson J.",
-    "price": 12.0
+    "name": "Zacha P.",
+    "price": 12.1
   },
   {
     "name": "Becher O.",
     "price": 12.0
   },
   {
-    "name": "Carlsson L.",
+    "name": "DeBrusk J.",
     "price": 12.0
   },
   {
-    "name": "Larsson A.",
+    "name": "Fleury C.",
+    "price": 12.0
+  },
+  {
+    "name": "Krebs P.",
+    "price": 12.0
+  },
+  {
+    "name": "Kunin L.",
+    "price": 12.0
+  },
+  {
+    "name": "Liljegren T.",
     "price": 12.0
   },
   {
@@ -2516,59 +2452,55 @@
     "price": 12.0
   },
   {
-    "name": "Smith R.",
+    "name": "Martinook J.",
     "price": 12.0
   },
   {
-    "name": "Crozier M.",
+    "name": "Mercer D.",
+    "price": 12.0
+  },
+  {
+    "name": "Sillinger C.",
+    "price": 12.0
+  },
+  {
+    "name": "Tucker T.",
+    "price": 12.0
+  },
+  {
+    "name": "Aamodt W.",
     "price": 11.9
   },
   {
-    "name": "Donato R.",
+    "name": "Gregor N.",
     "price": 11.9
   },
   {
-    "name": "Duhaime B.",
+    "name": "Joshua D.",
     "price": 11.9
   },
   {
-    "name": "Koivunen V.",
+    "name": "McCabe J.",
     "price": 11.9
   },
   {
-    "name": "Legault C.",
+    "name": "Myers P.",
     "price": 11.9
   },
   {
-    "name": "Mateychuk D.",
+    "name": "Nelson B.",
     "price": 11.9
   },
   {
-    "name": "O'Connor L.",
+    "name": "Stanley L.",
     "price": 11.9
   },
   {
-    "name": "Pearson T.",
+    "name": "Suter P.",
     "price": 11.9
   },
   {
-    "name": "Stamkos S.",
-    "price": 11.9
-  },
-  {
-    "name": "Wood M.",
-    "price": 11.9
-  },
-  {
-    "name": "Xhekaj A.",
-    "price": 11.9
-  },
-  {
-    "name": "Amadio M.",
-    "price": 11.8
-  },
-  {
-    "name": "Cates N.",
+    "name": "Benoit S.",
     "price": 11.8
   },
   {
@@ -2576,7 +2508,23 @@
     "price": 11.8
   },
   {
-    "name": "Leonard R.",
+    "name": "Ferraro M.",
+    "price": 11.8
+  },
+  {
+    "name": "Giroux C.",
+    "price": 11.8
+  },
+  {
+    "name": "Legault C.",
+    "price": 11.8
+  },
+  {
+    "name": "McCarron M.",
+    "price": 11.8
+  },
+  {
+    "name": "Pelech A.",
     "price": 11.8
   },
   {
@@ -2584,7 +2532,7 @@
     "price": 11.8
   },
   {
-    "name": "Stanley L.",
+    "name": "Raddysh D.",
     "price": 11.8
   },
   {
@@ -2592,27 +2540,7 @@
     "price": 11.8
   },
   {
-    "name": "Toews J.",
-    "price": 11.8
-  },
-  {
-    "name": "Zegras T.",
-    "price": 11.8
-  },
-  {
-    "name": "Beniers M.",
-    "price": 11.7
-  },
-  {
-    "name": "Bernard-Docker J.",
-    "price": 11.7
-  },
-  {
-    "name": "Cagnoni L.",
-    "price": 11.7
-  },
-  {
-    "name": "Chisholm D.",
+    "name": "Brodin J.",
     "price": 11.7
   },
   {
@@ -2620,36 +2548,20 @@
     "price": 11.7
   },
   {
-    "name": "Kerfoot A.",
+    "name": "Lindgren R.",
     "price": 11.7
   },
   {
-    "name": "Malenstyn B.",
+    "name": "Robertson M.",
     "price": 11.7
   },
   {
-    "name": "Martinook J.",
-    "price": 11.7
-  },
-  {
-    "name": "McLeod R.",
-    "price": 11.7
-  },
-  {
-    "name": "Morrow S.",
-    "price": 11.7
-  },
-  {
-    "name": "Pachal B.",
+    "name": "Simashev D.",
     "price": 11.7
   },
   {
     "name": "Thompson J.",
     "price": 11.7
-  },
-  {
-    "name": "Agozzino A.",
-    "price": 11.6
   },
   {
     "name": "Baddock B.",
@@ -2664,7 +2576,11 @@
     "price": 11.6
   },
   {
-    "name": "Dillon B.",
+    "name": "DeSimone N.",
+    "price": 11.6
+  },
+  {
+    "name": "Dumba M.",
     "price": 11.6
   },
   {
@@ -2672,15 +2588,11 @@
     "price": 11.6
   },
   {
-    "name": "Gatcomb M.",
+    "name": "Geekie C.",
     "price": 11.6
   },
   {
     "name": "Grainger L.",
-    "price": 11.6
-  },
-  {
-    "name": "Granlund M.",
     "price": 11.6
   },
   {
@@ -2692,6 +2604,10 @@
     "price": 11.6
   },
   {
+    "name": "Chytil F.",
+    "price": 11.6
+  },
+  {
     "name": "King B.",
     "price": 11.6
   },
@@ -2700,15 +2616,11 @@
     "price": 11.6
   },
   {
-    "name": "Kovacevic J.",
-    "price": 11.6
-  },
-  {
     "name": "Kressler B.",
     "price": 11.6
   },
   {
-    "name": "Lindholm H.",
+    "name": "Marino J.",
     "price": 11.6
   },
   {
@@ -2724,7 +2636,7 @@
     "price": 11.6
   },
   {
-    "name": "Parekh Z.",
+    "name": "Perron D.",
     "price": 11.6
   },
   {
@@ -2744,15 +2656,19 @@
     "price": 11.6
   },
   {
-    "name": "Sillinger C.",
-    "price": 11.6
-  },
-  {
     "name": "Sim L.",
     "price": 11.6
   },
   {
+    "name": "Solovyov I.",
+    "price": 11.6
+  },
+  {
     "name": "Stevens S.",
+    "price": 11.6
+  },
+  {
+    "name": "Tomasek D.",
     "price": 11.6
   },
   {
@@ -2764,19 +2680,15 @@
     "price": 11.6
   },
   {
-    "name": "Veleno J.",
-    "price": 11.6
-  },
-  {
-    "name": "Bichsel L.",
+    "name": "Aspirot J.",
     "price": 11.5
   },
   {
-    "name": "Boqvist A.",
+    "name": "Drysdale J.",
     "price": 11.5
   },
   {
-    "name": "Cotter P.",
+    "name": "Edvinsson S.",
     "price": 11.5
   },
   {
@@ -2784,11 +2696,27 @@
     "price": 11.5
   },
   {
-    "name": "Ivany J.",
+    "name": "Evans R.",
+    "price": 11.5
+  },
+  {
+    "name": "Girard S.",
+    "price": 11.5
+  },
+  {
+    "name": "Greer A.",
+    "price": 11.5
+  },
+  {
+    "name": "Iafallo A.",
     "price": 11.5
   },
   {
     "name": "Johnstone M.",
+    "price": 11.5
+  },
+  {
+    "name": "Kakko K.",
     "price": 11.5
   },
   {
@@ -2800,11 +2728,11 @@
     "price": 11.5
   },
   {
-    "name": "Nyquist G.",
+    "name": "Philp N.",
     "price": 11.5
   },
   {
-    "name": "Roslovic J.",
+    "name": "Struble J.",
     "price": 11.5
   },
   {
@@ -2812,15 +2740,27 @@
     "price": 11.5
   },
   {
-    "name": "Andrae E.",
-    "price": 11.4
+    "name": "Zub A.",
+    "price": 11.5
   },
   {
     "name": "Aston-Reese Z.",
     "price": 11.4
   },
   {
-    "name": "Ceci C.",
+    "name": "Barron M.",
+    "price": 11.4
+  },
+  {
+    "name": "Benn J.",
+    "price": 11.4
+  },
+  {
+    "name": "Blake J.",
+    "price": 11.4
+  },
+  {
+    "name": "Cernak E.",
     "price": 11.4
   },
   {
@@ -2832,47 +2772,15 @@
     "price": 11.4
   },
   {
-    "name": "Dach K.",
-    "price": 11.4
-  },
-  {
-    "name": "DeBrusk J.",
-    "price": 11.4
-  },
-  {
-    "name": "Domi M.",
-    "price": 11.4
-  },
-  {
-    "name": "Ford P.",
-    "price": 11.4
-  },
-  {
-    "name": "Huberdeau J.",
-    "price": 11.4
-  },
-  {
-    "name": "Kreider C.",
-    "price": 11.4
-  },
-  {
-    "name": "Kulak B.",
-    "price": 11.4
-  },
-  {
-    "name": "Levshunov A.",
-    "price": 11.4
-  },
-  {
     "name": "Marjala V.",
     "price": 11.4
   },
   {
-    "name": "Nicholl W.",
+    "name": "Nemec Š.",
     "price": 11.4
   },
   {
-    "name": "Noesen S.",
+    "name": "Nicholl W.",
     "price": 11.4
   },
   {
@@ -2884,19 +2792,11 @@
     "price": 11.4
   },
   {
-    "name": "Regula A.",
-    "price": 11.4
-  },
-  {
-    "name": "Robinson E.",
-    "price": 11.4
-  },
-  {
-    "name": "Roy N.",
-    "price": 11.4
-  },
-  {
     "name": "Samanski J.",
+    "price": 11.4
+  },
+  {
+    "name": "Skinner J.",
     "price": 11.4
   },
   {
@@ -2904,19 +2804,11 @@
     "price": 11.4
   },
   {
-    "name": "Wotherspoon P.",
-    "price": 11.4
-  },
-  {
-    "name": "Benn J.",
+    "name": "Benson Z.",
     "price": 11.3
   },
   {
-    "name": "Casey S.",
-    "price": 11.3
-  },
-  {
-    "name": "Danforth J.",
+    "name": "Dewar C.",
     "price": 11.3
   },
   {
@@ -2924,11 +2816,7 @@
     "price": 11.3
   },
   {
-    "name": "Hayes K.",
-    "price": 11.3
-  },
-  {
-    "name": "Helleson D.",
+    "name": "Huberdeau J.",
     "price": 11.3
   },
   {
@@ -2936,43 +2824,99 @@
     "price": 11.3
   },
   {
-    "name": "Maatta O.",
-    "price": 11.3
-  },
-  {
     "name": "Soderstrom V.",
     "price": 11.3
   },
   {
-    "name": "Gourde Y.",
+    "name": "Dillon B.",
     "price": 11.2
   },
   {
-    "name": "Kapanen K.",
+    "name": "Eyssimont M.",
     "price": 11.2
   },
   {
-    "name": "Kulikov D.",
+    "name": "Juulsen N.",
     "price": 11.2
   },
   {
-    "name": "Eberle J.",
+    "name": "Kelly P.",
+    "price": 11.2
+  },
+  {
+    "name": "Kuraly S.",
+    "price": 11.2
+  },
+  {
+    "name": "Miromanov D.",
+    "price": 11.2
+  },
+  {
+    "name": "Nosek T.",
+    "price": 11.2
+  },
+  {
+    "name": "Ottavainen V.",
+    "price": 11.2
+  },
+  {
+    "name": "Snuggerud J.",
+    "price": 11.2
+  },
+  {
+    "name": "Wiesblatt O.",
+    "price": 11.2
+  },
+  {
+    "name": "Blais S.",
     "price": 11.1
   },
   {
-    "name": "Ginning A.",
+    "name": "Cole I.",
     "price": 11.1
   },
   {
-    "name": "Killorn A.",
+    "name": "Cotter P.",
     "price": 11.1
   },
   {
-    "name": "Pesce B.",
+    "name": "Duhaime B.",
     "price": 11.1
   },
   {
-    "name": "Petry J.",
+    "name": "Finnie E.",
+    "price": 11.1
+  },
+  {
+    "name": "Goldsmith T.",
+    "price": 11.1
+  },
+  {
+    "name": "Jones Z.",
+    "price": 11.1
+  },
+  {
+    "name": "Klapka A.",
+    "price": 11.1
+  },
+  {
+    "name": "Mangiapane A.",
+    "price": 11.1
+  },
+  {
+    "name": "Nazar F.",
+    "price": 11.1
+  },
+  {
+    "name": "Nystrom J.",
+    "price": 11.1
+  },
+  {
+    "name": "Oleksiak J.",
+    "price": 11.1
+  },
+  {
+    "name": "Peeke A.",
     "price": 11.1
   },
   {
@@ -2980,11 +2924,11 @@
     "price": 11.1
   },
   {
-    "name": "Soderblom E.",
+    "name": "Solberg S.",
     "price": 11.1
   },
   {
-    "name": "Solberg S.",
+    "name": "Toropchenko A.",
     "price": 11.1
   },
   {
@@ -2992,7 +2936,11 @@
     "price": 11.1
   },
   {
-    "name": "Bahl K.",
+    "name": "Willander T.",
+    "price": 11.1
+  },
+  {
+    "name": "Bjorkstrand O.",
     "price": 11.0
   },
   {
@@ -3008,23 +2956,11 @@
     "price": 11.0
   },
   {
-    "name": "Cowan E.",
-    "price": 11.0
-  },
-  {
     "name": "Cristall A.",
     "price": 11.0
   },
   {
-    "name": "Dowd N.",
-    "price": 11.0
-  },
-  {
-    "name": "Ferraro M.",
-    "price": 11.0
-  },
-  {
-    "name": "Heineman E.",
+    "name": "Dumoulin B.",
     "price": 11.0
   },
   {
@@ -3032,7 +2968,19 @@
     "price": 11.0
   },
   {
-    "name": "Lohrei M.",
+    "name": "Hunt D.",
+    "price": 11.0
+  },
+  {
+    "name": "Jokiharju H.",
+    "price": 11.0
+  },
+  {
+    "name": "Killorn A.",
+    "price": 11.0
+  },
+  {
+    "name": "Kolesar K.",
     "price": 11.0
   },
   {
@@ -3048,27 +2996,31 @@
     "price": 11.0
   },
   {
-    "name": "Acciari N.",
+    "name": "Viel J.",
+    "price": 11.0
+  },
+  {
+    "name": "Armia J.",
     "price": 10.9
   },
   {
-    "name": "Appleton M.",
+    "name": "Bichsel L.",
     "price": 10.9
   },
   {
-    "name": "Bardakov Z.",
+    "name": "Bjornfot T.",
     "price": 10.9
   },
   {
-    "name": "Boqvist J.",
-    "price": 10.9
-  },
-  {
-    "name": "Carlo B.",
+    "name": "Borgen W.",
     "price": 10.9
   },
   {
     "name": "Connelly T.",
+    "price": 10.9
+  },
+  {
+    "name": "Dach K.",
     "price": 10.9
   },
   {
@@ -3088,19 +3040,27 @@
     "price": 10.9
   },
   {
+    "name": "Hamonic T.",
+    "price": 10.9
+  },
+  {
     "name": "Hutson Q.",
     "price": 10.9
   },
   {
-    "name": "Jensen N.",
+    "name": "Chibrikov N.",
     "price": 10.9
   },
   {
-    "name": "Johansson A.",
+    "name": "Koepke C.",
     "price": 10.9
   },
   {
-    "name": "Joseph P.",
+    "name": "Laughton S.",
+    "price": 10.9
+  },
+  {
+    "name": "Metsa Z.",
     "price": 10.9
   },
   {
@@ -3108,11 +3068,11 @@
     "price": 10.9
   },
   {
-    "name": "Seguin T.",
+    "name": "Robertson N.",
     "price": 10.9
   },
   {
-    "name": "Skinner J.",
+    "name": "Stenlund K.",
     "price": 10.9
   },
   {
@@ -3132,11 +3092,23 @@
     "price": 10.9
   },
   {
-    "name": "Brazeau J.",
+    "name": "Casey S.",
     "price": 10.8
   },
   {
-    "name": "Fleury C.",
+    "name": "Evans J.",
+    "price": 10.8
+  },
+  {
+    "name": "Fleury H.",
+    "price": 10.8
+  },
+  {
+    "name": "Ginning A.",
+    "price": 10.8
+  },
+  {
+    "name": "Helenius S.",
     "price": 10.8
   },
   {
@@ -3144,15 +3116,15 @@
     "price": 10.8
   },
   {
-    "name": "Maccelli M.",
+    "name": "Kartye T.",
     "price": 10.8
   },
   {
-    "name": "Meyers B.",
+    "name": "Kerfoot A.",
     "price": 10.8
   },
   {
-    "name": "Nemec Š.",
+    "name": "Moore I.",
     "price": 10.8
   },
   {
@@ -3160,15 +3132,11 @@
     "price": 10.8
   },
   {
-    "name": "Zary C.",
+    "name": "Stecher T.",
     "price": 10.8
   },
   {
-    "name": "Brink B.",
-    "price": 10.7
-  },
-  {
-    "name": "Carrier A.",
+    "name": "Ellis R.",
     "price": 10.7
   },
   {
@@ -3176,11 +3144,11 @@
     "price": 10.7
   },
   {
-    "name": "Finnie E.",
+    "name": "Hathaway G.",
     "price": 10.7
   },
   {
-    "name": "Hunt D.",
+    "name": "Chisholm D.",
     "price": 10.7
   },
   {
@@ -3188,19 +3156,7 @@
     "price": 10.7
   },
   {
-    "name": "Jones C.",
-    "price": 10.7
-  },
-  {
-    "name": "Juulsen N.",
-    "price": 10.7
-  },
-  {
-    "name": "Kiviranta J.",
-    "price": 10.7
-  },
-  {
-    "name": "Kotkaniemi J.",
+    "name": "Kovacevic J.",
     "price": 10.7
   },
   {
@@ -3208,11 +3164,7 @@
     "price": 10.7
   },
   {
-    "name": "Matinpalo N.",
-    "price": 10.7
-  },
-  {
-    "name": "Miromanov D.",
+    "name": "McLeod R.",
     "price": 10.7
   },
   {
@@ -3224,7 +3176,7 @@
     "price": 10.7
   },
   {
-    "name": "Sharangovich Y.",
+    "name": "Sourdif J.",
     "price": 10.7
   },
   {
@@ -3240,7 +3192,7 @@
     "price": 10.7
   },
   {
-    "name": "Tsyplakov M.",
+    "name": "Toews J.",
     "price": 10.7
   },
   {
@@ -3260,15 +3212,19 @@
     "price": 10.7
   },
   {
-    "name": "Balinskis U.",
+    "name": "Carrier A.",
     "price": 10.6
   },
   {
-    "name": "Blankenburg N.",
+    "name": "Farabee J.",
     "price": 10.6
   },
   {
-    "name": "Dvorak C.",
+    "name": "Johansson A.",
+    "price": 10.6
+  },
+  {
+    "name": "Kleven T.",
     "price": 10.6
   },
   {
@@ -3276,11 +3232,11 @@
     "price": 10.6
   },
   {
-    "name": "McDonagh R.",
+    "name": "Mailloux L.",
     "price": 10.6
   },
   {
-    "name": "McGroarty R.",
+    "name": "Malott J.",
     "price": 10.6
   },
   {
@@ -3288,23 +3244,31 @@
     "price": 10.6
   },
   {
-    "name": "Sissons C.",
+    "name": "Pachal B.",
     "price": 10.6
   },
   {
-    "name": "Armia J.",
+    "name": "Robinson E.",
+    "price": 10.6
+  },
+  {
+    "name": "Samson E.",
+    "price": 10.6
+  },
+  {
+    "name": "Wotherspoon P.",
+    "price": 10.6
+  },
+  {
+    "name": "Crozier M.",
     "price": 10.5
   },
   {
-    "name": "Brandsegg-Nygard M.",
+    "name": "Engvall P.",
     "price": 10.5
   },
   {
-    "name": "Drury J.",
-    "price": 10.5
-  },
-  {
-    "name": "Kindel B.",
+    "name": "Howard I.",
     "price": 10.5
   },
   {
@@ -3312,15 +3276,31 @@
     "price": 10.5
   },
   {
-    "name": "Mancini V.",
+    "name": "Minten F.",
     "price": 10.5
   },
   {
-    "name": "Novak T.",
+    "name": "Mukhamadullin S.",
     "price": 10.5
   },
   {
-    "name": "Sourdif J.",
+    "name": "Sharangovich Y.",
+    "price": 10.5
+  },
+  {
+    "name": "Svechkov F.",
+    "price": 10.5
+  },
+  {
+    "name": "Warren M.",
+    "price": 10.5
+  },
+  {
+    "name": "Wright S.",
+    "price": 10.5
+  },
+  {
+    "name": "York C.",
     "price": 10.5
   },
   {
@@ -3328,51 +3308,23 @@
     "price": 10.4
   },
   {
-    "name": "Benson Z.",
+    "name": "Andrae E.",
     "price": 10.4
   },
   {
-    "name": "Eller L.",
+    "name": "Gritsyuk A.",
     "price": 10.4
   },
   {
-    "name": "Engvall P.",
+    "name": "Jeannot T.",
     "price": 10.4
   },
   {
-    "name": "Funk Z.",
+    "name": "Jost T.",
     "price": 10.4
   },
   {
-    "name": "Kaliyev A.",
-    "price": 10.4
-  },
-  {
-    "name": "Klingberg J.",
-    "price": 10.4
-  },
-  {
-    "name": "Lindgren R.",
-    "price": 10.4
-  },
-  {
-    "name": "Megna J.",
-    "price": 10.4
-  },
-  {
-    "name": "Mermis D.",
-    "price": 10.4
-  },
-  {
-    "name": "Murphy C.",
-    "price": 10.4
-  },
-  {
-    "name": "Raty A.",
-    "price": 10.4
-  },
-  {
-    "name": "Reinhardt C.",
+    "name": "Kudryavtsev K.",
     "price": 10.4
   },
   {
@@ -3380,11 +3332,19 @@
     "price": 10.4
   },
   {
-    "name": "Saad B.",
+    "name": "Rifai M.",
     "price": 10.4
   },
   {
-    "name": "Sebrango D.",
+    "name": "Sabourin S.",
+    "price": 10.4
+  },
+  {
+    "name": "Smith R.",
+    "price": 10.4
+  },
+  {
+    "name": "Tsyplakov M.",
     "price": 10.4
   },
   {
@@ -3392,11 +3352,15 @@
     "price": 10.3
   },
   {
-    "name": "Dach C.",
+    "name": "Bernard-Docker J.",
     "price": 10.3
   },
   {
-    "name": "Demidov I.",
+    "name": "Boqvist A.",
+    "price": 10.3
+  },
+  {
+    "name": "Danforth J.",
     "price": 10.3
   },
   {
@@ -3404,19 +3368,11 @@
     "price": 10.3
   },
   {
-    "name": "Dunne J.",
+    "name": "Hayden J.",
     "price": 10.3
   },
   {
-    "name": "Ellinas L.",
-    "price": 10.3
-  },
-  {
-    "name": "Geertsen M.",
-    "price": 10.3
-  },
-  {
-    "name": "Howe T.",
+    "name": "Jiříček D.",
     "price": 10.3
   },
   {
@@ -3436,7 +3392,7 @@
     "price": 10.3
   },
   {
-    "name": "Nazar F.",
+    "name": "Mantha A.",
     "price": 10.3
   },
   {
@@ -3448,6 +3404,10 @@
     "price": 10.3
   },
   {
+    "name": "Veleno J.",
+    "price": 10.3
+  },
+  {
     "name": "Walker C.",
     "price": 10.3
   },
@@ -3456,35 +3416,51 @@
     "price": 10.3
   },
   {
-    "name": "York C.",
-    "price": 10.3
-  },
-  {
-    "name": "Brisebois G.",
+    "name": "Bahl K.",
     "price": 10.2
   },
   {
-    "name": "Dumoulin B.",
+    "name": "Callahan M.",
     "price": 10.2
   },
   {
-    "name": "Jokiharju H.",
+    "name": "Ford P.",
     "price": 10.2
   },
   {
-    "name": "Rasmussen M.",
+    "name": "Pageau J.",
     "price": 10.2
   },
   {
-    "name": "Siegenthaler J.",
+    "name": "Savoie M.",
     "price": 10.2
   },
   {
-    "name": "Borgen W.",
+    "name": "Seguin T.",
+    "price": 10.2
+  },
+  {
+    "name": "Bjugstad N.",
     "price": 10.1
   },
   {
-    "name": "Hallander F.",
+    "name": "Brandsegg-Nygard M.",
+    "price": 10.1
+  },
+  {
+    "name": "Brunicke H.",
+    "price": 10.1
+  },
+  {
+    "name": "D'Astous C.",
+    "price": 10.1
+  },
+  {
+    "name": "Dach C.",
+    "price": 10.1
+  },
+  {
+    "name": "Domi M.",
     "price": 10.1
   },
   {
@@ -3492,35 +3468,75 @@
     "price": 10.1
   },
   {
-    "name": "Lindell E.",
+    "name": "Huuhtanen N.",
     "price": 10.1
   },
   {
-    "name": "Moser J.",
+    "name": "Kaliyev A.",
     "price": 10.1
   },
   {
-    "name": "Robertson M.",
+    "name": "Kotkaniemi J.",
     "price": 10.1
   },
   {
-    "name": "Callahan M.",
+    "name": "Kozak T.",
+    "price": 10.1
+  },
+  {
+    "name": "Noesen S.",
+    "price": 10.1
+  },
+  {
+    "name": "Pitlick T.",
+    "price": 10.1
+  },
+  {
+    "name": "Stastney S.",
+    "price": 10.1
+  },
+  {
+    "name": "Anderson J.",
     "price": 10.0
   },
   {
-    "name": "Cousins N.",
+    "name": "Cirelli A.",
     "price": 10.0
   },
   {
-    "name": "Ellis R.",
+    "name": "Dean Z.",
     "price": 10.0
   },
   {
-    "name": "Henrique A.",
+    "name": "Dowd N.",
     "price": 10.0
   },
   {
-    "name": "Moore I.",
+    "name": "Dunne J.",
+    "price": 10.0
+  },
+  {
+    "name": "Dvorak C.",
+    "price": 10.0
+  },
+  {
+    "name": "Kastelic M.",
+    "price": 10.0
+  },
+  {
+    "name": "Lazar C.",
+    "price": 10.0
+  },
+  {
+    "name": "Lundkvist N.",
+    "price": 10.0
+  },
+  {
+    "name": "Pettersson M.",
+    "price": 10.0
+  },
+  {
+    "name": "Sennecke B.",
     "price": 10.0
   },
   {
@@ -3528,11 +3544,11 @@
     "price": 9.9
   },
   {
-    "name": "Brindley G.",
+    "name": "Brisebois G.",
     "price": 9.9
   },
   {
-    "name": "Cizikas C.",
+    "name": "Demidov I.",
     "price": 9.9
   },
   {
@@ -3540,19 +3556,7 @@
     "price": 9.9
   },
   {
-    "name": "Drysdale J.",
-    "price": 9.9
-  },
-  {
-    "name": "Emberson T.",
-    "price": 9.9
-  },
-  {
-    "name": "Farabee J.",
-    "price": 9.9
-  },
-  {
-    "name": "Goncalves G.",
+    "name": "Funk Z.",
     "price": 9.9
   },
   {
@@ -3564,19 +3568,15 @@
     "price": 9.9
   },
   {
-    "name": "Krys L.",
-    "price": 9.9
-  },
-  {
-    "name": "Kunin L.",
-    "price": 9.9
-  },
-  {
     "name": "Mueller T.",
     "price": 9.9
   },
   {
-    "name": "Mukhamadullin S.",
+    "name": "Murphy C.",
+    "price": 9.9
+  },
+  {
+    "name": "Nyquist G.",
     "price": 9.9
   },
   {
@@ -3588,15 +3588,15 @@
     "price": 9.9
   },
   {
-    "name": "Pickering O.",
-    "price": 9.9
-  },
-  {
     "name": "Smith G.",
     "price": 9.9
   },
   {
-    "name": "Arvidsson V.",
+    "name": "Ahcan J.",
+    "price": 9.8
+  },
+  {
+    "name": "Bogosian Z.",
     "price": 9.8
   },
   {
@@ -3604,15 +3604,19 @@
     "price": 9.8
   },
   {
-    "name": "Greer A.",
+    "name": "Geertsen M.",
     "price": 9.8
   },
   {
-    "name": "Kartye T.",
+    "name": "Hinostroza V.",
     "price": 9.8
   },
   {
-    "name": "Kozak T.",
+    "name": "Joseph M.",
+    "price": 9.8
+  },
+  {
+    "name": "Joseph P.",
     "price": 9.8
   },
   {
@@ -3620,7 +3624,11 @@
     "price": 9.8
   },
   {
-    "name": "Lundkvist N.",
+    "name": "Mahura J.",
+    "price": 9.8
+  },
+  {
+    "name": "McDonagh R.",
     "price": 9.8
   },
   {
@@ -3632,7 +3640,19 @@
     "price": 9.8
   },
   {
-    "name": "Ritchie C.",
+    "name": "Petrovic A.",
+    "price": 9.8
+  },
+  {
+    "name": "Soderblom E.",
+    "price": 9.8
+  },
+  {
+    "name": "Soucy C.",
+    "price": 9.8
+  },
+  {
+    "name": "Strome R.",
     "price": 9.8
   },
   {
@@ -3640,15 +3660,19 @@
     "price": 9.8
   },
   {
-    "name": "Weber S.",
+    "name": "Xhekaj A.",
     "price": 9.8
   },
   {
-    "name": "Connors S.",
+    "name": "Cagnoni L.",
     "price": 9.7
   },
   {
-    "name": "Drouin J.",
+    "name": "Cizikas C.",
+    "price": 9.7
+  },
+  {
+    "name": "Connors S.",
     "price": 9.7
   },
   {
@@ -3664,23 +3688,23 @@
     "price": 9.7
   },
   {
-    "name": "Gregor N.",
+    "name": "Holtz A.",
     "price": 9.7
   },
   {
-    "name": "Grzelcyk M.",
+    "name": "Landeskog G.",
     "price": 9.7
   },
   {
-    "name": "Mahura J.",
+    "name": "Lorentz S.",
     "price": 9.7
   },
   {
-    "name": "Peeke A.",
+    "name": "Nyman J.",
     "price": 9.7
   },
   {
-    "name": "Pettersson M.",
+    "name": "Pearson T.",
     "price": 9.7
   },
   {
@@ -3696,47 +3720,75 @@
     "price": 9.7
   },
   {
-    "name": "Tomasek D.",
+    "name": "Tomasino P.",
     "price": 9.7
   },
   {
-    "name": "Danielson N.",
+    "name": "Weber S.",
+    "price": 9.7
+  },
+  {
+    "name": "Zary C.",
+    "price": 9.7
+  },
+  {
+    "name": "Catton B.",
     "price": 9.6
   },
   {
-    "name": "Holtz A.",
+    "name": "Drouin J.",
     "price": 9.6
   },
   {
-    "name": "Kuraly S.",
+    "name": "LaBate J.",
     "price": 9.6
   },
   {
-    "name": "Mangiapane A.",
+    "name": "McDonald K.",
     "price": 9.6
   },
   {
-    "name": "Pageau J.",
+    "name": "Nesterenko N.",
     "price": 9.6
   },
   {
-    "name": "Palát O.",
+    "name": "Rasmussen M.",
     "price": 9.6
   },
   {
-    "name": "Philp N.",
+    "name": "Raty A.",
     "price": 9.6
   },
   {
-    "name": "Yamamoto K.",
+    "name": "Saad B.",
     "price": 9.6
   },
   {
-    "name": "Zacha P.",
+    "name": "Schuldt J.",
     "price": 9.6
+  },
+  {
+    "name": "Stephenson C.",
+    "price": 9.6
+  },
+  {
+    "name": "Wheatcroft C.",
+    "price": 9.6
+  },
+  {
+    "name": "Appleton M.",
+    "price": 9.5
   },
   {
     "name": "Brown P.",
+    "price": 9.5
+  },
+  {
+    "name": "Colangelo S.",
+    "price": 9.5
+  },
+  {
+    "name": "Jones B.",
     "price": 9.5
   },
   {
@@ -3744,31 +3796,39 @@
     "price": 9.5
   },
   {
-    "name": "Liljegren T.",
+    "name": "Levshunov A.",
     "price": 9.5
   },
   {
-    "name": "Stecher T.",
+    "name": "Megna J.",
     "price": 9.5
   },
   {
-    "name": "Bogosian Z.",
+    "name": "Moser J.",
+    "price": 9.5
+  },
+  {
+    "name": "Nadeau B.",
+    "price": 9.5
+  },
+  {
+    "name": "Sturm N.",
+    "price": 9.5
+  },
+  {
+    "name": "Bertuzzi T.",
     "price": 9.4
   },
   {
-    "name": "Bunting M.",
+    "name": "Burroughs K.",
     "price": 9.4
   },
   {
-    "name": "Deslauriers N.",
+    "name": "Dickinson S.",
     "price": 9.4
   },
   {
-    "name": "Evans J.",
-    "price": 9.4
-  },
-  {
-    "name": "Evans R.",
+    "name": "Foligno N.",
     "price": 9.4
   },
   {
@@ -3780,47 +3840,35 @@
     "price": 9.4
   },
   {
-    "name": "Ostlund N.",
+    "name": "Reinhardt C.",
     "price": 9.4
   },
   {
-    "name": "Wilsby A.",
+    "name": "Roy N.",
     "price": 9.4
   },
   {
-    "name": "Yurov D.",
-    "price": 9.4
-  },
-  {
-    "name": "Abols R.",
+    "name": "Cousins N.",
     "price": 9.3
   },
   {
-    "name": "Frank E.",
+    "name": "Jensen N.",
     "price": 9.3
   },
   {
-    "name": "Haula E.",
+    "name": "Lambert B.",
     "price": 9.3
   },
   {
-    "name": "Cholowski D.",
+    "name": "Lindell E.",
     "price": 9.3
   },
   {
-    "name": "Jiříček D.",
+    "name": "Mermis D.",
     "price": 9.3
   },
   {
-    "name": "Lizotte B.",
-    "price": 9.3
-  },
-  {
-    "name": "Tanev C.",
-    "price": 9.3
-  },
-  {
-    "name": "van R.",
+    "name": "Sissons C.",
     "price": 9.3
   },
   {
@@ -3828,23 +3876,19 @@
     "price": 9.2
   },
   {
-    "name": "Barron J.",
+    "name": "Amadio M.",
     "price": 9.2
   },
   {
-    "name": "Geekie C.",
+    "name": "Carlo B.",
     "price": 9.2
   },
   {
-    "name": "Hague N.",
+    "name": "Ivany J.",
     "price": 9.2
   },
   {
-    "name": "Kakko K.",
-    "price": 9.2
-  },
-  {
-    "name": "Mayfield S.",
+    "name": "Martin B.",
     "price": 9.2
   },
   {
@@ -3852,7 +3896,23 @@
     "price": 9.2
   },
   {
+    "name": "Nurmi J.",
+    "price": 9.2
+  },
+  {
+    "name": "Rooney K.",
+    "price": 9.2
+  },
+  {
+    "name": "Valimaki J.",
+    "price": 9.2
+  },
+  {
     "name": "Avery J.",
+    "price": 9.1
+  },
+  {
+    "name": "Bear E.",
     "price": 9.1
   },
   {
@@ -3872,15 +3932,7 @@
     "price": 9.1
   },
   {
-    "name": "Gadjovich J.",
-    "price": 9.1
-  },
-  {
     "name": "Hayes A.",
-    "price": 9.1
-  },
-  {
-    "name": "Hinostroza V.",
     "price": 9.1
   },
   {
@@ -3888,7 +3940,7 @@
     "price": 9.1
   },
   {
-    "name": "Jarnkrok C.",
+    "name": "Janmark M.",
     "price": 9.1
   },
   {
@@ -3896,15 +3948,11 @@
     "price": 9.1
   },
   {
+    "name": "Kurashev P.",
+    "price": 9.1
+  },
+  {
     "name": "McDonough A.",
-    "price": 9.1
-  },
-  {
-    "name": "Ohgren L.",
-    "price": 9.1
-  },
-  {
-    "name": "Savoie M.",
     "price": 9.1
   },
   {
@@ -3916,23 +3964,31 @@
     "price": 9.1
   },
   {
+    "name": "Yurov D.",
+    "price": 9.1
+  },
+  {
     "name": "Zonnon B.",
     "price": 9.1
   },
   {
-    "name": "Bear E.",
+    "name": "Abols R.",
     "price": 9.0
   },
   {
-    "name": "Bjornfot T.",
+    "name": "Capobianco K.",
     "price": 9.0
   },
   {
-    "name": "George I.",
+    "name": "Cowan E.",
     "price": 9.0
   },
   {
-    "name": "Hanley J.",
+    "name": "Deslauriers N.",
+    "price": 9.0
+  },
+  {
+    "name": "Grzelcyk M.",
     "price": 9.0
   },
   {
@@ -3940,15 +3996,7 @@
     "price": 9.0
   },
   {
-    "name": "Nosek T.",
-    "price": 9.0
-  },
-  {
-    "name": "Petrovic A.",
-    "price": 9.0
-  },
-  {
-    "name": "Soucy C.",
+    "name": "Maccelli M.",
     "price": 9.0
   },
   {
@@ -3956,19 +4004,23 @@
     "price": 9.0
   },
   {
-    "name": "Wright S.",
+    "name": "Teravainen T.",
     "price": 9.0
   },
   {
-    "name": "Colangelo S.",
+    "name": "Texier A.",
+    "price": 9.0
+  },
+  {
+    "name": "Watson A.",
+    "price": 9.0
+  },
+  {
+    "name": "Mayfield S.",
     "price": 8.9
   },
   {
-    "name": "Girgensons Z.",
-    "price": 8.9
-  },
-  {
-    "name": "Haight H.",
+    "name": "O'Connor L.",
     "price": 8.9
   },
   {
@@ -3976,12 +4028,12 @@
     "price": 8.9
   },
   {
-    "name": "Rempe M.",
+    "name": "Sundqvist O.",
     "price": 8.9
   },
   {
-    "name": "Sennecke B.",
-    "price": 8.9
+    "name": "Berggren J.",
+    "price": 8.8
   },
   {
     "name": "Boucher T.",
@@ -3992,11 +4044,11 @@
     "price": 8.8
   },
   {
-    "name": "Dorwart K.",
+    "name": "Brazeau J.",
     "price": 8.8
   },
   {
-    "name": "Evangelista L.",
+    "name": "Dorwart K.",
     "price": 8.8
   },
   {
@@ -4004,11 +4056,19 @@
     "price": 8.8
   },
   {
-    "name": "Helenius S.",
+    "name": "Hayes K.",
     "price": 8.8
   },
   {
-    "name": "Jeannot T.",
+    "name": "Chaffee M.",
+    "price": 8.8
+  },
+  {
+    "name": "Christiansen J.",
+    "price": 8.8
+  },
+  {
+    "name": "Jones C.",
     "price": 8.8
   },
   {
@@ -4024,7 +4084,7 @@
     "price": 8.8
   },
   {
-    "name": "Malott J.",
+    "name": "Matinpalo N.",
     "price": 8.8
   },
   {
@@ -4032,7 +4092,7 @@
     "price": 8.8
   },
   {
-    "name": "Shea R.",
+    "name": "Roy J.",
     "price": 8.8
   },
   {
@@ -4040,19 +4100,15 @@
     "price": 8.8
   },
   {
+    "name": "van R.",
+    "price": 8.8
+  },
+  {
     "name": "Washkurak K.",
     "price": 8.8
   },
   {
-    "name": "Dickinson S.",
-    "price": 8.7
-  },
-  {
-    "name": "Eyssimont M.",
-    "price": 8.7
-  },
-  {
-    "name": "Foligno N.",
+    "name": "Harris J.",
     "price": 8.7
   },
   {
@@ -4060,7 +4116,19 @@
     "price": 8.7
   },
   {
-    "name": "Lilleberg E.",
+    "name": "Maatta O.",
+    "price": 8.7
+  },
+  {
+    "name": "Milano S.",
+    "price": 8.7
+  },
+  {
+    "name": "Misa M.",
+    "price": 8.7
+  },
+  {
+    "name": "Pesce B.",
     "price": 8.7
   },
   {
@@ -4072,11 +4140,11 @@
     "price": 8.7
   },
   {
-    "name": "Sturm N.",
+    "name": "Wennberg A.",
     "price": 8.7
   },
   {
-    "name": "Vaakanainen U.",
+    "name": "Yamamoto K.",
     "price": 8.7
   },
   {
@@ -4088,15 +4156,23 @@
     "price": 8.6
   },
   {
+    "name": "Bean J.",
+    "price": 8.6
+  },
+  {
     "name": "Cronin R.",
     "price": 8.6
   },
   {
-    "name": "Forbort D.",
+    "name": "Frank E.",
     "price": 8.6
   },
   {
-    "name": "Glass C.",
+    "name": "Gaudreau F.",
+    "price": 8.6
+  },
+  {
+    "name": "Gourde Y.",
     "price": 8.6
   },
   {
@@ -4108,11 +4184,11 @@
     "price": 8.6
   },
   {
-    "name": "Hoglander N.",
+    "name": "Locmelis D.",
     "price": 8.6
   },
   {
-    "name": "Locmelis D.",
+    "name": "Mancini V.",
     "price": 8.6
   },
   {
@@ -4120,15 +4196,23 @@
     "price": 8.6
   },
   {
+    "name": "Schwindt C.",
+    "price": 8.6
+  },
+  {
     "name": "Villeneuve-Houle D.",
     "price": 8.6
   },
   {
-    "name": "Berggren J.",
+    "name": "Danielson N.",
     "price": 8.5
   },
   {
-    "name": "Brown C.",
+    "name": "Ellinas L.",
+    "price": 8.5
+  },
+  {
+    "name": "George I.",
     "price": 8.5
   },
   {
@@ -4136,32 +4220,28 @@
     "price": 8.5
   },
   {
-    "name": "Gritsyuk A.",
-    "price": 8.5
-  },
-  {
-    "name": "Chaffee M.",
-    "price": 8.5
-  },
-  {
     "name": "Kemell J.",
     "price": 8.5
   },
   {
-    "name": "Lammikko J.",
+    "name": "Lapierre H.",
     "price": 8.5
   },
   {
-    "name": "Strome R.",
+    "name": "Luchanko J.",
     "price": 8.5
   },
   {
-    "name": "Burakovsky A.",
-    "price": 8.4
+    "name": "Meyers B.",
+    "price": 8.5
   },
   {
-    "name": "Burroughs K.",
-    "price": 8.4
+    "name": "Mikheyev I.",
+    "price": 8.5
+  },
+  {
+    "name": "Siegenthaler J.",
+    "price": 8.5
   },
   {
     "name": "Butler C.",
@@ -4172,27 +4252,31 @@
     "price": 8.4
   },
   {
-    "name": "Dadonov E.",
+    "name": "Couture L.",
     "price": 8.4
   },
   {
-    "name": "Christiansen J.",
+    "name": "Crevier L.",
     "price": 8.4
   },
   {
-    "name": "Lambert B.",
+    "name": "Dickinson J.",
     "price": 8.4
   },
   {
-    "name": "Luchanko J.",
+    "name": "Forbort D.",
     "price": 8.4
   },
   {
-    "name": "McLaughlin M.",
+    "name": "Grebyonkin N.",
     "price": 8.4
   },
   {
-    "name": "Perbix N.",
+    "name": "Moverare J.",
+    "price": 8.4
+  },
+  {
+    "name": "Novak T.",
     "price": 8.4
   },
   {
@@ -4200,7 +4284,11 @@
     "price": 8.4
   },
   {
-    "name": "Zamula E.",
+    "name": "Vaakanainen U.",
+    "price": 8.4
+  },
+  {
+    "name": "Winterton R.",
     "price": 8.4
   },
   {
@@ -4212,31 +4300,47 @@
     "price": 8.3
   },
   {
-    "name": "Bryson J.",
+    "name": "Burakovsky A.",
     "price": 8.3
   },
   {
-    "name": "Copp A.",
+    "name": "Eller L.",
     "price": 8.3
   },
   {
-    "name": "Howard I.",
+    "name": "Gushchin D.",
     "price": 8.3
   },
   {
-    "name": "Huuhtanen N.",
+    "name": "Haight H.",
     "price": 8.3
   },
   {
-    "name": "Lycksell O.",
+    "name": "Hoglander N.",
     "price": 8.3
   },
   {
-    "name": "Oleksiak J.",
+    "name": "Honzek S.",
     "price": 8.3
   },
   {
-    "name": "Teravainen T.",
+    "name": "Cholowski D.",
+    "price": 8.3
+  },
+  {
+    "name": "Lammikko J.",
+    "price": 8.3
+  },
+  {
+    "name": "Ohgren L.",
+    "price": 8.3
+  },
+  {
+    "name": "Rempe M.",
+    "price": 8.3
+  },
+  {
+    "name": "Turcotte A.",
     "price": 8.3
   },
   {
@@ -4248,10 +4352,6 @@
     "price": 8.2
   },
   {
-    "name": "Compher J.",
-    "price": 8.2
-  },
-  {
     "name": "Cootes B.",
     "price": 8.2
   },
@@ -4260,19 +4360,7 @@
     "price": 8.2
   },
   {
-    "name": "Duclair A.",
-    "price": 8.2
-  },
-  {
-    "name": "Finley J.",
-    "price": 8.2
-  },
-  {
-    "name": "Kapanen O.",
-    "price": 8.2
-  },
-  {
-    "name": "Kastelic M.",
+    "name": "Hanley J.",
     "price": 8.2
   },
   {
@@ -4280,23 +4368,19 @@
     "price": 8.2
   },
   {
-    "name": "MacEwen Z.",
-    "price": 8.2
-  },
-  {
-    "name": "McCarron M.",
-    "price": 8.2
-  },
-  {
-    "name": "Milano S.",
-    "price": 8.2
-  },
-  {
     "name": "Mitton R.",
     "price": 8.2
   },
   {
-    "name": "O'Reilly R.",
+    "name": "O'Connor D.",
+    "price": 8.2
+  },
+  {
+    "name": "Pickering O.",
+    "price": 8.2
+  },
+  {
+    "name": "Poehling R.",
     "price": 8.2
   },
   {
@@ -4304,23 +4388,23 @@
     "price": 8.2
   },
   {
-    "name": "Bertuzzi T.",
+    "name": "Copp A.",
     "price": 8.1
   },
   {
-    "name": "Blueger T.",
+    "name": "Drury J.",
     "price": 8.1
   },
   {
-    "name": "Grebyonkin N.",
+    "name": "Duclair A.",
     "price": 8.1
   },
   {
-    "name": "Halonen B.",
+    "name": "Iorio V.",
     "price": 8.1
   },
   {
-    "name": "O'Connor D.",
+    "name": "Kapanen O.",
     "price": 8.1
   },
   {
@@ -4328,15 +4412,11 @@
     "price": 8.1
   },
   {
-    "name": "Dickinson J.",
+    "name": "Dellandrea T.",
     "price": 8.0
   },
   {
-    "name": "Douglas C.",
-    "price": 8.0
-  },
-  {
-    "name": "Honzek S.",
+    "name": "Harkins J.",
     "price": 8.0
   },
   {
@@ -4344,19 +4424,11 @@
     "price": 8.0
   },
   {
-    "name": "Karlsson L.",
-    "price": 8.0
-  },
-  {
-    "name": "Lekkerimaki J.",
-    "price": 8.0
-  },
-  {
     "name": "Lund C.",
     "price": 8.0
   },
   {
-    "name": "Nesterenko N.",
+    "name": "McGroarty R.",
     "price": 8.0
   },
   {
@@ -4368,7 +4440,27 @@
     "price": 7.9
   },
   {
+    "name": "Bryson J.",
+    "price": 7.9
+  },
+  {
     "name": "Farrell S.",
+    "price": 7.9
+  },
+  {
+    "name": "Girgensons Z.",
+    "price": 7.9
+  },
+  {
+    "name": "Glass C.",
+    "price": 7.9
+  },
+  {
+    "name": "Holmstrom S.",
+    "price": 7.9
+  },
+  {
+    "name": "Howe T.",
     "price": 7.9
   },
   {
@@ -4376,7 +4468,23 @@
     "price": 7.9
   },
   {
+    "name": "Othmann B.",
+    "price": 7.9
+  },
+  {
+    "name": "Palát O.",
+    "price": 7.9
+  },
+  {
     "name": "Rohrer V.",
+    "price": 7.9
+  },
+  {
+    "name": "Shabanov M.",
+    "price": 7.9
+  },
+  {
+    "name": "Shea R.",
     "price": 7.9
   },
   {
@@ -4388,7 +4496,11 @@
     "price": 7.9
   },
   {
-    "name": "Bean J.",
+    "name": "Agozzino A.",
+    "price": 7.8
+  },
+  {
+    "name": "Bardakov Z.",
     "price": 7.8
   },
   {
@@ -4396,7 +4508,7 @@
     "price": 7.8
   },
   {
-    "name": "Edstrom A.",
+    "name": "Hallander F.",
     "price": 7.8
   },
   {
@@ -4404,31 +4516,23 @@
     "price": 7.8
   },
   {
-    "name": "Laba N.",
-    "price": 7.8
-  },
-  {
-    "name": "Lazar C.",
-    "price": 7.8
-  },
-  {
     "name": "Legare N.",
     "price": 7.8
   },
   {
-    "name": "Turcotte A.",
+    "name": "Lucic M.",
     "price": 7.8
   },
   {
-    "name": "Beck O.",
+    "name": "Zamula E.",
+    "price": 7.8
+  },
+  {
+    "name": "Brown C.",
     "price": 7.7
   },
   {
-    "name": "Brodzinski J.",
-    "price": 7.7
-  },
-  {
-    "name": "Crevier L.",
+    "name": "Compher J.",
     "price": 7.7
   },
   {
@@ -4436,15 +4540,15 @@
     "price": 7.7
   },
   {
-    "name": "Nyman J.",
+    "name": "Kiviranta J.",
     "price": 7.7
   },
   {
-    "name": "Parssinen J.",
+    "name": "Lomberg R.",
     "price": 7.7
   },
   {
-    "name": "Pitre C.",
+    "name": "Raddysh T.",
     "price": 7.7
   },
   {
@@ -4452,23 +4556,47 @@
     "price": 7.7
   },
   {
-    "name": "Viel J.",
-    "price": 7.7
+    "name": "Beck O.",
+    "price": 7.6
+  },
+  {
+    "name": "Brodzinski J.",
+    "price": 7.6
+  },
+  {
+    "name": "Desharnais V.",
+    "price": 7.6
+  },
+  {
+    "name": "Dvorsky D.",
+    "price": 7.6
+  },
+  {
+    "name": "Finley J.",
+    "price": 7.6
   },
   {
     "name": "Hamblin J.",
     "price": 7.6
   },
   {
-    "name": "Jones B.",
+    "name": "James D.",
     "price": 7.6
   },
   {
-    "name": "Lapierre H.",
+    "name": "Karlsson L.",
     "price": 7.6
   },
   {
-    "name": "Nurmi J.",
+    "name": "Kindel B.",
+    "price": 7.6
+  },
+  {
+    "name": "Koivunen V.",
+    "price": 7.6
+  },
+  {
+    "name": "Mittelstadt C.",
     "price": 7.6
   },
   {
@@ -4476,23 +4604,27 @@
     "price": 7.6
   },
   {
-    "name": "Shabanov M.",
-    "price": 7.6
+    "name": "Acciari N.",
+    "price": 7.5
   },
   {
-    "name": "Wennberg A.",
-    "price": 7.6
+    "name": "Blueger T.",
+    "price": 7.5
   },
   {
-    "name": "Catton B.",
+    "name": "Dadonov E.",
+    "price": 7.5
+  },
+  {
+    "name": "Laba N.",
+    "price": 7.5
+  },
+  {
+    "name": "McLaughlin M.",
     "price": 7.5
   },
   {
     "name": "Ostapchuk Z.",
-    "price": 7.5
-  },
-  {
-    "name": "Raddysh T.",
     "price": 7.5
   },
   {
@@ -4504,11 +4636,11 @@
     "price": 7.4
   },
   {
-    "name": "Dellandrea T.",
+    "name": "Gagnier R.",
     "price": 7.4
   },
   {
-    "name": "Gagnier R.",
+    "name": "Goncalves G.",
     "price": 7.4
   },
   {
@@ -4520,19 +4652,7 @@
     "price": 7.4
   },
   {
-    "name": "Iorio V.",
-    "price": 7.4
-  },
-  {
     "name": "Israels H.",
-    "price": 7.4
-  },
-  {
-    "name": "MacDermid K.",
-    "price": 7.4
-  },
-  {
-    "name": "Mikheyev I.",
     "price": 7.4
   },
   {
@@ -4540,7 +4660,7 @@
     "price": 7.4
   },
   {
-    "name": "Moverare J.",
+    "name": "Reaves R.",
     "price": 7.4
   },
   {
@@ -4548,11 +4668,19 @@
     "price": 7.4
   },
   {
-    "name": "Smith C.",
+    "name": "Sheary C.",
     "price": 7.4
   },
   {
-    "name": "Couture L.",
+    "name": "Tanev C.",
+    "price": 7.4
+  },
+  {
+    "name": "Vlasic A.",
+    "price": 7.4
+  },
+  {
+    "name": "MacEwen Z.",
     "price": 7.3
   },
   {
@@ -4560,11 +4688,19 @@
     "price": 7.3
   },
   {
-    "name": "Minten F.",
-    "price": 7.3
+    "name": "Erne A.",
+    "price": 7.2
   },
   {
-    "name": "Faksa R.",
+    "name": "Gaudette A.",
+    "price": 7.2
+  },
+  {
+    "name": "Lekkerimaki J.",
+    "price": 7.2
+  },
+  {
+    "name": "Brindley G.",
     "price": 7.1
   },
   {
@@ -4576,14 +4712,6 @@
     "price": 7.1
   },
   {
-    "name": "Holmberg P.",
-    "price": 7.1
-  },
-  {
-    "name": "Jankowski M.",
-    "price": 7.1
-  },
-  {
     "name": "Lachance S.",
     "price": 7.1
   },
@@ -4592,59 +4720,59 @@
     "price": 7.1
   },
   {
-    "name": "Holmstrom S.",
+    "name": "Parssinen J.",
+    "price": 7.1
+  },
+  {
+    "name": "Pitre C.",
+    "price": 7.1
+  },
+  {
+    "name": "Ritchie C.",
+    "price": 7.1
+  },
+  {
+    "name": "Kessel M.",
     "price": 7.0
-  },
-  {
-    "name": "Janmark M.",
-    "price": 7.0
-  },
-  {
-    "name": "Lomberg R.",
-    "price": 7.0
-  },
-  {
-    "name": "Sasson M.",
-    "price": 7.0
-  },
-  {
-    "name": "Stephenson C.",
-    "price": 7.0
-  },
-  {
-    "name": "Vlasic A.",
-    "price": 7.0
-  },
-  {
-    "name": "Aman N.",
-    "price": 6.9
-  },
-  {
-    "name": "Harkins J.",
-    "price": 6.9
   },
   {
     "name": "Moore O.",
     "price": 6.9
   },
   {
-    "name": "Poehling R.",
+    "name": "Ostlund N.",
     "price": 6.9
-  },
-  {
-    "name": "Wiesblatt O.",
-    "price": 6.9
-  },
-  {
-    "name": "Jost T.",
-    "price": 6.8
   },
   {
     "name": "Blackwell C.",
+    "price": 6.8
+  },
+  {
+    "name": "Edstrom A.",
+    "price": 6.8
+  },
+  {
+    "name": "Faksa R.",
+    "price": 6.8
+  },
+  {
+    "name": "Halonen B.",
+    "price": 6.8
+  },
+  {
+    "name": "Jarnkrok C.",
+    "price": 6.8
+  },
+  {
+    "name": "Beecher J.",
     "price": 6.7
   },
   {
-    "name": "McDonald K.",
+    "name": "Holmberg P.",
+    "price": 6.7
+  },
+  {
+    "name": "Kirkland J.",
     "price": 6.7
   },
   {
@@ -4652,43 +4780,31 @@
     "price": 6.7
   },
   {
-    "name": "Wheatcroft C.",
-    "price": 6.7
-  },
-  {
-    "name": "Winterton R.",
-    "price": 6.7
-  },
-  {
-    "name": "Schwindt C.",
+    "name": "Graf C.",
     "price": 6.6
   },
   {
-    "name": "Svechkov F.",
+    "name": "Jankowski M.",
     "price": 6.6
+  },
+  {
+    "name": "MacEachern M.",
+    "price": 6.6
+  },
+  {
+    "name": "Johnston R.",
+    "price": 6.5
   },
   {
     "name": "Kolyachonok V.",
     "price": 6.5
   },
   {
-    "name": "Kurashev P.",
+    "name": "Lycksell O.",
     "price": 6.5
   },
   {
-    "name": "Lundestrom I.",
-    "price": 6.5
-  },
-  {
-    "name": "Bains A.",
-    "price": 6.4
-  },
-  {
-    "name": "Gaudreau F.",
-    "price": 6.4
-  },
-  {
-    "name": "Harris J.",
+    "name": "Highmore M.",
     "price": 6.4
   },
   {
@@ -4696,43 +4812,47 @@
     "price": 6.4
   },
   {
-    "name": "Lyubushkin I.",
+    "name": "Lilleberg E.",
     "price": 6.4
   },
   {
-    "name": "Erne A.",
+    "name": "Bourque M.",
     "price": 6.3
   },
   {
-    "name": "Glendening L.",
+    "name": "Steel S.",
     "price": 6.3
   },
   {
-    "name": "Kirkland J.",
-    "price": 6.3
-  },
-  {
-    "name": "Misa M.",
-    "price": 6.3
-  },
-  {
-    "name": "Pitlick T.",
-    "price": 6.3
-  },
-  {
-    "name": "Sheary C.",
+    "name": "Lizotte B.",
     "price": 6.2
   },
   {
-    "name": "Bourque M.",
-    "price": 6.1
+    "name": "Reichel L.",
+    "price": 6.2
   },
   {
     "name": "Bastian N.",
-    "price": 6.0
+    "price": 6.1
+  },
+  {
+    "name": "Glendening L.",
+    "price": 6.1
+  },
+  {
+    "name": "Lundestrom I.",
+    "price": 6.1
+  },
+  {
+    "name": "MacLean K.",
+    "price": 6.1
   },
   {
     "name": "Bradshaw S.",
+    "price": 6.0
+  },
+  {
+    "name": "Giles P.",
     "price": 6.0
   },
   {
@@ -4748,91 +4868,63 @@
     "price": 6.0
   },
   {
-    "name": "Steel S.",
-    "price": 6.0
-  },
-  {
-    "name": "Johnston R.",
+    "name": "Bains A.",
     "price": 5.8
   },
   {
-    "name": "Mittelstadt C.",
+    "name": "Goodrow B.",
     "price": 5.8
   },
   {
-    "name": "Reaves R.",
+    "name": "Khusnutdinov M.",
     "price": 5.8
   },
   {
-    "name": "Stastney S.",
+    "name": "Leddy N.",
     "price": 5.8
   },
   {
-    "name": "Desharnais V.",
-    "price": 5.7
+    "name": "Lyubushkin I.",
+    "price": 5.8
+  },
+  {
+    "name": "Sasson M.",
+    "price": 5.8
   },
   {
     "name": "Harvey-Pinard R.",
     "price": 5.7
   },
   {
-    "name": "Hryckowian J.",
-    "price": 5.7
-  },
-  {
-    "name": "MacLean K.",
-    "price": 5.7
-  },
-  {
-    "name": "Martin B.",
-    "price": 5.7
-  },
-  {
-    "name": "Goodrow B.",
+    "name": "Douglas C.",
     "price": 5.6
   },
   {
-    "name": "Gaudette A.",
+    "name": "Hryckowian J.",
     "price": 5.5
   },
   {
-    "name": "Graf C.",
-    "price": 5.3
+    "name": "Lafferty S.",
+    "price": 5.4
   },
   {
-    "name": "Rooney K.",
-    "price": 5.3
+    "name": "Slaggert L.",
+    "price": 5.2
   },
   {
     "name": "Greene R.",
     "price": 5.1
   },
   {
-    "name": "Leddy N.",
-    "price": 5.1
+    "name": "Aman N.",
+    "price": 4.7
   },
   {
-    "name": "Lafferty S.",
-    "price": 4.9
-  },
-  {
-    "name": "Beecher J.",
-    "price": 4.4
-  },
-  {
-    "name": "Slaggert L.",
-    "price": 4.1
-  },
-  {
-    "name": "Khusnutdinov M.",
-    "price": 3.2
+    "name": "MacDermid K.",
+    "price": 4.6
   },
   {
     "name": "Back O.",
-    "price": 3.0
-  },
-  {
-    "name": "Reichel L.",
     "price": 2.9
   }
 ]

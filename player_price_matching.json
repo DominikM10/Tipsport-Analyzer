@@ -1,317 +1,587 @@
 {
-  "total_players": 51,
-  "matched_count": 51,
-  "direct_matches": 51,
-  "variant_matches": 0,
+  "total_players": 96,
+  "matched_count": 96,
+  "direct_matches": 91,
+  "variant_matches": 5,
   "common_matches": 0,
   "fuzzy_matches": 0,
   "unmatched_count": 0,
   "details": [
     {
-      "player": "Draisaitl L.",
+      "player": "Appleton M.",
       "match_type": "direct",
-      "matched_with": "Draisaitl L.",
-      "price": 19.8
-    },
-    {
-      "player": "Frederic T.",
-      "match_type": "direct",
-      "matched_with": "Frederic T.",
-      "price": 12.8
-    },
-    {
-      "player": "Henrique A.",
-      "match_type": "direct",
-      "matched_with": "Henrique A.",
-      "price": 10.0
-    },
-    {
-      "player": "Howard I.",
-      "match_type": "direct",
-      "matched_with": "Howard I.",
-      "price": 8.3
-    },
-    {
-      "player": "Hyman Z.",
-      "match_type": "direct",
-      "matched_with": "Hyman Z.",
-      "price": 20.8
-    },
-    {
-      "player": "Janmark M.",
-      "match_type": "direct",
-      "matched_with": "Janmark M.",
-      "price": 7.0
-    },
-    {
-      "player": "Kapanen K.",
-      "match_type": "direct",
-      "matched_with": "Kapanen K.",
-      "price": 11.2
-    },
-    {
-      "player": "Lazar C.",
-      "match_type": "direct",
-      "matched_with": "Lazar C.",
-      "price": 7.8
-    },
-    {
-      "player": "Mangiapane A.",
-      "match_type": "direct",
-      "matched_with": "Mangiapane A.",
-      "price": 9.6
-    },
-    {
-      "player": "Mcdavid C.",
-      "match_type": "case_insensitive",
-      "matched_with": "mcdavid c.",
-      "price": 21.9
-    },
-    {
-      "player": "Nugent-hopkins R.",
-      "match_type": "case_insensitive",
-      "matched_with": "nugent-hopkins r.",
-      "price": 14.8
-    },
-    {
-      "player": "Philp N.",
-      "match_type": "direct",
-      "matched_with": "Philp N.",
-      "price": 9.6
-    },
-    {
-      "player": "Podkolzin V.",
-      "match_type": "direct",
-      "matched_with": "Podkolzin V.",
-      "price": 13.2
-    },
-    {
-      "player": "Roslovic J.",
-      "match_type": "direct",
-      "matched_with": "Roslovic J.",
-      "price": 11.5
-    },
-    {
-      "player": "Savoie M.",
-      "match_type": "direct",
-      "matched_with": "Savoie M.",
-      "price": 9.1
-    },
-    {
-      "player": "Tomasek D.",
-      "match_type": "direct",
-      "matched_with": "Tomasek D.",
-      "price": 9.7
-    },
-    {
-      "player": "Bouchard E.",
-      "match_type": "direct",
-      "matched_with": "Bouchard E.",
-      "price": 24.7
-    },
-    {
-      "player": "Ekholm M.",
-      "match_type": "direct",
-      "matched_with": "Ekholm M.",
-      "price": 17.4
-    },
-    {
-      "player": "Emberson T.",
-      "match_type": "direct",
-      "matched_with": "Emberson T.",
-      "price": 9.9
-    },
-    {
-      "player": "Kulak B.",
-      "match_type": "direct",
-      "matched_with": "Kulak B.",
-      "price": 11.4
-    },
-    {
-      "player": "Nurse D.",
-      "match_type": "direct",
-      "matched_with": "Nurse D.",
-      "price": 17.2
-    },
-    {
-      "player": "Regula A.",
-      "match_type": "direct",
-      "matched_with": "Regula A.",
-      "price": 11.4
-    },
-    {
-      "player": "Stecher T.",
-      "match_type": "direct",
-      "matched_with": "Stecher T.",
+      "matched_with": "Appleton M.",
       "price": 9.5
     },
     {
-      "player": "Walman J.",
+      "player": "Berggren J.",
       "match_type": "direct",
-      "matched_with": "Walman J.",
-      "price": 18.1
+      "matched_with": "Berggren J.",
+      "price": 8.8
     },
     {
-      "player": "Pickard C.",
+      "player": "Compher J.",
       "match_type": "direct",
-      "matched_with": "Pickard C.",
-      "price": 14.7
+      "matched_with": "Compher J.",
+      "price": 7.7
     },
     {
-      "player": "Skinner S.",
+      "player": "Copp A.",
       "match_type": "direct",
-      "matched_with": "Skinner S.",
-      "price": 16.2
+      "matched_with": "Copp A.",
+      "price": 8.1
     },
     {
-      "player": "Blais S.",
-      "match_type": "direct",
-      "matched_with": "Blais S.",
-      "price": 12.2
-    },
-    {
-      "player": "Cowan E.",
-      "match_type": "direct",
-      "matched_with": "Cowan E.",
-      "price": 11.0
-    },
-    {
-      "player": "Domi M.",
-      "match_type": "direct",
-      "matched_with": "Domi M.",
-      "price": 11.4
-    },
-    {
-      "player": "Jarnkrok C.",
-      "match_type": "direct",
-      "matched_with": "Jarnkrok C.",
-      "price": 9.1
-    },
-    {
-      "player": "Joshua D.",
-      "match_type": "direct",
-      "matched_with": "Joshua D.",
-      "price": 12.3
-    },
-    {
-      "player": "Knies M.",
-      "match_type": "direct",
-      "matched_with": "Knies M.",
-      "price": 17.6
-    },
-    {
-      "player": "Laughton S.",
-      "match_type": "direct",
-      "matched_with": "Laughton S.",
-      "price": 13.0
-    },
-    {
-      "player": "Lorentz S.",
-      "match_type": "direct",
-      "matched_with": "Lorentz S.",
-      "price": 12.1
-    },
-    {
-      "player": "Maccelli M.",
-      "match_type": "direct",
-      "matched_with": "Maccelli M.",
-      "price": 10.8
-    },
-    {
-      "player": "Matthews A.",
-      "match_type": "direct",
-      "matched_with": "Matthews A.",
-      "price": 24.5
-    },
-    {
-      "player": "Mcmann B.",
+      "player": "Debrincat A.",
       "match_type": "case_insensitive",
-      "matched_with": "mcmann b.",
-      "price": 16.2
+      "matched_with": "debrincat a.",
+      "price": 18.8
     },
     {
-      "player": "Nylander W.",
+      "player": "Finnie E.",
       "match_type": "direct",
-      "matched_with": "Nylander W.",
-      "price": 19.4
+      "matched_with": "Finnie E.",
+      "price": 11.1
     },
     {
-      "player": "Robertson N.",
+      "player": "Kane P.",
       "match_type": "direct",
-      "matched_with": "Robertson N.",
-      "price": 12.9
+      "matched_with": "Kane P.",
+      "price": 15.1
     },
     {
-      "player": "Roy N.",
+      "player": "Kasper M.",
       "match_type": "direct",
-      "matched_with": "Roy N.",
-      "price": 11.4
+      "matched_with": "Kasper M.",
+      "price": 13.7
     },
     {
-      "player": "Tavares J.",
+      "player": "Larkin D.",
       "match_type": "direct",
-      "matched_with": "Tavares J.",
-      "price": 18.1
+      "matched_with": "Larkin D.",
+      "price": 17.4
     },
     {
-      "player": "Benoit S.",
+      "player": "Rasmussen M.",
       "match_type": "direct",
-      "matched_with": "Benoit S.",
-      "price": 12.5
+      "matched_with": "Rasmussen M.",
+      "price": 9.6
     },
     {
-      "player": "Carlo B.",
+      "player": "Raymond L.",
       "match_type": "direct",
-      "matched_with": "Carlo B.",
+      "matched_with": "Raymond L.",
+      "price": 14.8
+    },
+    {
+      "player": "Soderblom E.",
+      "match_type": "direct",
+      "matched_with": "Soderblom E.",
+      "price": 9.8
+    },
+    {
+      "player": "Riemsdyk J.",
+      "match_type": "variant",
+      "matched_variant": "jr.",
+      "price": 18.6
+    },
+    {
+      "player": "Watson A.",
+      "match_type": "direct",
+      "matched_with": "Watson A.",
+      "price": 9.0
+    },
+    {
+      "player": "Bernard-docker J.",
+      "match_type": "case_insensitive",
+      "matched_with": "bernard-docker j.",
+      "price": 10.3
+    },
+    {
+      "player": "Chiarot B.",
+      "match_type": "direct",
+      "matched_with": "Chiarot B.",
+      "price": 13.1
+    },
+    {
+      "player": "Edvinsson S.",
+      "match_type": "direct",
+      "matched_with": "Edvinsson S.",
+      "price": 11.5
+    },
+    {
+      "player": "Hamonic T.",
+      "match_type": "direct",
+      "matched_with": "Hamonic T.",
       "price": 10.9
     },
     {
-      "player": "Ekman-larsson O.",
+      "player": "Johansson A.",
+      "match_type": "direct",
+      "matched_with": "Johansson A.",
+      "price": 10.6
+    },
+    {
+      "player": "Sandin-pellikka A.",
+      "match_type": "variant",
+      "matched_variant": "a.s",
+      "price": 19.1
+    },
+    {
+      "player": "Seider M.",
+      "match_type": "direct",
+      "matched_with": "Seider M.",
+      "price": 18.7
+    },
+    {
+      "player": "Gibson J.",
+      "match_type": "direct",
+      "matched_with": "Gibson J.",
+      "price": 16.6
+    },
+    {
+      "player": "Talbot C.",
+      "match_type": "direct",
+      "matched_with": "Talbot C.",
+      "price": 15.0
+    },
+    {
+      "player": "Beauvillier A.",
+      "match_type": "direct",
+      "matched_with": "Beauvillier A.",
+      "price": 13.1
+    },
+    {
+      "player": "Dowd N.",
+      "match_type": "direct",
+      "matched_with": "Dowd N.",
+      "price": 10.0
+    },
+    {
+      "player": "Dubois P.",
+      "match_type": "direct",
+      "matched_with": "Dubois P.",
+      "price": 13.2
+    },
+    {
+      "player": "Duhaime B.",
+      "match_type": "direct",
+      "matched_with": "Duhaime B.",
+      "price": 11.1
+    },
+    {
+      "player": "Frank E.",
+      "match_type": "direct",
+      "matched_with": "Frank E.",
+      "price": 8.6
+    },
+    {
+      "player": "Lapierre H.",
+      "match_type": "direct",
+      "matched_with": "Lapierre H.",
+      "price": 8.5
+    },
+    {
+      "player": "Leonard R.",
+      "match_type": "direct",
+      "matched_with": "Leonard R.",
+      "price": 12.5
+    },
+    {
+      "player": "Mcmichael C.",
       "match_type": "case_insensitive",
-      "matched_with": "ekman-larsson o.",
+      "matched_with": "mcmichael c.",
+      "price": 12.5
+    },
+    {
+      "player": "Milano S.",
+      "match_type": "direct",
+      "matched_with": "Milano S.",
+      "price": 8.7
+    },
+    {
+      "player": "Ovechkin A.",
+      "match_type": "direct",
+      "matched_with": "Ovechkin A.",
+      "price": 24.9
+    },
+    {
+      "player": "Protas A.",
+      "match_type": "direct",
+      "matched_with": "Protas A.",
+      "price": 12.8
+    },
+    {
+      "player": "Sourdif J.",
+      "match_type": "direct",
+      "matched_with": "Sourdif J.",
+      "price": 10.7
+    },
+    {
+      "player": "Strome D.",
+      "match_type": "direct",
+      "matched_with": "Strome D.",
+      "price": 14.4
+    },
+    {
+      "player": "Wilson T.",
+      "match_type": "direct",
+      "matched_with": "Wilson T.",
+      "price": 18.7
+    },
+    {
+      "player": "Carlson J.",
+      "match_type": "direct",
+      "matched_with": "Carlson J.",
+      "price": 19.7
+    },
+    {
+      "player": "Chisholm D.",
+      "match_type": "direct",
+      "matched_with": "Chisholm D.",
+      "price": 10.7
+    },
+    {
+      "player": "Chychrun J.",
+      "match_type": "direct",
+      "matched_with": "Chychrun J.",
+      "price": 21.3
+    },
+    {
+      "player": "Fehérváry M.",
+      "match_type": "direct",
+      "matched_with": "Fehérváry M.",
       "price": 14.2
     },
     {
-      "player": "Mccabe J.",
+      "player": "Mcilrath D.",
       "match_type": "case_insensitive",
-      "matched_with": "mccabe j.",
-      "price": 13.3
+      "matched_with": "mcilrath d.",
+      "price": 12.8
     },
     {
-      "player": "Mermis D.",
+      "player": "Roy M.",
       "match_type": "direct",
-      "matched_with": "Mermis D.",
+      "matched_with": "Roy M.",
+      "price": 14.3
+    },
+    {
+      "player": "Sandin R.",
+      "match_type": "direct",
+      "matched_with": "Sandin R.",
+      "price": 13.4
+    },
+    {
+      "player": "Riemsdyk T.",
+      "match_type": "variant",
+      "matched_variant": "r t",
+      "price": 14.5
+    },
+    {
+      "player": "Lindgren C.",
+      "match_type": "direct",
+      "matched_with": "Lindgren C.",
+      "price": 16.7
+    },
+    {
+      "player": "Thompson L.",
+      "match_type": "direct",
+      "matched_with": "Thompson L.",
+      "price": 18.4
+    },
+    {
+      "player": "Carlsson L.",
+      "match_type": "direct",
+      "matched_with": "Carlsson L.",
+      "price": 13.7
+    },
+    {
+      "player": "Colangelo S.",
+      "match_type": "direct",
+      "matched_with": "Colangelo S.",
+      "price": 9.5
+    },
+    {
+      "player": "Gauthier C.",
+      "match_type": "direct",
+      "matched_with": "Gauthier C.",
+      "price": 18.3
+    },
+    {
+      "player": "Granlund M.",
+      "match_type": "direct",
+      "matched_with": "Granlund M.",
+      "price": 14.4
+    },
+    {
+      "player": "Harkins J.",
+      "match_type": "direct",
+      "matched_with": "Harkins J.",
+      "price": 8.0
+    },
+    {
+      "player": "Johnston R.",
+      "match_type": "direct",
+      "matched_with": "Johnston R.",
+      "price": 6.5
+    },
+    {
+      "player": "Killorn A.",
+      "match_type": "direct",
+      "matched_with": "Killorn A.",
+      "price": 11.0
+    },
+    {
+      "player": "Kreider C.",
+      "match_type": "direct",
+      "matched_with": "Kreider C.",
+      "price": 12.7
+    },
+    {
+      "player": "Mctavish M.",
+      "match_type": "case_insensitive",
+      "matched_with": "mctavish m.",
+      "price": 15.4
+    },
+    {
+      "player": "Nesterenko N.",
+      "match_type": "direct",
+      "matched_with": "Nesterenko N.",
+      "price": 9.6
+    },
+    {
+      "player": "Poehling R.",
+      "match_type": "direct",
+      "matched_with": "Poehling R.",
+      "price": 8.2
+    },
+    {
+      "player": "Sennecke B.",
+      "match_type": "direct",
+      "matched_with": "Sennecke B.",
+      "price": 10.0
+    },
+    {
+      "player": "Strome R.",
+      "match_type": "direct",
+      "matched_with": "Strome R.",
+      "price": 9.8
+    },
+    {
+      "player": "Terry T.",
+      "match_type": "direct",
+      "matched_with": "Terry T.",
+      "price": 14.0
+    },
+    {
+      "player": "Vatrano F.",
+      "match_type": "direct",
+      "matched_with": "Vatrano F.",
+      "price": 15.0
+    },
+    {
+      "player": "Gudas R.",
+      "match_type": "direct",
+      "matched_with": "Gudas R.",
+      "price": 13.2
+    },
+    {
+      "player": "Helleson D.",
+      "match_type": "direct",
+      "matched_with": "Helleson D.",
+      "price": 12.5
+    },
+    {
+      "player": "Lacombe J.",
+      "match_type": "case_insensitive",
+      "matched_with": "lacombe j.",
+      "price": 15.8
+    },
+    {
+      "player": "Mintyukov P.",
+      "match_type": "direct",
+      "matched_with": "Mintyukov P.",
+      "price": 9.8
+    },
+    {
+      "player": "Moore I.",
+      "match_type": "direct",
+      "matched_with": "Moore I.",
+      "price": 10.8
+    },
+    {
+      "player": "Trouba J.",
+      "match_type": "direct",
+      "matched_with": "Trouba J.",
+      "price": 15.5
+    },
+    {
+      "player": "Zellweger O.",
+      "match_type": "direct",
+      "matched_with": "Zellweger O.",
+      "price": 15.5
+    },
+    {
+      "player": "Dostal L.",
+      "match_type": "variant",
+      "matched_variant": "ld.",
+      "price": 22.2
+    },
+    {
+      "player": "Mrazek P.",
+      "match_type": "variant",
+      "matched_variant": "mrazek.p",
+      "price": 16.0
+    },
+    {
+      "player": "Barzal M.",
+      "match_type": "direct",
+      "matched_with": "Barzal M.",
+      "price": 15.2
+    },
+    {
+      "player": "Cizikas C.",
+      "match_type": "direct",
+      "matched_with": "Cizikas C.",
+      "price": 9.7
+    },
+    {
+      "player": "Drouin J.",
+      "match_type": "direct",
+      "matched_with": "Drouin J.",
+      "price": 9.6
+    },
+    {
+      "player": "Duclair A.",
+      "match_type": "direct",
+      "matched_with": "Duclair A.",
+      "price": 8.1
+    },
+    {
+      "player": "Heineman E.",
+      "match_type": "direct",
+      "matched_with": "Heineman E.",
+      "price": 13.6
+    },
+    {
+      "player": "Holmstrom S.",
+      "match_type": "direct",
+      "matched_with": "Holmstrom S.",
+      "price": 7.9
+    },
+    {
+      "player": "Horvat B.",
+      "match_type": "direct",
+      "matched_with": "Horvat B.",
+      "price": 16.7
+    },
+    {
+      "player": "Lee A.",
+      "match_type": "direct",
+      "matched_with": "Lee A.",
+      "price": 13.5
+    },
+    {
+      "player": "Maclean K.",
+      "match_type": "case_insensitive",
+      "matched_with": "maclean k.",
+      "price": 6.1
+    },
+    {
+      "player": "Pageau J.",
+      "match_type": "direct",
+      "matched_with": "Pageau J.",
+      "price": 10.2
+    },
+    {
+      "player": "Palmieri K.",
+      "match_type": "direct",
+      "matched_with": "Palmieri K.",
+      "price": 13.6
+    },
+    {
+      "player": "Ritchie C.",
+      "match_type": "direct",
+      "matched_with": "Ritchie C.",
+      "price": 7.1
+    },
+    {
+      "player": "Shabanov M.",
+      "match_type": "direct",
+      "matched_with": "Shabanov M.",
+      "price": 7.9
+    },
+    {
+      "player": "Tsyplakov M.",
+      "match_type": "direct",
+      "matched_with": "Tsyplakov M.",
       "price": 10.4
     },
     {
-      "player": "Myers P.",
+      "player": "Bear E.",
       "match_type": "direct",
-      "matched_with": "Myers P.",
-      "price": 14.7
+      "matched_with": "Bear E.",
+      "price": 9.1
     },
     {
-      "player": "Rielly M.",
+      "player": "Boqvist A.",
       "match_type": "direct",
-      "matched_with": "Rielly M.",
-      "price": 16.8
+      "matched_with": "Boqvist A.",
+      "price": 10.3
     },
     {
-      "player": "Tanev C.",
-      "match_type": "direct",
-      "matched_with": "Tanev C.",
-      "price": 9.3
+      "player": "Deangelo T.",
+      "match_type": "case_insensitive",
+      "matched_with": "deangelo t.",
+      "price": 14.5
     },
     {
-      "player": "Primeau C.",
+      "player": "Mayfield S.",
       "match_type": "direct",
-      "matched_with": "Primeau C.",
-      "price": 17.1
+      "matched_with": "Mayfield S.",
+      "price": 8.9
     },
     {
-      "player": "Stolarz A.",
+      "player": "Pelech A.",
       "match_type": "direct",
-      "matched_with": "Stolarz A.",
-      "price": 18.9
+      "matched_with": "Pelech A.",
+      "price": 11.8
+    },
+    {
+      "player": "Pulock R.",
+      "match_type": "direct",
+      "matched_with": "Pulock R.",
+      "price": 11.8
+    },
+    {
+      "player": "Romanov A.",
+      "match_type": "direct",
+      "matched_with": "Romanov A.",
+      "price": 15.4
+    },
+    {
+      "player": "Schaefer M.",
+      "match_type": "direct",
+      "matched_with": "Schaefer M.",
+      "price": 16.2
+    },
+    {
+      "player": "Rittich D.",
+      "match_type": "direct",
+      "matched_with": "Rittich D.",
+      "price": 14.5
+    },
+    {
+      "player": "Sorokin I.",
+      "match_type": "direct",
+      "matched_with": "Sorokin I.",
+      "price": 16.0
+    },
+    {
+      "player": "Varlamov S.",
+      "match_type": "direct",
+      "matched_with": "Varlamov S.",
+      "price": 13.7
     }
   ]
 }

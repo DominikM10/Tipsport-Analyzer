@@ -16,15 +16,22 @@ class LineupConstraints:
     max_budget: float = 200.0   # Absolute maximum (no hard limit mentioned)
     penalty_per_million: float = 0.01  # 1% penalty per million over 100
     
-    # Lineup structure: 2G + 4D + 6F = 12 players
+    # Lineup structure: 6 starters (3F + 2D + 1G) + 6 substitutes (3F + 2D + 1G)
     required_positions: Dict[str, int] = None
+    substitute_positions: Dict[str, int] = None
     
     def __post_init__(self):
         if self.required_positions is None:
             self.required_positions = {
-                'G': 2,   # 2 Goalkeepers
-                'D': 4,   # 4 Defenders
-                'F': 6    # 6 Forwards
+                'G': 1,   # 1 Goalkeeper
+                'D': 2,   # 2 Defenders
+                'F': 3    # 3 Forwards
+            }
+        if self.substitute_positions is None:
+            self.substitute_positions = {
+                'G': 1,   # 1 Substitute Goalkeeper
+                'D': 2,   # 2 Substitute Defenders
+                'F': 3    # 3 Substitute Forwards
             }
 
 
@@ -159,22 +166,24 @@ class LineupOptimizer:
     ) -> Tuple[List[Dict], float, float]:
         """
         Builds a lineup using a greedy algorithm - selects best value players first.
-        Uses value_score which combines statistical production and price efficiency.
+        Optimizes for maximum effective fantasy points after budget penalties.
         
         Args:
             players: List of all available players with stats and prices
-            max_budget: Maximum budget to use (defaults to constraint max)
+            max_budget: Target budget to stay close to (defaults to base budget + 10%)
             
         Returns:
-            Tuple of (lineup, total_cost, effective_value_score)
+            Tuple of (lineup, total_cost, effective_fantasy_points)
         """
         if max_budget is None:
-            max_budget = self.constraints.max_budget
+            # Use base budget + 10% as target to minimize penalties
+            max_budget = self.constraints.base_budget * 1.1
             
-        # Filter out players with no value score or no price
+        # Filter out players with no price or name
+        # Allow value_score >= 0 to include goalies with 0 fantasy points (early season, backup goalies)
         valid_players = [
             p for p in players 
-            if p.get('value_score', 0) > 0 
+            if p.get('value_score', 0) >= 0  # Allow 0 for goalies without stats yet
             and p.get('cena', 0) > 0
             and p.get('name')  # Must have a name
         ]
@@ -202,26 +211,31 @@ class LineupOptimizer:
             print(f"  {pos}: {len(grouped[pos])} players")
         
         for pos in grouped:
-            # Rank by value_score (statistical production per dollar)
-            grouped[pos] = self.rank_players_by_value(grouped[pos], 'value_score')
+            # Rank by value_per_cost (fantasy points per dollar spent)
+            grouped[pos] = self.rank_players_by_value(grouped[pos], 'value_per_cost')
             
             # Print top players in each position
             if grouped[pos]:
-                print(f"\nTop 3 {pos} players:")
+                print(f"\nTop 3 {pos} players by value:")
                 for i, p in enumerate(grouped[pos][:3], 1):
-                    print(f"  {i}. {p.get('name')} - Value: {p.get('value_score', 0):.2f}, ${p.get('cena', 0):.1f}M")
+                    print(f"  {i}. {p.get('name')} - {p.get('projected_points', 0):.1f} pts @ ${p.get('cena', 0):.1f}M = {p.get('value_per_cost', 0):.2f} pts/$M")
         
-        lineup = []
+        starters = []
+        substitutes = []
         total_cost = 0.0
         total_value = 0.0
         
-        # Fill each position requirement greedily
+        print("\n=== Selecting STARTERS (Best value players) ===")
+        
+        # Fill starter positions greedily (best value)
         for position, count in self.constraints.required_positions.items():
             available = grouped[position]
             selected_count = 0
             
             if len(available) < count:
                 print(f"⚠️  Warning: Only {len(available)} {position} players available, need {count}")
+            elif len(available) == count:
+                print(f"ℹ️  Note: Exactly {count} {position} player(s) available - no alternatives for optimization")
             
             for player in available:
                 if selected_count >= count:
@@ -229,6 +243,8 @@ class LineupOptimizer:
                 
                 cost = player.get('cena', 0)
                 value = player.get('value_score', 0)
+                value_per_cost = player.get('value_per_cost', 0)
+                proj_points = player.get('projected_points', 0)
                 
                 # Skip invalid players
                 if cost <= 0 or value <= 0:
@@ -236,11 +252,20 @@ class LineupOptimizer:
                 
                 # Check if we can afford this player
                 if total_cost + cost <= max_budget:
-                    lineup.append(player)
+                    player['lineup_role'] = 'STARTER'
+                    starters.append(player)
                     total_cost += cost
                     total_value += value
                     selected_count += 1
-                    print(f"  Selected: {player.get('name')} ({position}) - ${cost:.1f}M, Value: {value:.2f}")
+                    
+                    # Add note if this is the only option and has poor value
+                    reason = ""
+                    if len(available) == 1 and value_per_cost < 5.0:
+                        reason = " [ONLY OPTION AVAILABLE]"
+                    elif len(available) == selected_count and value_per_cost < 5.0:
+                        reason = " [REQUIRED TO FILL POSITION]"
+                    
+                    print(f"  ✓ {player.get('name')} ({position}) - {proj_points:.1f} pts @ ${cost:.1f}M = {value_per_cost:.2f} pts/$M{reason}")
                 else:
                     # Try to find a cheaper alternative
                     cheaper_found = False
@@ -249,11 +274,14 @@ class LineupOptimizer:
                         alt_value = alt_player.get('value_score', 0)
                         
                         if alt_cost > 0 and alt_value > 0 and total_cost + alt_cost <= max_budget:
-                            lineup.append(alt_player)
+                            alt_player['lineup_role'] = 'STARTER'
+                            starters.append(alt_player)
                             total_cost += alt_cost
                             total_value += alt_value
                             selected_count += 1
-                            print(f"  Selected (budget): {alt_player.get('name')} ({position}) - ${alt_cost:.1f}M, Value: {alt_value:.2f}")
+                            alt_points = alt_player.get('projected_points', 0)
+                            alt_vpc = alt_player.get('value_per_cost', 0)
+                            print(f"  ✓ {alt_player.get('name')} ({position}) - {alt_points:.1f} pts @ ${alt_cost:.1f}M = {alt_vpc:.2f} pts/$M [budget pick]")
                             cheaper_found = True
                             break
                     
@@ -261,17 +289,211 @@ class LineupOptimizer:
                         print(f"  ⚠️  Could not afford {position} position #{selected_count + 1}")
             
             if selected_count < count:
-                print(f"⚠️  Warning: Only selected {selected_count}/{count} {position} players")
+                print(f"⚠️  Warning: Only selected {selected_count}/{count} {position} starters")
         
-        # Calculate effective value after budget penalties
-        # The value score already accounts for price efficiency,
-        # but we still apply budget penalty for going over base budget
-        penalty = self.calculate_budget_penalty(total_cost)
-        effective_value = total_value * (1 - penalty)
+        print(f"\n✓ Starters complete: {len(starters)} players, ${total_cost:.2f}M")
         
-        print(f"\n✓ Lineup complete: {len(lineup)} players, ${total_cost:.2f}M, {effective_value:.2f} value")
+        # OPTIMIZATION PHASE: Try swaps to maximize total effective fantasy points
+        # This only affects STARTERS - substitutes selected afterwards independently
+        print(f"\n🔄 Optimizing starter lineup (testing player swaps)...")
         
-        return lineup, total_cost, effective_value
+        # Remove selected starters from grouped for optimization
+        starter_ids = {id(p) for p in starters}
+        grouped_for_opt = {}
+        for pos in grouped:
+            grouped_for_opt[pos] = [p for p in grouped[pos] if id(p) not in starter_ids]
+        
+        starters, total_cost, effective_fp = self._optimize_lineup_swaps(
+            starters, grouped_for_opt, max_budget, 
+            initial_fp=sum(p.get('total_fantasy_points', 0) for p in starters) * (1 - self.calculate_budget_penalty(total_cost))
+        )
+        
+        print(f"\n✓ Optimized starters: {len(starters)} players, ${total_cost:.2f}M, {effective_fp:.1f} effective FP")
+        
+        # NOW select substitutes - these are INDEPENDENT and don't affect total cost
+        # Substitutes must be cheaper than the starter they would replace, but have best fantasy points among cheaper options
+        
+        print("\n=== Selecting SUBSTITUTES (Best cheaper alternatives for each starter) ===")
+        
+        # Group starters by position
+        starters_by_pos = {'G': [], 'D': [], 'F': []}
+        for player in starters:
+            pos = self.normalize_position(player.get('position', ''))
+            starters_by_pos[pos].append(player)
+        
+        # Track already used players (starters + already selected substitutes)
+        used_player_keys = {(p.get('name'), p.get('team')) for p in starters}
+        
+        # For each position, find the best substitutes
+        for position, count in self.constraints.substitute_positions.items():
+            position_starters = starters_by_pos[position]
+            selected_count = 0
+            
+            if not position_starters:
+                print(f"⚠️  No {position} starters to find substitutes for")
+                continue
+            
+            # Sort starters by cost (most expensive first) to find substitutes in priority order
+            sorted_position_starters = sorted(position_starters, key=lambda p: p.get('cena', 0), reverse=True)
+            
+            # For each substitute slot, find the best cheaper alternative
+            for i in range(count):
+                if i >= len(sorted_position_starters):
+                    # If we have more sub slots than starters, find additional cheaper options
+                    # Use the cheapest starter as the max cost reference
+                    reference_starter = min(position_starters, key=lambda p: p.get('cena', 0))
+                else:
+                    # Find substitute for the i-th most expensive starter
+                    reference_starter = sorted_position_starters[i]
+                
+                max_cost = reference_starter.get('cena', 0)
+                
+                # Find all available players cheaper than this starter
+                available = grouped[position]
+                
+                cheaper_alternatives = [
+                    p for p in available 
+                    if (p.get('name'), p.get('team')) not in used_player_keys  # Not already used
+                    and p.get('cena', 0) < max_cost  # Cheaper than starter
+                    and p.get('cena', 0) > 0  # Valid price
+                    and p.get('total_fantasy_points', 0) > 0  # Has fantasy points
+                ]
+                
+                if not cheaper_alternatives:
+                    print(f"  ⚠️  No cheaper alternatives found for {reference_starter.get('name')} (${max_cost:.1f}M)")
+                    continue
+                
+                # Select the one with HIGHEST fantasy points (best value among cheaper options)
+                best_sub = max(cheaper_alternatives, key=lambda p: p.get('total_fantasy_points', 0))
+                best_sub['lineup_role'] = 'SUBSTITUTE'
+                best_sub['replaces'] = reference_starter.get('name')
+                substitutes.append(best_sub)
+                
+                # Mark as used so we don't select again
+                used_player_keys.add((best_sub.get('name'), best_sub.get('team')))
+                
+                cost = best_sub.get('cena', 0)
+                proj_points = best_sub.get('total_fantasy_points', 0)
+                savings = max_cost - cost
+                
+                print(f"  ✓ {best_sub.get('name')} ({position}) - {proj_points:.1f} pts @ ${cost:.1f}M (saves ${savings:.1f}M vs {reference_starter.get('name')})")
+                selected_count += 1
+            
+            if selected_count < count:
+                print(f"⚠️  Warning: Only selected {selected_count}/{count} {position} substitutes")
+        
+        # Combine starters and substitutes for reporting (but subs don't affect cost/optimization)
+        lineup = starters + substitutes
+        
+        # Note: total_cost and effective_fp are already calculated from starters only
+        print(f"\n✅ Final lineup: {len(starters)} starters + {len(substitutes)} substitutes = {len(lineup)} total")
+        print(f"   Starter cost: ${total_cost:.2f}M (substitutes are independent)")
+        print(f"   Effective Fantasy Points: {effective_fp:.1f} (from starters only)")
+        
+        return lineup, total_cost, effective_fp
+    
+    def _optimize_lineup_swaps(
+        self,
+        lineup: List[Dict],
+        available_grouped: Dict[str, List[Dict]],
+        max_budget: float,
+        initial_fp: float,
+        max_iterations: int = 100
+    ) -> Tuple[List[Dict], float, float]:
+        """
+        Optimize lineup by trying player swaps to maximize total effective fantasy points.
+        This fixes the greedy algorithm's limitation of only considering individual value ratios.
+        
+        Strategy:
+        1. Try swapping each player with alternatives from their position
+        2. Accept swap if it increases total effective fantasy points
+        3. Consider budget impact - sometimes a cheaper player + budget headroom = better total
+        
+        Args:
+            lineup: Current lineup
+            available_grouped: Available players grouped by position
+            max_budget: Maximum budget constraint
+            initial_fp: Initial effective fantasy points
+            max_iterations: Maximum swap attempts
+            
+        Returns:
+            Optimized (lineup, total_cost, effective_fantasy_points)
+        """
+        best_lineup = lineup.copy()
+        best_cost = sum(p.get('cena', 0) for p in best_lineup)
+        best_fp = initial_fp
+        improvements = 0
+        
+        # Build list of all available players (not in current lineup)
+        lineup_ids = {(p.get('name'), p.get('team')) for p in lineup}
+        
+        for iteration in range(max_iterations):
+            improved = False
+            
+            # Try swapping each player in the lineup
+            for i, current_player in enumerate(best_lineup):
+                current_pos = self.normalize_position(current_player.get('position', ''))
+                current_cost = current_player.get('cena', 0)
+                current_role = current_player.get('lineup_role', 'STARTER')
+                
+                # Get alternative players from same position (not in lineup)
+                alternatives = [
+                    p for p in available_grouped.get(current_pos, [])
+                    if (p.get('name'), p.get('team')) not in lineup_ids
+                ]
+                
+                # Try each alternative
+                for alt_player in alternatives[:20]:  # Limit to top 20 for speed
+                    alt_cost = alt_player.get('cena', 0)
+                    
+                    # Calculate new lineup cost
+                    new_cost = best_cost - current_cost + alt_cost
+                    
+                    # Skip if over max budget
+                    if new_cost > max_budget * 1.15:  # Allow 15% over for exploration
+                        continue
+                    
+                    # Create test lineup with swap
+                    test_lineup = best_lineup.copy()
+                    test_lineup[i] = alt_player.copy()
+                    test_lineup[i]['lineup_role'] = current_role  # Preserve role
+                    
+                    # Calculate new effective fantasy points
+                    test_raw_fp = sum(p.get('total_fantasy_points', 0) for p in test_lineup)
+                    test_penalty = self.calculate_budget_penalty(new_cost)
+                    test_effective_fp = test_raw_fp * (1 - test_penalty)
+                    
+                    # Accept if improvement found
+                    if test_effective_fp > best_fp:
+                        print(f"  ✓ Swap: {current_player.get('name')} → {alt_player.get('name')} "
+                              f"({current_pos}, ${current_cost:.1f}M → ${alt_cost:.1f}M) "
+                              f"= +{test_effective_fp - best_fp:.1f} pts")
+                        
+                        # Update best lineup
+                        lineup_ids.remove((current_player.get('name'), current_player.get('team')))
+                        lineup_ids.add((alt_player.get('name'), alt_player.get('team')))
+                        
+                        best_lineup = test_lineup
+                        best_cost = new_cost
+                        best_fp = test_effective_fp
+                        improvements += 1
+                        improved = True
+                        break
+                
+                if improved:
+                    break  # Start over from first player after improvement
+            
+            # If no improvements in this iteration, we're done
+            if not improved:
+                break
+        
+        if improvements > 0:
+            print(f"\n✅ Optimization complete: {improvements} improvements made")
+            print(f"  Final Effective Fantasy Points: {best_fp:.1f} (+{best_fp - initial_fp:.1f})")
+        else:
+            print(f"\n✅ No improvements found - lineup already optimal")
+        
+        return best_lineup, best_cost, best_fp
     
     def optimize_lineup_iterative(
         self,
@@ -342,59 +564,72 @@ class LineupOptimizer:
     ) -> str:
         """
         Generates a human-readable report of the lineup with all relevant details.
-        
-        Args:
-            lineup: Selected players
-            total_cost: Total lineup cost
-            effective_value: Value score after penalties
-            
-        Returns:
-            Formatted string report
         """
-        raw_fantasy_points = sum(p.get('fantasy_points', 0) for p in lineup)
-        raw_value = sum(p.get('value_score', 0) for p in lineup)
+        # Separate starters and substitutes first
+        starters = [p for p in lineup if p.get('lineup_role') == 'STARTER']
+        substitutes = [p for p in lineup if p.get('lineup_role') == 'SUBSTITUTE']
+        
+        # Calculate stats from STARTERS only (substitutes are independent)
+        starter_base_fp = sum(p.get('fantasy_points', 0) for p in starters)
+        starter_bonus = sum(p.get('correlation_bonus', 0) for p in starters)
+        starter_total_fp = sum(p.get('total_fantasy_points', 0) for p in starters)
+        starter_value = sum(p.get('value_score', 0) for p in starters)
         penalty = self.calculate_budget_penalty(total_cost)
-        penalty_fp = raw_fantasy_points * penalty
+        penalty_fp = starter_total_fp * penalty
         
         report = []
-        report.append("=" * 70)
+        report.append("=" * 80)
         report.append("OPTIMAL FANTASY LINEUP")
-        report.append("=" * 70)
+        report.append("=" * 80)
         report.append("")
         
-        # Budget summary
-        report.append(f"Total Cost: ${total_cost:.2f}M / ${self.constraints.max_budget:.2f}M")
+        # Budget summary (starters only)
+        report.append(f"Starter Cost: ${total_cost:.2f}M / ${self.constraints.max_budget:.2f}M")
         report.append(f"Budget Used: {(total_cost/self.constraints.max_budget)*100:.1f}%")
         report.append(f"Over Base Budget: ${max(0, total_cost - self.constraints.base_budget):.2f}M")
         report.append("")
         
-        # Fantasy Points summary
-        report.append(f"Raw Fantasy Points: {raw_fantasy_points:.1f}")
+        # Fantasy Points summary (starters only)
+        report.append(f"Starter Base Fantasy Points: {starter_base_fp:.1f}")
+        report.append(f"Correlation Bonuses: +{starter_bonus:.1f}")
+        report.append(f"Total Starter Fantasy Points: {starter_total_fp:.1f}")
         if penalty > 0:
             report.append(f"Budget Penalty: {penalty*100:.1f}% (-{penalty_fp:.1f} points)")
-        effective_fp = raw_fantasy_points * (1 - penalty)
+        effective_fp = starter_total_fp * (1 - penalty)
         report.append(f"Effective Fantasy Points: {effective_fp:.1f}")
         report.append("")
         
-        # Value summary
-        report.append(f"Total Value Score: {raw_value:.2f}")
-        report.append(f"Average Value per Player: {raw_value/len(lineup):.2f}")
+        # Value summary (starters only)
+        report.append(f"Total Starter Value Score: {starter_value:.2f}")
+        report.append(f"Average Value per Starter: {starter_value/len(starters) if starters else 0:.2f}")
         report.append("")
-        report.append("NOTE: Value score = fantasy_points / price")
-        report.append("      Higher value = more fantasy points per dollar spent")
+        report.append("NOTE: Cost and fantasy points only count starters")
+        report.append("      Substitutes are independent alternatives (not added to total)")
+        report.append("      Value score = total_fantasy_points / price")
+        report.append("      Correlation bonuses (0-2) added based on unmapped stats")
         report.append("")
         
-        # Lineup by position
-        grouped = self.group_players_by_position(lineup)
+        # Find captain (player with highest total fantasy points among starters)
+        captain = max(starters, key=lambda p: p.get('total_fantasy_points', 0)) if starters else None
+        
+        # STARTERS Section
+        report.append("=" * 80)
+        report.append("STARTERS (6 players)")
+        report.append("=" * 80)
+        report.append("")
+        report.append("⭐ CAPTAIN: The player with the highest projected fantasy points")
+        report.append("")
+        
+        grouped_starters = self.group_players_by_position(starters)
         
         for position in ['G', 'D', 'F']:
-            position_name = {'G': 'GOALKEEPERS', 'D': 'DEFENDERS', 'F': 'FORWARDS'}[position]
+            position_name = {'G': 'GOALKEEPER', 'D': 'DEFENDERS', 'F': 'FORWARDS'}[position]
             report.append(f"\n{position_name}:")
-            report.append("-" * 70)
+            report.append("-" * 80)
             
             pos_players = sorted(
-                grouped[position],
-                key=lambda p: p.get('fantasy_points', 0),
+                grouped_starters[position],
+                key=lambda p: p.get('total_fantasy_points', 0),
                 reverse=True
             )
             
@@ -402,10 +637,47 @@ class LineupOptimizer:
                 name = player.get('name', 'Unknown')
                 team = player.get('team', '???')
                 cost = player.get('cena', player.get('price', 0))
-                fp = player.get('fantasy_points', 0)
+                base_fp = player.get('fantasy_points', 0)
+                bonus = player.get('correlation_bonus', 0)
+                total_fp = player.get('total_fantasy_points', 0)
                 value = player.get('value_score', 0)
                 
-                # Show key stats for context
+                # Mark captain with special emoji
+                captain_mark = " ⭐ CAPTAIN" if captain and player.get('id') == captain.get('id') else ""
+                
+                report.append(f"  {name} ({team}){captain_mark}")
+                report.append(f"    Cost: ${cost:.2f}M | Fantasy Points: {base_fp:.1f} + {bonus:.1f} = {total_fp:.1f} | Value: {value:.2f}")
+        
+        # SUBSTITUTES Section
+        report.append("")
+        report.append("=" * 80)
+        report.append("SUBSTITUTES (6 players)")
+        report.append("=" * 80)
+        
+        grouped_subs = self.group_players_by_position(substitutes)
+        
+        for position in ['G', 'D', 'F']:
+            position_name = {'G': 'GOALKEEPER', 'D': 'DEFENDERS', 'F': 'FORWARDS'}[position]
+            report.append(f"\n{position_name}:")
+            report.append("-" * 80)
+            
+            pos_players = sorted(
+                grouped_subs[position],
+                key=lambda p: p.get('total_fantasy_points', 0),
+                reverse=True
+            )
+            
+            for player in pos_players:
+                name = player.get('name', 'Unknown')
+                team = player.get('team', '???')
+                cost = player.get('cena', player.get('price', 0))
+                base_fp = player.get('fantasy_points', 0)
+                bonus = player.get('correlation_bonus', 0)
+                total_fp = player.get('total_fantasy_points', 0)
+                value = player.get('value_score', 0)
+                replaces = player.get('replaces', 'N/A')
+                
+                # Show key stats
                 stats = player.get('stats', {})
                 if position == 'G':
                     wins = int(stats.get('wins', stats.get('w', 0)))
@@ -417,13 +689,13 @@ class LineupOptimizer:
                     stat_str = f"{goals}G {assists}A"
                 
                 report.append(
-                    f"  {name:30s} {team:4s} | "
-                    f"${cost:5.2f}M | FP: {fp:6.1f} | Value: {value:5.2f} | "
-                    f"{stat_str}"
+                    f"  {name:30s} {team:4s} | ${cost:5.2f}M | "
+                    f"FP: {base_fp:5.1f}+{bonus:3.1f}={total_fp:5.1f} | "
+                    f"Val: {value:5.2f} | {stat_str} | [Alt for: {replaces}]"
                 )
         
         report.append("")
-        report.append("=" * 70)
+        report.append("=" * 80)
         
         return "\n".join(report)
     

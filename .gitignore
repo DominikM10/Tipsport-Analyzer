@@ -12,3 +12,38 @@
 /player_rankings_20251017_223240.md
 /player_rankings_20251017_223240.txt
 /cache
+# Byte-compiled / cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE / local files
+.vscode/
+*.code-workspace
+
+# Cache / generated data
+cache/
+*.json
+optimal_lineup_*.txt
+players_with_scores_*.json
+player_rankings_*
+
+# OS / sync
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+~$*
+*.tmp
+
+# Environment / secrets
+.env
+*.key
+*.secret
+*.bak
+
+# OneDrive sync files
+*.ini
+*.lnk
+*.tmp
+~$*

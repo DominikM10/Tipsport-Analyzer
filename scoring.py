@@ -13,75 +13,75 @@ class FantasyScorer:
     """
     
     def __init__(self):
-        """Initialize with standard scoring rules."""
+        """Initialize with standard scoring rules based on Tipsport scoring system."""
         # Common scoring values for all positions
         self.common_scoring = {
-            # Basic stats
-            'goal': 0,  # Base value, position-specific values are used instead
-            'assist': 0,  # Base value, position-specific values are used instead
+            # Penalties (same for all positions)
+            'penalty_2min': -2,
+            'penalty_5min': -4,
+            'misconduct_10min': -2,
+            'game_misconduct': -6,
             
-            # Special goals
-            'power_play_goal': 10,
-            'short_handed_goal': 16,
-            'game_winning_goal': 10,
-            'hat_trick': 12,
+            # Shots and hits
+            'shot': 2,
+            'hit': 2,
+            'plus_minus': 2,  # Per +/- point
             
-            # Special assists
-            'power_play_assist': 5,
-            'short_handed_assist': 8,
-            
-            # Penalties
-            'penalty_2min': -0.5,
-            'penalty_5min': -2,
-            'misconduct_10min': -4,
-            'game_misconduct': -8,
-            
-            # Other
-            'shot': 1,
-            'hit': 1,
-            'blocked_shot': 0,  # Base value, position-specific values are used
-            'plus_minus': 2,  # Per +1 rating
-            
-            # Team results
-            'team_win_regulation': 3,
+            # Team results (same for all)
+            'team_win_regulation': 4,
             'team_win_overtime': 2,
-            'team_win_shootout': 1,
-            'team_loss_regulation': -3,
+            'team_win_shootout': 2,
+            'team_loss_regulation': -4,
             'team_loss_overtime': -2,
-            'team_loss_shootout': -1
+            'team_loss_shootout': -2
         }
         
-        # Position-specific scoring adjustments
+        # Forward-specific scoring
         self.forward_scoring = {
-            'goal': 12,  # Even strength goal for forward
-            'assist': 6,  # Even strength assist for forward
-            'blocked_shot': 2  # Lower value for forwards blocking shots
+            'goal_even': 12,
+            'goal_pp': 10,
+            'goal_sh': 16,
+            'game_winning_goal': 4,
+            'hat_trick': 6,
+            'assist_even': 12,
+            'assist_pp': 12,
+            'assist_sh': 12,
+            'blocked_shot': 4
         }
         
+        # Defender-specific scoring
         self.defense_scoring = {
-            'goal': 20,  # Even strength goal for defender
-            'assist': 8,  # Even strength assist for defender
-            'blocked_shot': 4  # Higher value for defenders blocking shots
+            'goal_even': 20,
+            'goal_pp': 18,
+            'goal_sh': 24,
+            'game_winning_goal': 4,
+            'hat_trick': 6,
+            'assist_even': 12,
+            'assist_pp': 12,
+            'assist_sh': 12,
+            'blocked_shot': 4
         }
         
+        # Goalie-specific scoring (based on Tipsport rules)
         self.goalie_scoring = {
-            'win': 6,
-            'loss': -6,
-            'saved_shot': 1,
-            'cleared_goal': -4,
-            'shutout': 12,
-            'goal_against': -3,
-            'overtime_loss': -3
+            'goal_even': 40,
+            'goal_pp': 40,
+            'goal_sh': 40,
+            'game_winning_goal': 4,
+            'hat_trick': 6,
+            'assist_even': 12,
+            'assist_pp': 12,
+            'assist_sh': 12,
+            'win': 6,  # Výhry
+            'loss': -6,  # Prehry
+            'shutout': 10,  # Vychytané nuly
+            'save': 1,  # Chytené strely - CRITICAL FOR GOALIE SCORING
+            'goal_against': -4  # Obdržané góly
         }
 
     def calculate_player_value(self, player: Dict[str, Any]) -> float:
         """
         Calculate a value score for a player based on their statistics, position, and price.
-        
-        Process:
-        1. Extract statistics from player data
-        2. Calculate fantasy points based on scoring rules
-        3. Divide by price to get value per dollar
         
         Args:
             player: Dictionary containing player stats, position, and price
@@ -92,170 +92,24 @@ class FantasyScorer:
         # Determine player position
         position = self._normalize_position(player.get('position', 'F'))
         
-        # Get stats dictionary
-        stats = self._extract_stats(player)
-        
         # Get price
         price = player.get('cena', 0)
         
-        # Skip if no stats or invalid price
-        if not stats or price <= 0:
+        # Skip if invalid price
+        if price <= 0:
             return 0.0
         
-        # Check if player has played any games
-        games = self._get_stat(stats, 'games', 'gamesPlayed', 'games_played')
-        
-        # If no games played, check if ANY stat is non-zero
-        if games == 0:
-            has_any_stat = any([
-                self._get_stat(stats, 'goals', 'g') > 0,
-                self._get_stat(stats, 'assists', 'a') > 0,
-                self._get_stat(stats, 'shots', 's') > 0,
-                self._get_stat(stats, 'hits', 'h') > 0,
-                self._get_stat(stats, 'blocked_shots', 'bs') > 0,
-                abs(self._get_stat(stats, 'plus_minus')) > 0
-            ])
-            
-            if not has_any_stat:
-                return 0.0
-            
-            # Assume at least 1 game for calculation purposes
-            games = 1
-        
-        # STEP 1: Calculate fantasy points from stats based on position
-        if position == 'G':
-            fantasy_points = self._calculate_goalie_points(stats)
-        elif position == 'D':
-            fantasy_points = self._calculate_defender_points(stats)
-        else:  # Forward (F)
-            fantasy_points = self._calculate_forward_points(stats)
+        # Calculate fantasy points
+        fantasy_points = self.calculate_points(player)
         
         # If no fantasy points, return 0
         if fantasy_points <= 0:
             return 0.0
         
-        # STEP 2: Calculate value per dollar
-        # Higher fantasy points and lower price = better value
-        value_score = fantasy_points / price if price > 0 else 0
+        # Calculate value per dollar
+        value_score = fantasy_points / price
         
         return value_score
-    
-    def _calculate_forward_stat_value(self, stats: Dict) -> float:
-        """
-        Calculate statistical value for a forward based on fantasy scoring weights.
-        This is NOT fantasy points - it's a weighted measure of statistical production.
-        
-        Args:
-            stats: Player statistics dictionary
-            
-        Returns:
-            Statistical value score
-        """
-        value = 0.0
-        
-        # Weight each stat by its fantasy importance
-        # Goals are worth more than assists, PP goals more than EV goals, etc.
-        
-        # Basic production
-        value += self._get_stat(stats, 'goals', 'g') * 12.0
-        value += self._get_stat(stats, 'assists', 'a') * 6.0
-        
-        # Special situations (bonus value)
-        value += self._get_stat(stats, 'power_play_goals', 'ppg') * 10.0
-        value += self._get_stat(stats, 'short_handed_goals', 'shg') * 16.0
-        value += self._get_stat(stats, 'game_winning_goals', 'gwg') * 10.0
-        value += self._get_stat(stats, 'hat_tricks') * 12.0
-        
-        value += self._get_stat(stats, 'power_play_assists', 'ppa') * 5.0
-        value += self._get_stat(stats, 'short_handed_assists', 'sha') * 8.0
-        
-        # Peripheral stats (smaller weights)
-        value += self._get_stat(stats, 'shots', 'shots_on_goal', 's') * 1.0
-        value += self._get_stat(stats, 'hits', 'h') * 1.0
-        value += self._get_stat(stats, 'blocked_shots', 'blocked', 'bs') * 2.0
-        
-        # Plus/minus (can be positive or negative)
-        plus_minus = self._get_stat(stats, 'plus_minus', 'plus_minus_rating', 'plusminus')
-        value += plus_minus * 2.0
-        
-        # Penalties (negative value)
-        value += self._get_stat(stats, 'penalty_minutes_2', 'pim_2') * -0.5
-        value += self._get_stat(stats, 'penalty_minutes_5', 'pim_5') * -2.0
-        value += self._get_stat(stats, 'penalty_minutes_10', 'pim_10', 'misconduct') * -4.0
-        value += self._get_stat(stats, 'game_misconduct', 'gm_penalty') * -8.0
-        
-        return max(0, value)  # Don't return negative values
-    
-    def _calculate_defender_stat_value(self, stats: Dict) -> float:
-        """
-        Calculate statistical value for a defender based on fantasy scoring weights.
-        Defenders get higher value for goals and blocked shots.
-        
-        Args:
-            stats: Player statistics dictionary
-            
-        Returns:
-            Statistical value score
-        """
-        value = 0.0
-        
-        # Defenders get premium for scoring
-        value += self._get_stat(stats, 'goals', 'g') * 20.0
-        value += self._get_stat(stats, 'assists', 'a') * 8.0
-        
-        # Special situations
-        value += self._get_stat(stats, 'power_play_goals', 'ppg') * 10.0
-        value += self._get_stat(stats, 'short_handed_goals', 'shg') * 16.0
-        value += self._get_stat(stats, 'game_winning_goals', 'gwg') * 10.0
-        value += self._get_stat(stats, 'hat_tricks') * 12.0
-        
-        value += self._get_stat(stats, 'power_play_assists', 'ppa') * 5.0
-        value += self._get_stat(stats, 'short_handed_assists', 'sha') * 8.0
-        
-        # Defensive stats (higher value for defenders)
-        value += self._get_stat(stats, 'shots', 'shots_on_goal', 's') * 1.0
-        value += self._get_stat(stats, 'hits', 'h') * 1.0
-        value += self._get_stat(stats, 'blocked_shots', 'blocked', 'bs') * 4.0  # Higher for defenders
-        
-        # Plus/minus
-        plus_minus = self._get_stat(stats, 'plus_minus', 'plus_minus_rating', 'plusminus')
-        value += plus_minus * 2.0
-        
-        # Penalties
-        value += self._get_stat(stats, 'penalty_minutes_2', 'pim_2') * -0.5
-        value += self._get_stat(stats, 'penalty_minutes_5', 'pim_5') * -2.0
-        value += self._get_stat(stats, 'penalty_minutes_10', 'pim_10', 'misconduct') * -4.0
-        value += self._get_stat(stats, 'game_misconduct', 'gm_penalty') * -8.0
-        
-        return max(0, value)
-    
-    def _calculate_goalie_stat_value(self, stats: Dict) -> float:
-        """
-        Calculate statistical value for a goaltender based on fantasy scoring weights.
-        Goalies are valued differently - wins, saves, and save percentage matter most.
-        
-        Args:
-            stats: Player statistics dictionary
-            
-        Returns:
-            Statistical value score
-        """
-        value = 0.0
-        
-        # Wins are crucial for goalies
-        value += self._get_stat(stats, 'wins', 'w') * 6.0
-        value += self._get_stat(stats, 'losses', 'l') * -6.0
-        value += self._get_stat(stats, 'overtime_losses', 'otl', 'ot') * -3.0
-        
-        # Saves and shutouts
-        value += self._get_stat(stats, 'saves', 'saved_shots', 'sv') * 1.0
-        value += self._get_stat(stats, 'shutouts', 'so') * 12.0
-        
-        # Goals against (negative)
-        value += self._get_stat(stats, 'goals_against', 'ga') * -3.0
-        value += self._get_stat(stats, 'cleared_goals', 'expected_goals') * -4.0
-        
-        return max(0, value)
     
     def calculate_points(self, player: Dict[str, Any]) -> float:
         """
@@ -270,321 +124,767 @@ class FantasyScorer:
         # Determine player position
         position = self._normalize_position(player.get('position', 'F'))
         
-        # Get stats dictionary, which might be nested differently depending on data source
-        stats = self._extract_stats(player)
+        # Get stats dictionary (combine current and previous seasons)
+        stats = self._extract_combined_stats(player)
+        
+        # Debug output for Strome
+        if 'Strome' in player.get('name', '') and player.get('team') == 'ANA':
+            print(f"\n[DEBUG] calculate_points for {player.get('name')}:")
+            print(f"  Games: {stats.get('gamesPlayed', 0):.1f}")
+            print(f"  Goals: {stats.get('goals', 0):.1f}")
+            print(f"  Assists: {stats.get('assists', 0):.1f}")
         
         # Skip if no stats available
         if not stats:
             return 0.0
             
-        # Calculate based on position
+        # Calculate base fantasy points based on position
         if position == 'G':
-            return self._calculate_goalie_points(stats)
+            base_points = self._calculate_goalie_points(stats)
         elif position == 'D':
-            return self._calculate_defender_points(stats)
-        else:  # Forward (F)
-            return self._calculate_forward_points(stats)
+            base_points = self._calculate_defender_points(stats)
+        else:  # Forward
+            base_points = self._calculate_forward_points(stats)
+        
+        # Debug output for Strome
+        if 'Strome' in player.get('name', '') and player.get('team') == 'ANA':
+            print(f"  Fantasy Points: {base_points:.1f}\n")
+        
+        return base_points
+    
+    def _calculate_dynamic_weights(self, current_stats: Dict) -> tuple:
+        """
+        Calculate dynamic weighting based on current season progress using sigmoid curve.
+        This creates a smooth, natural transition that accelerates in mid-season.
+        
+        Early season (0-20 games): Slow shift from 15% to ~35% current
+        Mid season (20-50 games): Rapid transition to ~75% current  
+        Late season (50-82 games): Gradual approach to 92% current
+        
+        Uses sigmoid function: weight = L / (1 + e^(-k*(x - x0)))
+        where L=max weight, k=steepness, x0=midpoint
+        
+        Args:
+            current_stats: Current season statistics
+            
+        Returns:
+            Tuple of (current_weight, previous_weight)
+        """
+        import math
+        
+        games_played = self._get_stat(current_stats, 'gamesPlayed')
+        
+        if games_played <= 0:
+            # No games played yet - rely heavily on previous season
+            return 0.15, 0.85
+        
+        # Sigmoid parameters for smooth transition
+        # L = 0.92 (max weight at 92% current season)
+        # k = 0.08 (steepness - higher = more abrupt transition)
+        # x0 = 35 (inflection point at game 35, mid-season)
+        L = 0.92
+        k = 0.08
+        x0 = 35
+        
+        # Sigmoid function for natural S-curve
+        games_capped = min(games_played, 82)
+        current_weight = L / (1 + math.exp(-k * (games_capped - x0)))
+        
+        # Ensure minimum of 15% current weight even at start
+        current_weight = max(0.15, current_weight)
+        
+        previous_weight = 1.0 - current_weight
+        
+        return current_weight, previous_weight
+    
+    def _apply_rookie_amplification(self, current_stats: Dict) -> Dict:
+        """
+        Apply dynamic amplification to rookie stats based on games played.
+        Uses logarithmic decay so amplification decreases as sample size grows.
+        
+        Logic:
+        - With few games (1-10): High amplification (1.35-1.25) due to small sample
+        - With moderate games (10-40): Medium amplification (1.25-1.10)  
+        - With many games (40-82): Low amplification (1.10-1.05)
+        
+        Formula: amp = 1.05 + 0.30 * e^(-games/20)
+        This creates exponential decay from 1.35 to 1.05
+        
+        Args:
+            current_stats: Current season statistics
+            
+        Returns:
+            Amplified statistics dictionary
+        """
+        import math
+        
+        amplified = current_stats.copy()
+        games_played = self._get_stat(current_stats, 'gamesPlayed')
+        
+        if games_played <= 0:
+            # No games played - maximum amplification
+            amplification = 1.40
+        else:
+            # Exponential decay from 1.35 to 1.05 as games increase
+            # Formula: 1.05 + 0.30 * e^(-games/20)
+            # At 1 game: ~1.35
+            # At 10 games: ~1.23
+            # At 20 games: ~1.16  
+            # At 40 games: ~1.09
+            # At 82 games: ~1.05
+            decay_rate = 20  # Controls how fast amplification decreases
+            amplification = 1.05 + 0.30 * math.exp(-games_played / decay_rate)
+        
+        numeric_keys = ['goals', 'assists', 'points', 'shots', 'hits', 'blockedShots',
+                       'powerPlayGoals', 'powerPlayPoints', 'shorthandedGoals', 'shorthandedPoints',
+                       'gameWinningGoals', 'plusMinus', 'pim', 'wins', 'losses', 'shutouts',
+                       'goalsAgainst', 'saves']
+        
+        for key in numeric_keys:
+            if key in amplified and isinstance(amplified[key], (int, float)):
+                amplified[key] = amplified[key] * amplification
+        
+        return amplified
+    
+    def _extract_combined_stats(self, player: Dict) -> Dict:
+        """
+        Extract and combine statistics from current and previous seasons.
+        Uses dynamic weighting based on season progress:
+        - Early season: 30% current, 70% previous
+        - Late season: 90% current, 10% previous
+        - Rookies: 115% amplification of current stats
+        
+        Args:
+            player: Player dictionary with stats
+            
+        Returns:
+            Combined dictionary of stats
+        """
+        current_season = "20252026"
+        previous_season = "20242025"
+        
+        current_stats = {}
+        previous_stats = {}
+        
+        # Priority 1: Check for featuredStats.regularSeason.subSeason (current season)
+        if 'featuredStats' in player and isinstance(player['featuredStats'], dict):
+            featured = player['featuredStats']
+            if 'regularSeason' in featured and isinstance(featured['regularSeason'], dict):
+                if 'subSeason' in featured['regularSeason']:
+                    current_stats = featured['regularSeason']['subSeason']
+        
+        # Priority 2: Check seasonTotals array
+        if 'seasonTotals' in player and isinstance(player['seasonTotals'], list):
+            for season_data in player['seasonTotals']:
+                season = str(season_data.get('season', ''))
+                league = season_data.get('leagueAbbrev', '')
+                game_type = season_data.get('gameTypeId', 0)
+                
+                # Only count NHL regular season games
+                if league != 'NHL' or game_type != 2:
+                    continue
+                
+                if season == current_season:
+                    # Merge current season stats
+                    for key, value in season_data.items():
+                        if key not in current_stats and value is not None:
+                            current_stats[key] = value
+                elif season == previous_season:
+                    # Store previous season stats
+                    previous_stats = season_data
+        
+        # Priority 3: Check for current_season or stats dictionary
+        if not current_stats:
+            if 'current_season' in player and isinstance(player['current_season'], dict):
+                current_stats = player['current_season']
+            elif 'stats' in player and isinstance(player['stats'], dict):
+                current_stats = player['stats']
+            elif 'current_season_stats' in player and isinstance(player['current_season_stats'], dict):
+                current_stats = player['current_season_stats']
+        
+        # Debug for Strome
+        if 'Strome' in player.get('name', '') and player.get('team') == 'ANA':
+            print(f"\n[DEBUG] _extract_combined_stats for {player.get('name')}:")
+            print(f"  Found current_stats: {bool(current_stats)}")
+            if current_stats:
+                print(f"    Current GP: {current_stats.get('gamesPlayed', 0)}")
+            print(f"  Found previous_stats: {bool(previous_stats)}")
+            if previous_stats:
+                print(f"    Previous GP: {previous_stats.get('gamesPlayed', 0)}")
+        
+        # If we have no current stats, return empty
+        if not current_stats:
+            return {}
+        
+        # Combine current and previous seasons with dynamic weighting
+        combined = current_stats.copy()
+        
+        current_games = self._get_stat(current_stats, 'gamesPlayed')
+        
+        if previous_stats and current_games > 0:
+            # Calculate dynamic weight based on current season progress
+            current_weight, previous_weight = self._calculate_dynamic_weights(current_stats)
+            
+            previous_games = self._get_stat(previous_stats, 'gamesPlayed')
+            
+            # Combine numeric stats using PER-GAME rates, not totals
+            # This prevents inflated stats from combining season totals
+            numeric_keys = ['goals', 'assists', 'points', 'shots', 'hits', 'blockedShots',
+                          'powerPlayGoals', 'powerPlayPoints', 'shorthandedGoals', 'shorthandedPoints',
+                          'gameWinningGoals', 'plusMinus', 'pim', 'wins', 'losses', 'shutouts',
+                          'goalsAgainst', 'saves']
+            
+            for key in numeric_keys:
+                current_val = self._get_stat(current_stats, key)
+                previous_val = self._get_stat(previous_stats, key)
+                
+                # Calculate per-game rates
+                current_per_game = current_val / current_games if current_games > 0 else 0
+                previous_per_game = previous_val / previous_games if previous_games > 0 else 0
+                
+                # Weighted average of per-game rates
+                combined_per_game = (current_per_game * current_weight) + (previous_per_game * previous_weight)
+                
+                # Project to current season games played (not full 82!)
+                combined[key] = combined_per_game * current_games
+            
+            # Games played uses current season only
+            combined['gamesPlayed'] = current_games
+        else:
+            # Rookie or no previous stats - use current stats only (no amplification for now)
+            combined = current_stats.copy()
+        
+        return combined
+    
+    def _calculate_forward_points(self, stats: Dict) -> float:
+        """Calculate fantasy points for a forward."""
+        points = 0.0
+        
+        # Goals (need to estimate even strength vs PP vs SH)
+        total_goals = self._get_stat(stats, 'goals', 'g')
+        pp_goals = self._get_stat(stats, 'powerPlayGoals', 'ppg')
+        sh_goals = self._get_stat(stats, 'shorthandedGoals', 'shg')
+        
+        # Even strength goals = total - PP - SH
+        even_goals = max(0, total_goals - pp_goals - sh_goals)
+        
+        points += even_goals * self.forward_scoring['goal_even']
+        points += pp_goals * self.forward_scoring['goal_pp']
+        points += sh_goals * self.forward_scoring['goal_sh']
+        
+        # Game winning goals
+        gwg = self._get_stat(stats, 'gameWinningGoals', 'gwg')
+        points += gwg * self.forward_scoring['game_winning_goal']
+        
+        # Hat tricks (estimate: 1 hat trick per 10 goals for high scorers)
+        if total_goals >= 30:
+            hat_tricks = max(1, int(total_goals / 10))
+            points += hat_tricks * self.forward_scoring['hat_trick']
+        
+        # Assists (estimate distribution like goals)
+        total_assists = self._get_stat(stats, 'assists', 'a')
+        pp_assists = self._get_stat(stats, 'powerPlayPoints', 'ppp') - pp_goals  # PP points minus PP goals
+        pp_assists = max(0, pp_assists)
+        sh_assists = self._get_stat(stats, 'shorthandedPoints', 'shp') - sh_goals
+        sh_assists = max(0, sh_assists)
+        
+        even_assists = max(0, total_assists - pp_assists - sh_assists)
+        
+        points += even_assists * self.forward_scoring['assist_even']
+        points += pp_assists * self.forward_scoring['assist_pp']
+        points += sh_assists * self.forward_scoring['assist_sh']
+        
+        # Shots
+        shots = self._get_stat(stats, 'shots', 'sog', 's')
+        points += shots * self.common_scoring['shot']
+        
+        # Hits
+        hits = self._get_stat(stats, 'hits', 'h')
+        points += hits * self.common_scoring['hit']
+        
+        # Blocked shots
+        blocked = self._get_stat(stats, 'blockedShots', 'blocked', 'bs')
+        points += blocked * self.forward_scoring['blocked_shot']
+        
+        # Plus/minus
+        plus_minus = self._get_stat(stats, 'plusMinus', 'plus_minus_rating', 'plusminus')
+        points += plus_minus * self.common_scoring['plus_minus']
+        
+        # Penalties (negative points)
+        pim = self._get_stat(stats, 'pim', 'penaltyMinutes')
+        # Estimate distribution: mostly 2-min, some 5-min, rare misconducts
+        two_min_penalties = int(pim * 0.8 / 2)  # 80% are 2-min
+        five_min_penalties = int(pim * 0.15 / 5)  # 15% are 5-min
+        misconduct = int(pim * 0.05 / 10)  # 5% are misconducts
+        
+        points += two_min_penalties * self.common_scoring['penalty_2min']
+        points += five_min_penalties * self.common_scoring['penalty_5min']
+        points += misconduct * self.common_scoring['misconduct_10min']
+        
+        return max(0, points)
+    
+    def _calculate_defender_points(self, stats: Dict) -> float:
+        """Calculate fantasy points for a defender (higher goal values)."""
+        points = 0.0
+        
+        # Goals (higher value for defenders)
+        total_goals = self._get_stat(stats, 'goals', 'g')
+        pp_goals = self._get_stat(stats, 'powerPlayGoals', 'ppg')
+        sh_goals = self._get_stat(stats, 'shorthandedGoals', 'shg')
+        
+        even_goals = max(0, total_goals - pp_goals - sh_goals)
+        
+        points += even_goals * self.defense_scoring['goal_even']
+        points += pp_goals * self.defense_scoring['goal_pp']
+        points += sh_goals * self.defense_scoring['goal_sh']
+        
+        # Game winning goals
+        gwg = self._get_stat(stats, 'gameWinningGoals', 'gwg')
+        points += gwg * self.defense_scoring['game_winning_goal']
+        
+        # Hat tricks (rare for defenders)
+        if total_goals >= 20:
+            hat_tricks = max(1, int(total_goals / 15))
+            points += hat_tricks * self.defense_scoring['hat_trick']
+        
+        # Assists
+        total_assists = self._get_stat(stats, 'assists', 'a')
+        pp_assists = self._get_stat(stats, 'powerPlayPoints', 'ppp') - pp_goals
+        pp_assists = max(0, pp_assists)
+        sh_assists = self._get_stat(stats, 'shorthandedPoints', 'shp') - sh_goals
+        sh_assists = max(0, sh_assists)
+        
+        even_assists = max(0, total_assists - pp_assists - sh_assists)
+        
+        points += even_assists * self.defense_scoring['assist_even']
+        points += pp_assists * self.defense_scoring['assist_pp']
+        points += sh_assists * self.defense_scoring['assist_sh']
+        
+        # Shots
+        shots = self._get_stat(stats, 'shots', 'sog', 's')
+        points += shots * self.common_scoring['shot']
+        
+        # Hits
+        hits = self._get_stat(stats, 'hits', 'h')
+        points += hits * self.common_scoring['hit']
+        
+        # Blocked shots (important for defenders)
+        blocked = self._get_stat(stats, 'blockedShots', 'blocked', 'bs')
+        points += blocked * self.defense_scoring['blocked_shot']
+        
+        # Plus/minus
+        plus_minus = self._get_stat(stats, 'plusMinus', 'plus_minus_rating', 'plusminus')
+        points += plus_minus * self.common_scoring['plus_minus']
+        
+        # Penalties
+        pim = self._get_stat(stats, 'pim', 'penaltyMinutes')
+        two_min_penalties = int(pim * 0.8 / 2)
+        five_min_penalties = int(pim * 0.15 / 5)
+        misconduct = int(pim * 0.05 / 10)
+        
+        points += two_min_penalties * self.common_scoring['penalty_2min']
+        points += five_min_penalties * self.common_scoring['penalty_5min']
+        points += misconduct * self.common_scoring['misconduct_10min']
+        
+        return max(0, points)
+    
+    def _calculate_goalie_points(self, stats: Dict) -> float:
+        """Calculate fantasy points for a goaltender based on Tipsport rules."""
+        points = 0.0
+        
+        # Wins and losses
+        wins = self._get_stat(stats, 'wins', 'w')
+        losses = self._get_stat(stats, 'losses', 'l')
+        
+        points += wins * self.goalie_scoring['win']
+        points += losses * self.goalie_scoring['loss']
+        
+        # Shutouts (Vychytané nuly)
+        shutouts = self._get_stat(stats, 'shutouts', 'so')
+        points += shutouts * self.goalie_scoring['shutout']
+        
+        # Saves (Chytené strely) - CRITICAL!
+        # Try to get saves directly, or calculate from shotsAgainst - goalsAgainst
+        saves = self._get_stat(stats, 'saves', 'sv', 'savesTotal')
+        if saves == 0:
+            shots_against = self._get_stat(stats, 'shotsAgainst', 'sa')
+            goals_against = self._get_stat(stats, 'goalsAgainst', 'ga')
+            saves = max(0, shots_against - goals_against)
+        points += saves * self.goalie_scoring['save']
+        
+        # Goals against (Obdržané góly)
+        goals_against = self._get_stat(stats, 'goalsAgainst', 'ga')
+        points += goals_against * self.goalie_scoring['goal_against']
+        
+        # Goalies can also score goals and assists (rare but valuable)
+        total_goals = self._get_stat(stats, 'goals', 'g')
+        if total_goals > 0:
+            pp_goals = self._get_stat(stats, 'powerPlayGoals', 'ppg')
+            sh_goals = self._get_stat(stats, 'shorthandedGoals', 'shg')
+            even_goals = max(0, total_goals - pp_goals - sh_goals)
+            
+            points += even_goals * self.goalie_scoring['goal_even']
+            points += pp_goals * self.goalie_scoring['goal_pp']
+            points += sh_goals * self.goalie_scoring['goal_sh']
+        
+        total_assists = self._get_stat(stats, 'assists', 'a')
+        if total_assists > 0:
+            # Estimate assist distribution
+            pp_assists = max(0, self._get_stat(stats, 'powerPlayPoints', 'ppp') - self._get_stat(stats, 'powerPlayGoals', 'ppg'))
+            sh_assists = max(0, self._get_stat(stats, 'shorthandedPoints', 'shp') - self._get_stat(stats, 'shorthandedGoals', 'shg'))
+            even_assists = max(0, total_assists - pp_assists - sh_assists)
+            
+            points += even_assists * self.goalie_scoring['assist_even']
+            points += pp_assists * self.goalie_scoring['assist_pp']
+            points += sh_assists * self.goalie_scoring['assist_sh']
+        
+        return max(0, points)
+    
+    def calculate_correlation_bonus(
+        self, 
+        player: Dict[str, Any], 
+        top_performers: List[Dict],
+        position: str
+    ) -> float:
+        """
+        Calculate bonus points based on unmapped statistics compared to top performers.
+        Awards 0-2 points per stat category based on player's performance vs. top 10.
+        
+        Args:
+            player: Player dictionary
+            top_performers: List of top 10 players in same position
+            position: Player position (G, D, F)
+            
+        Returns:
+            Correlation bonus points (capped at 10)
+        """
+        if not top_performers:
+            return 0.0
+        
+        bonus = 0.0
+        stats = self._extract_combined_stats(player)
+        
+        if not stats:
+            return 0.0
+        
+        # Get games played for per-game calculations
+        games = max(1, self._get_stat(stats, 'gamesPlayed', 'games', 'gp'))
+        
+        # Stats to consider for correlation
+        if position == 'G':
+            # Goalie-specific unmapped stats
+            save_pct = self._get_stat(stats, 'savePctg', 'savePercentage', 'svPct') * 100
+            gaa = self._get_stat(stats, 'goalsAgainstAverage', 'gaa')
+            
+            # Calculate averages from top performers
+            top_save_pcts = [self._get_stat(self._extract_combined_stats(p), 'savePctg', 'savePercentage') * 100 
+                           for p in top_performers if self._get_stat(self._extract_combined_stats(p), 'savePctg') > 0]
+            top_gaas = [self._get_stat(self._extract_combined_stats(p), 'goalsAgainstAverage', 'gaa')
+                       for p in top_performers if self._get_stat(self._extract_combined_stats(p), 'goalsAgainstAverage') > 0]
+            
+            if top_save_pcts and save_pct > 0:
+                avg_save_pct = sum(top_save_pcts) / len(top_save_pcts)
+                if save_pct >= avg_save_pct * 1.05:  # 5% better
+                    bonus += 2.0
+                elif save_pct >= avg_save_pct:
+                    bonus += 1.0
+            
+            if top_gaas and gaa > 0:
+                avg_gaa = sum(top_gaas) / len(top_gaas)
+                if gaa <= avg_gaa * 0.95:  # 5% better (lower is better)
+                    bonus += 2.0
+                elif gaa <= avg_gaa:
+                    bonus += 1.0
+        
+        else:  # F or D
+            # Shooting percentage
+            shooting_pct = self._get_stat(stats, 'shootingPctg', 'shootingPercentage', 'sPct') * 100
+            
+            # Time on ice per game
+            toi = self._get_stat(stats, 'avgToi', 'timeOnIcePerGame', 'toi')
+            
+            # Faceoff percentage (mostly for forwards)
+            fo_pct = self._get_stat(stats, 'faceoffWinningPctg', 'faceOffPct') * 100
+            
+            # Calculate averages
+            top_shooting = [self._get_stat(self._extract_combined_stats(p), 'shootingPctg') * 100
+                          for p in top_performers if self._get_stat(self._extract_combined_stats(p), 'shootingPctg') > 0]
+            
+            if top_shooting and shooting_pct > 0:
+                avg_shooting = sum(top_shooting) / len(top_shooting)
+                if shooting_pct >= avg_shooting * 1.1:  # 10% better
+                    bonus += 2.0
+                elif shooting_pct >= avg_shooting:
+                    bonus += 1.0
+            
+            # Points per game bonus
+            points_per_game = self._get_stat(stats, 'points') / games
+            top_ppg = [self._get_stat(self._extract_combined_stats(p), 'points') / max(1, self._get_stat(self._extract_combined_stats(p), 'gamesPlayed'))
+                      for p in top_performers if self._get_stat(self._extract_combined_stats(p), 'gamesPlayed') > 0]
+            
+            if top_ppg and points_per_game > 0:
+                avg_ppg = sum(top_ppg) / len(top_ppg)
+                if points_per_game >= avg_ppg * 1.1:
+                    bonus += 2.0
+                elif points_per_game >= avg_ppg:
+                    bonus += 1.0
+        
+        # Cap total bonus at 10 points
+        return min(10.0, bonus)
     
     def _normalize_position(self, position: str) -> str:
         """
         Normalize position to standard format: F (forward), D (defense), G (goalie).
-        
-        Args:
-            position: Raw position string from data
-            
-        Returns:
-            Normalized position code
         """
         pos = position.upper().strip()
         
-        # Goalie variations
         if pos in ['G', 'GOALIE', 'GOALKEEPER', 'B', 'BRANKÁR', 'BRANKAŘ']:
             return 'G'
         
-        # Defender variations
         if pos in ['D', 'DEFENSE', 'DEFENDER', 'DEFENSEMAN', 'DEFENCEMAN', 'O', 'OBRANCA', 'OBRÁNCE']:
             return 'D'
         
-        # Forward variations
-        if pos in ['F', 'C', 'LW', 'RW', 'FORWARD', 'ATTACKER', 'CENTER', 'WING', 'Ú', 'ÚTOČNÍK', 'UTOČNÍK']:
+        # All forward positions map to 'F'
+        if pos in ['F', 'C', 'LW', 'RW', 'FORWARD', 'ATTACKER', 'CENTER', 'WING', 'Ú', 'ÚTOČNÍK', 'UTOČNÍK', 'L', 'R']:
             return 'F'
         
-        # Default to forward if unknown
-        return 'F'
+        return 'F'  # Default
     
-    def _extract_stats(self, player: Dict[str, Any]) -> Dict:
-        """
-        Extract statistics from player object, handling different data structures.
-        
-        Args:
-            player: Player dictionary with stats
-            
-        Returns:
-            Dictionary of stats
-        """
-        # Check for nested 'stats' dictionary first
-        if 'stats' in player and isinstance(player['stats'], dict):
-            return player['stats']
-            
-        # Check for API format with current_season stats
-        if 'current_season_stats' in player and isinstance(player['current_season_stats'], dict):
-            return player['current_season_stats']
-            
-        # Check for flat structure (all stats in main dict)
-        stat_keys = ['goals', 'assists', 'shots', 'hits', 'blocked_shots', 'plus_minus']
-        if any(key in player for key in stat_keys):
-            return player
-            
-        # Return empty dict if no stats found
-        return {}
-    
-    def _calculate_forward_points(self, stats: Dict) -> float:
-        """
-        Calculate fantasy points for a forward.
-        
-        Args:
-            stats: Player statistics dictionary
-            
-        Returns:
-            Fantasy points
-        """
-        points = 0.0
-        
-        # Basic stats using forward-specific values
-        points += self._get_stat(stats, 'goals', 'g') * self.forward_scoring['goal']
-        points += self._get_stat(stats, 'assists', 'a') * self.forward_scoring['assist']
-        
-        # Special goals
-        points += self._get_stat(stats, 'power_play_goals', 'ppg') * self.common_scoring['power_play_goal']
-        points += self._get_stat(stats, 'short_handed_goals', 'shg') * self.common_scoring['short_handed_goal']
-        points += self._get_stat(stats, 'game_winning_goals', 'gwg') * self.common_scoring['game_winning_goal']
-        points += self._get_stat(stats, 'hat_tricks') * self.common_scoring['hat_trick']
-        
-        # Special assists
-        points += self._get_stat(stats, 'power_play_assists', 'ppa') * self.common_scoring['power_play_assist']
-        points += self._get_stat(stats, 'short_handed_assists', 'sha') * self.common_scoring['short_handed_assist']
-        
-        # Penalties
-        points += self._get_stat(stats, 'penalty_minutes_2', 'pim_2') * self.common_scoring['penalty_2min']
-        points += self._get_stat(stats, 'penalty_minutes_5', 'pim_5') * self.common_scoring['penalty_5min']
-        points += self._get_stat(stats, 'penalty_minutes_10', 'pim_10', 'misconduct') * self.common_scoring['misconduct_10min']
-        points += self._get_stat(stats, 'game_misconduct', 'gm_penalty') * self.common_scoring['game_misconduct']
-        
-        # Other stats
-        points += self._get_stat(stats, 'shots', 'shots_on_goal', 's') * self.common_scoring['shot']
-        points += self._get_stat(stats, 'hits', 'h') * self.common_scoring['hit']
-        points += self._get_stat(stats, 'blocked_shots', 'blocked', 'bs') * self.forward_scoring['blocked_shot']
-        
-        # Plus/minus
-        plus_minus = self._get_stat(stats, 'plus_minus', 'plus_minus_rating', 'plusminus')
-        if plus_minus > 0:
-            points += plus_minus * self.common_scoring['plus_minus']
-        elif plus_minus < 0:
-            points += plus_minus * self.common_scoring['plus_minus']  # Negative already included in value
-        
-        # Team results
-        points += self._get_stat(stats, 'team_win_regulation') * self.common_scoring['team_win_regulation']
-        points += self._get_stat(stats, 'team_win_overtime') * self.common_scoring['team_win_overtime']
-        points += self._get_stat(stats, 'team_win_shootout') * self.common_scoring['team_win_shootout']
-        points += self._get_stat(stats, 'team_loss_regulation') * self.common_scoring['team_loss_regulation']
-        points += self._get_stat(stats, 'team_loss_overtime') * self.common_scoring['team_loss_overtime']
-        points += self._get_stat(stats, 'team_loss_shootout') * self.common_scoring['team_loss_shootout']
-        
-        return points
-    
-    def _calculate_defender_points(self, stats: Dict) -> float:
-        """
-        Calculate fantasy points for a defender.
-        
-        Args:
-            stats: Player statistics dictionary
-            
-        Returns:
-            Fantasy points
-        """
-        points = 0.0
-        
-        # Basic stats using defender-specific values
-        points += self._get_stat(stats, 'goals', 'g') * self.defense_scoring['goal']
-        points += self._get_stat(stats, 'assists', 'a') * self.defense_scoring['assist']
-        
-        # Special goals
-        points += self._get_stat(stats, 'power_play_goals', 'ppg') * self.common_scoring['power_play_goal']
-        points += self._get_stat(stats, 'short_handed_goals', 'shg') * self.common_scoring['short_handed_goal']
-        points += self._get_stat(stats, 'game_winning_goals', 'gwg') * self.common_scoring['game_winning_goal']
-        points += self._get_stat(stats, 'hat_tricks') * self.common_scoring['hat_trick']
-        
-        # Special assists
-        points += self._get_stat(stats, 'power_play_assists', 'ppa') * self.common_scoring['power_play_assist']
-        points += self._get_stat(stats, 'short_handed_assists', 'sha') * self.common_scoring['short_handed_assist']
-        
-        # Penalties
-        points += self._get_stat(stats, 'penalty_minutes_2', 'pim_2') * self.common_scoring['penalty_2min']
-        points += self._get_stat(stats, 'penalty_minutes_5', 'pim_5') * self.common_scoring['penalty_5min']
-        points += self._get_stat(stats, 'penalty_minutes_10', 'pim_10', 'misconduct') * self.common_scoring['misconduct_10min']
-        points += self._get_stat(stats, 'game_misconduct', 'gm_penalty') * self.common_scoring['game_misconduct']
-        
-        # Other stats
-        points += self._get_stat(stats, 'shots', 'shots_on_goal', 's') * self.common_scoring['shot']
-        points += self._get_stat(stats, 'hits', 'h') * self.common_scoring['hit']
-        points += self._get_stat(stats, 'blocked_shots', 'blocked', 'bs') * self.defense_scoring['blocked_shot']
-        
-        # Plus/minus
-        plus_minus = self._get_stat(stats, 'plus_minus', 'plus_minus_rating', 'plusminus')
-        if plus_minus > 0:
-            points += plus_minus * self.common_scoring['plus_minus']
-        elif plus_minus < 0:
-            points += plus_minus * self.common_scoring['plus_minus']  # Negative already included in value
-        
-        # Team results
-        points += self._get_stat(stats, 'team_win_regulation') * self.common_scoring['team_win_regulation']
-        points += self._get_stat(stats, 'team_win_overtime') * self.common_scoring['team_win_overtime']
-        points += self._get_stat(stats, 'team_win_shootout') * self.common_scoring['team_win_shootout']
-        points += self._get_stat(stats, 'team_loss_regulation') * self.common_scoring['team_loss_regulation']
-        points += self._get_stat(stats, 'team_loss_overtime') * self.common_scoring['team_loss_overtime']
-        points += self._get_stat(stats, 'team_loss_shootout') * self.common_scoring['team_loss_shootout']
-        
-        return points
-    
-    def _calculate_goalie_points(self, stats: Dict) -> float:
-        """
-        Calculate fantasy points for a goaltender.
-        
-        Args:
-            stats: Player statistics dictionary
-            
-        Returns:
-            Fantasy points
-        """
-        points = 0.0
-        
-        # Goalie-specific stats
-        points += self._get_stat(stats, 'wins', 'w') * self.goalie_scoring['win']
-        points += self._get_stat(stats, 'losses', 'l') * self.goalie_scoring['loss']
-        points += self._get_stat(stats, 'overtime_losses', 'otl', 'ot') * self.goalie_scoring['overtime_loss']
-        points += self._get_stat(stats, 'shutouts', 'so') * self.goalie_scoring['shutout']
-        points += self._get_stat(stats, 'goals_against', 'ga') * self.goalie_scoring['goal_against']
-        
-        # Special goalie stats from images
-        points += self._get_stat(stats, 'saves', 'saved_shots', 'sv') * self.goalie_scoring['saved_shot']
-        points += self._get_stat(stats, 'cleared_goals', 'expected_goals') * self.goalie_scoring['cleared_goal']
-        
-        return points
-    
-    def calculate_game_score(self, player: Dict[str, Any]) -> float:
-        """
-        Calculate GameScore (GS) per game for a player.
-        Based on NHL GameScore formula using available stats.
-        
-        Formula:
-        - Goals: 0.75
-        - Assists (Primary+Secondary combined): 0.625 average
-        - Shots: 0.075
-        - Blocked Shots: 0.05
-        - Hits: 0.05 (proxy for physical engagement)
-        - Plus/Minus: 0.15 per +1
-        
-        Args:
-            player: Player dictionary with stats
-            
-        Returns:
-            GameScore per game
-        """
-        stats = self._extract_stats(player)
-        
-        if not stats:
-            return 0.0
-        
-        games = self._get_stat(stats, 'games', 'gamesPlayed', 'games_played')
-        
-        if games == 0:
-            return 0.0
-        
-        # Get stats
-        goals = self._get_stat(stats, 'goals', 'g')
-        assists = self._get_stat(stats, 'assists', 'a')
-        shots = self._get_stat(stats, 'shots', 'shots_on_goal', 's')
-        blocked_shots = self._get_stat(stats, 'blocked_shots', 'blocked', 'bs')
-        hits = self._get_stat(stats, 'hits', 'h')
-        plus_minus = self._get_stat(stats, 'plus_minus', 'plus_minus_rating', 'plusminus')
-        
-        # Calculate GameScore components
-        gs = 0.0
-        gs += goals * 0.75
-        gs += assists * 0.625  # Average of primary (0.7) and secondary (0.55)
-        gs += shots * 0.075
-        gs += blocked_shots * 0.05
-        gs += hits * 0.05  # Proxy for physical engagement
-        gs += plus_minus * 0.15
-        
-        # Penalties (negative contribution)
-        pim_2 = self._get_stat(stats, 'penalty_minutes_2', 'pim_2')
-        pim_5 = self._get_stat(stats, 'penalty_minutes_5', 'pim_5')
-        pim_10 = self._get_stat(stats, 'penalty_minutes_10', 'pim_10')
-        
-        # Assume each penalty is one infraction
-        gs += (pim_2 / 2) * -0.15  # 2-min penalties
-        gs += (pim_5 / 5) * -0.15  # 5-min penalties
-        gs += (pim_10 / 10) * -0.15  # 10-min penalties
-        
-        # Return per-game average
-        return gs / games if games > 0 else 0.0
-    
-    def calculate_fantasy_points_per_game(self, player: Dict[str, Any]) -> float:
-        """
-        Calculate fantasy points per game for a player.
-        
-        Args:
-            player: Player dictionary
-            
-        Returns:
-            Fantasy points per game
-        """
-        stats = self._extract_stats(player)
-        
-        if not stats:
-            return 0.0
-        
-        games = self._get_stat(stats, 'games', 'gamesPlayed', 'games_played')
-        
-        if games == 0:
-            return 0.0
-        
-        # Calculate total fantasy points
-        position = self._normalize_position(player.get('position', 'F'))
-        
-        if position == 'G':
-            total_fp = self._calculate_goalie_stat_value(stats)
-        elif position == 'D':
-            total_fp = self._calculate_defender_stat_value(stats)
-        else:
-            total_fp = self._calculate_forward_stat_value(stats)
-        
-        return total_fp / games if games > 0 else 0.0
-
     def _get_stat(self, stats: Dict, *keys: str) -> Union[int, float]:
         """
         Get a stat value safely from a stats dictionary.
-        Tries multiple possible keys.
-        
-        Args:
-            stats: Statistics dictionary
-            keys: Multiple possible keys to check
-            
-        Returns:
-            Stat value or 0 if not found
+        Tries multiple possible keys and returns 0 for any missing or invalid values.
         """
         for key in keys:
             if key in stats:
-                val = stats[key]
-                try:
-                    # Convert to float and handle None/empty values
-                    if val is None:
-                        return 0
-                    return float(val)
-                except (ValueError, TypeError):
-                    # If conversion fails, try next key
-                    continue
-                    
-        # No valid stat found
-        return 0
+                value = stats[key]
+                if value is not None:
+                    try:
+                        return float(value)
+                    except (ValueError, TypeError):
+                        continue
+        return 0.0
+
+    def calculate_game_score(self, player: Dict[str, Any]) -> float:
+        """Calculate GameScore metric for advanced optimization."""
+        stats = self._extract_combined_stats(player)
+        if not stats:
+            return 0.0
+        
+        position = self._normalize_position(player.get('position', 'F'))
+        games = max(1, self._get_stat(stats, 'gamesPlayed', 'games', 'gp'))
+        
+        if position == 'G':
+            # Goalie GameScore
+            wins = self._get_stat(stats, 'wins', 'w')
+            saves = self._get_stat(stats, 'saves', 'sv')
+            ga = self._get_stat(stats, 'goalsAgainst', 'ga')
+            
+            gs = (wins * 0.5) + (saves * 0.01) - (ga * 0.2)
+            return gs / games
+        else:
+            # Skater GameScore
+            goals = self._get_stat(stats, 'goals', 'g')
+            assists = self._get_stat(stats, 'assists', 'a')
+            shots = self._get_stat(stats, 'shots', 's')
+            blocked = self._get_stat(stats, 'blockedShots', 'bs')
+            
+            gs = (goals * 0.75) + (assists * 0.7) + (shots * 0.05) + (blocked * 0.05)
+            return gs / games
+    
+    def calculate_fantasy_points_per_game(self, player: Dict[str, Any]) -> float:
+        """Calculate fantasy points per game."""
+        stats = self._extract_combined_stats(player)
+        if not stats:
+            return 0.0
+        
+        games = max(1, self._get_stat(stats, 'gamesPlayed', 'games', 'gp'))
+        total_points = self.calculate_points(player)
+        
+        return total_points / games
+
+    def generate_scoring_breakdown(self, player: Dict[str, Any]) -> str:
+        """
+        Generate a detailed breakdown of how fantasy points were calculated for a player.
+        Shows each stat category and the points awarded.
+        
+        Args:
+            player: Player dictionary with stats
+            
+        Returns:
+            Formatted string showing the scoring breakdown
+        """
+        position = self._normalize_position(player.get('position', 'F'))
+        stats = self._extract_combined_stats(player)
+        
+        if not stats:
+            return f"No stats available for {player.get('name', 'Unknown')}"
+        
+        lines = []
+        lines.append("=" * 60)
+        lines.append(f"FANTASY POINTS BREAKDOWN: {player.get('name', 'Unknown')}")
+        lines.append(f"Position: {position} | Team: {player.get('team', '???')}")
+        lines.append("=" * 60)
+        lines.append("")
+        
+        total_points = 0.0
+        
+        if position == 'G':
+            # Goalie breakdown
+            lines.append("GOALIE SCORING:")
+            lines.append("-" * 60)
+            
+            wins = self._get_stat(stats, 'wins', 'w')
+            if wins > 0:
+                pts = wins * self.goalie_scoring['win']
+                lines.append(f"  Wins: {int(wins)} × {self.goalie_scoring['win']} = {pts:.1f} pts")
+                total_points += pts
+            
+            losses = self._get_stat(stats, 'losses', 'l')
+            if losses > 0:
+                pts = losses * self.goalie_scoring['loss']
+                lines.append(f"  Losses: {int(losses)} × {self.goalie_scoring['loss']} = {pts:.1f} pts")
+                total_points += pts
+            
+            shutouts = self._get_stat(stats, 'shutouts', 'so')
+            if shutouts > 0:
+                pts = shutouts * self.goalie_scoring['shutout']
+                lines.append(f"  Shutouts: {int(shutouts)} × {self.goalie_scoring['shutout']} = {pts:.1f} pts")
+                total_points += pts
+            
+            # Saves (calculated or direct)
+            saves = self._get_stat(stats, 'saves', 'sv', 'savesTotal')
+            if saves == 0:
+                shots_against = self._get_stat(stats, 'shotsAgainst', 'sa')
+                ga = self._get_stat(stats, 'goalsAgainst', 'ga')
+                saves = max(0, shots_against - ga)
+            if saves > 0:
+                pts = saves * self.goalie_scoring['save']
+                lines.append(f"  Saves: {int(saves)} × {self.goalie_scoring['save']} = {pts:.1f} pts")
+                total_points += pts
+            
+            ga = self._get_stat(stats, 'goalsAgainst', 'ga')
+            if ga > 0:
+                pts = ga * self.goalie_scoring['goal_against']
+                lines.append(f"  Goals Against: {int(ga)} × {self.goalie_scoring['goal_against']} = {pts:.1f} pts")
+                total_points += pts
+                
+        else:
+            # Skater breakdown (Forward or Defense)
+            scoring_dict = self.defense_scoring if position == 'D' else self.forward_scoring
+            pos_name = "DEFENDER" if position == 'D' else "FORWARD"
+            
+            lines.append(f"{pos_name} SCORING:")
+            lines.append("-" * 60)
+            
+            # Goals
+            total_goals = self._get_stat(stats, 'goals', 'g')
+            pp_goals = self._get_stat(stats, 'powerPlayGoals', 'ppg')
+            sh_goals = self._get_stat(stats, 'shorthandedGoals', 'shg')
+            even_goals = max(0, total_goals - pp_goals - sh_goals)
+            
+            if even_goals > 0:
+                pts = even_goals * scoring_dict['goal_even']
+                lines.append(f"  Even Strength Goals: {int(even_goals)} × {scoring_dict['goal_even']} = {pts:.1f} pts")
+                total_points += pts
+            
+            if pp_goals > 0:
+                pts = pp_goals * scoring_dict['goal_pp']
+                lines.append(f"  Power Play Goals: {int(pp_goals)} × {scoring_dict['goal_pp']} = {pts:.1f} pts")
+                total_points += pts
+            
+            if sh_goals > 0:
+                pts = sh_goals * scoring_dict['goal_sh']
+                lines.append(f"  Short-Handed Goals: {int(sh_goals)} × {scoring_dict['goal_sh']} = {pts:.1f} pts")
+                total_points += pts
+            
+            gwg = self._get_stat(stats, 'gameWinningGoals', 'gwg')
+            if gwg > 0:
+                pts = gwg * scoring_dict['game_winning_goal']
+                lines.append(f"  Game Winning Goals: {int(gwg)} × {scoring_dict['game_winning_goal']} = {pts:.1f} pts")
+                total_points += pts
+            
+            # Hat tricks (estimated)
+            if total_goals >= 30:
+                hat_tricks = max(1, int(total_goals / 10))
+                pts = hat_tricks * scoring_dict['hat_trick']
+                lines.append(f"  Hat Tricks (est): {hat_tricks} × {scoring_dict['hat_trick']} = {pts:.1f} pts")
+                total_points += pts
+            
+            # Assists
+            total_assists = self._get_stat(stats, 'assists', 'a')
+            pp_assists = max(0, self._get_stat(stats, 'powerPlayPoints', 'ppp') - pp_goals)
+            sh_assists = max(0, self._get_stat(stats, 'shorthandedPoints', 'shp') - sh_goals)
+            even_assists = max(0, total_assists - pp_assists - sh_assists)
+            
+            if even_assists > 0:
+                pts = even_assists * scoring_dict['assist_even']
+                lines.append(f"  Even Strength Assists: {int(even_assists)} × {scoring_dict['assist_even']} = {pts:.1f} pts")
+                total_points += pts
+            
+            if pp_assists > 0:
+                pts = pp_assists * scoring_dict['assist_pp']
+                lines.append(f"  Power Play Assists: {int(pp_assists)} × {scoring_dict['assist_pp']} = {pts:.1f} pts")
+                total_points += pts
+            
+            if sh_assists > 0:
+                pts = sh_assists * scoring_dict['assist_sh']
+                lines.append(f"  Short-Handed Assists: {int(sh_assists)} × {scoring_dict['assist_sh']} = {pts:.1f} pts")
+                total_points += pts
+            
+            # Shots
+            shots = self._get_stat(stats, 'shots', 'sog', 's')
+            if shots > 0:
+                pts = shots * self.common_scoring['shot']
+                lines.append(f"  Shots on Goal: {int(shots)} × {self.common_scoring['shot']} = {pts:.1f} pts")
+                total_points += pts
+            
+            # Hits
+            hits = self._get_stat(stats, 'hits', 'h')
+            if hits > 0:
+                pts = hits * self.common_scoring['hit']
+                lines.append(f"  Hits: {int(hits)} × {self.common_scoring['hit']} = {pts:.1f} pts")
+                total_points += pts
+            
+            # Blocked shots
+            blocked = self._get_stat(stats, 'blockedShots', 'blocked', 'bs')
+            if blocked > 0:
+                pts = blocked * scoring_dict['blocked_shot']
+                lines.append(f"  Blocked Shots: {int(blocked)} × {scoring_dict['blocked_shot']} = {pts:.1f} pts")
+                total_points += pts
+            
+            # Plus/Minus
+            plus_minus = self._get_stat(stats, 'plusMinus', 'plus_minus_rating', 'plusminus')
+            if plus_minus != 0:
+                pts = plus_minus * self.common_scoring['plus_minus']
+                lines.append(f"  Plus/Minus: {int(plus_minus):+d} × {self.common_scoring['plus_minus']} = {pts:.1f} pts")
+                total_points += pts
+            
+            # Penalties
+            pim = self._get_stat(stats, 'pim', 'penaltyMinutes')
+            if pim > 0:
+                two_min = int(pim * 0.8 / 2)
+                five_min = int(pim * 0.15 / 5)
+                misconduct = int(pim * 0.05 / 10)
+                
+                if two_min > 0:
+                    pts = two_min * self.common_scoring['penalty_2min']
+                    lines.append(f"  2-min Penalties (est): {two_min} × {self.common_scoring['penalty_2min']} = {pts:.1f} pts")
+                    total_points += pts
+                
+                if five_min > 0:
+                    pts = five_min * self.common_scoring['penalty_5min']
+                    lines.append(f"  5-min Penalties (est): {five_min} × {self.common_scoring['penalty_5min']} = {pts:.1f} pts")
+                    total_points += pts
+                
+                if misconduct > 0:
+                    pts = misconduct * self.common_scoring['misconduct_10min']
+                    lines.append(f"  Misconducts (est): {misconduct} × {self.common_scoring['misconduct_10min']} = {pts:.1f} pts")
+                    total_points += pts
+        
+        lines.append("")
+        lines.append("-" * 60)
+        lines.append(f"TOTAL FANTASY POINTS: {total_points:.1f}")
+        lines.append("=" * 60)
+        
+        return "\n".join(lines)

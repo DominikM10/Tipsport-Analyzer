@@ -72,6 +72,126 @@ class NHLDataFetcher:
         start_year = int(current[:4])
         return f"{start_year - 1}{start_year}"
     
+    def fetch_all_teams(self) -> List[Dict]:
+        """
+        Fetches list of all NHL teams.
+        
+        Returns:
+            List of team dictionaries with basic info
+        """
+        cache_file = os.path.join(self.cache_dir, "all_teams.json")
+        
+        if self._cache_is_valid(cache_file, max_age_hours=168):  # Cache for 1 week
+            try:
+                with open(cache_file, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except Exception:
+                pass
+        
+        try:
+            # NHL teams endpoint - using standings to get current teams
+            url = f"{self.base_url}/standings/now"
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            standings_data = response.json()
+            
+            teams = []
+            seen_teams = set()
+            
+            # Extract teams from standings
+            for standing in standings_data.get('standings', []):
+                team_abbrev = standing.get('teamAbbrev', {}).get('default', '')
+                team_name = standing.get('teamName', {}).get('default', '')
+                
+                if team_abbrev and team_abbrev not in seen_teams:
+                    teams.append({
+                        'abbrev': team_abbrev,
+                        'name': team_name,
+                        'id': standing.get('teamId')
+                    })
+                    seen_teams.add(team_abbrev)
+            
+            # If standings didn't work, use hardcoded list of current NHL teams
+            if not teams:
+                teams = [
+                    {'abbrev': 'ANA', 'name': 'Anaheim Ducks'},
+                    {'abbrev': 'BOS', 'name': 'Boston Bruins'},
+                    {'abbrev': 'BUF', 'name': 'Buffalo Sabres'},
+                    {'abbrev': 'CAR', 'name': 'Carolina Hurricanes'},
+                    {'abbrev': 'CBJ', 'name': 'Columbus Blue Jackets'},
+                    {'abbrev': 'CGY', 'name': 'Calgary Flames'},
+                    {'abbrev': 'CHI', 'name': 'Chicago Blackhawks'},
+                    {'abbrev': 'COL', 'name': 'Colorado Avalanche'},
+                    {'abbrev': 'DAL', 'name': 'Dallas Stars'},
+                    {'abbrev': 'DET', 'name': 'Detroit Red Wings'},
+                    {'abbrev': 'EDM', 'name': 'Edmonton Oilers'},
+                    {'abbrev': 'FLA', 'name': 'Florida Panthers'},
+                    {'abbrev': 'LAK', 'name': 'Los Angeles Kings'},
+                    {'abbrev': 'MIN', 'name': 'Minnesota Wild'},
+                    {'abbrev': 'MTL', 'name': 'Montreal Canadiens'},
+                    {'abbrev': 'NJD', 'name': 'New Jersey Devils'},
+                    {'abbrev': 'NSH', 'name': 'Nashville Predators'},
+                    {'abbrev': 'NYI', 'name': 'New York Islanders'},
+                    {'abbrev': 'NYR', 'name': 'New York Rangers'},
+                    {'abbrev': 'OTT', 'name': 'Ottawa Senators'},
+                    {'abbrev': 'PHI', 'name': 'Philadelphia Flyers'},
+                    {'abbrev': 'PIT', 'name': 'Pittsburgh Penguins'},
+                    {'abbrev': 'SEA', 'name': 'Seattle Kraken'},
+                    {'abbrev': 'SJS', 'name': 'San Jose Sharks'},
+                    {'abbrev': 'STL', 'name': 'St. Louis Blues'},
+                    {'abbrev': 'TBL', 'name': 'Tampa Bay Lightning'},
+                    {'abbrev': 'TOR', 'name': 'Toronto Maple Leafs'},
+                    {'abbrev': 'UTA', 'name': 'Utah Hockey Club'},
+                    {'abbrev': 'VAN', 'name': 'Vancouver Canucks'},
+                    {'abbrev': 'VGK', 'name': 'Vegas Golden Knights'},
+                    {'abbrev': 'WPG', 'name': 'Winnipeg Jets'},
+                    {'abbrev': 'WSH', 'name': 'Washington Capitals'}
+                ]
+            
+            # Save to cache
+            with open(cache_file, 'w', encoding='utf-8') as f:
+                json.dump(teams, f, ensure_ascii=False, indent=2)
+            
+            return teams
+            
+        except requests.exceptions.RequestException as e:
+            print(f"Error fetching teams: {e}")
+            # Return hardcoded list as fallback
+            return [
+                {'abbrev': 'ANA', 'name': 'Anaheim Ducks'},
+                {'abbrev': 'BOS', 'name': 'Boston Bruins'},
+                {'abbrev': 'BUF', 'name': 'Buffalo Sabres'},
+                {'abbrev': 'CAR', 'name': 'Carolina Hurricanes'},
+                {'abbrev': 'CBJ', 'name': 'Columbus Blue Jackets'},
+                {'abbrev': 'CGY', 'name': 'Calgary Flames'},
+                {'abbrev': 'CHI', 'name': 'Chicago Blackhawks'},
+                {'abbrev': 'COL', 'name': 'Colorado Avalanche'},
+                {'abbrev': 'DAL', 'name': 'Dallas Stars'},
+                {'abbrev': 'DET', 'name': 'Detroit Red Wings'},
+                {'abbrev': 'EDM', 'name': 'Edmonton Oilers'},
+                {'abbrev': 'FLA', 'name': 'Florida Panthers'},
+                {'abbrev': 'LAK', 'name': 'Los Angeles Kings'},
+                {'abbrev': 'MIN', 'name': 'Minnesota Wild'},
+                {'abbrev': 'MTL', 'name': 'Montreal Canadiens'},
+                {'abbrev': 'NJD', 'name': 'New Jersey Devils'},
+                {'abbrev': 'NSH', 'name': 'Nashville Predators'},
+                {'abbrev': 'NYI', 'name': 'New York Islanders'},
+                {'abbrev': 'NYR', 'name': 'New York Rangers'},
+                {'abbrev': 'OTT', 'name': 'Ottawa Senators'},
+                {'abbrev': 'PHI', 'name': 'Philadelphia Flyers'},
+                {'abbrev': 'PIT', 'name': 'Pittsburgh Penguins'},
+                {'abbrev': 'SEA', 'name': 'Seattle Kraken'},
+                {'abbrev': 'SJS', 'name': 'San Jose Sharks'},
+                {'abbrev': 'STL', 'name': 'St. Louis Blues'},
+                {'abbrev': 'TBL', 'name': 'Tampa Bay Lightning'},
+                {'abbrev': 'TOR', 'name': 'Toronto Maple Leafs'},
+                {'abbrev': 'UTA', 'name': 'Utah Hockey Club'},
+                {'abbrev': 'VAN', 'name': 'Vancouver Canucks'},
+                {'abbrev': 'VGK', 'name': 'Vegas Golden Knights'},
+                {'abbrev': 'WPG', 'name': 'Winnipeg Jets'},
+                {'abbrev': 'WSH', 'name': 'Washington Capitals'}
+            ]
+    
     def clear_cache(self):
         """
         Clears all cached data to ensure fresh data on next fetch.
@@ -154,20 +274,26 @@ class NHLDataFetcher:
     def fetch_player_stats(self, player_id: int, include_previous=True) -> Dict:
         """
         Fetches detailed statistics for a specific player.
+        Extracts and flattens the most relevant stats for fantasy analysis.
         
         Args:
             player_id: NHL player ID number
             include_previous: Whether to include previous season stats
             
         Returns:
-            Dictionary containing comprehensive player statistics with clear season separation
+            Dictionary containing simplified player statistics
         """
         cache_file = os.path.join(self.cache_dir, f"player_{player_id}.json")
         
         if self._cache_is_valid(cache_file):
             try:
                 with open(cache_file, 'r', encoding='utf-8') as f:
-                    return json.load(f)
+                    cached_data = json.load(f)
+                    # Return the simplified version if it exists
+                    if 'current_season' in cached_data:
+                        return cached_data
+                    # Otherwise process the cached raw data
+                    return self._extract_current_season_stats(cached_data)
             except Exception:
                 pass
             
@@ -178,392 +304,67 @@ class NHLDataFetcher:
             response.raise_for_status()
             player_data = response.json()
             
-            # Process and separate current vs previous season
-            if include_previous and 'seasonTotals' in player_data:
-                current_season_stats = {}
-                previous_season_stats = {}
-                
-                for season_data in player_data.get('seasonTotals', []):
-                    season = season_data.get('season', '')
-                    
-                    if season == self.current_season:
-                        current_season_stats = season_data
-                    elif season == self.previous_season:
-                        previous_season_stats = season_data
-                
-                # Add clearly labeled season data
-                player_data['current_season'] = current_season_stats
-                player_data['previous_season'] = previous_season_stats
+            # Extract and simplify current season stats
+            simplified_data = self._extract_current_season_stats(player_data)
             
-            # Save to cache
+            # Save simplified version to cache
             with open(cache_file, 'w', encoding='utf-8') as f:
-                json.dump(player_data, f, ensure_ascii=False, indent=2)
+                json.dump(simplified_data, f, ensure_ascii=False, indent=2)
                 
-            return player_data
+            return simplified_data
+            
         except requests.exceptions.RequestException as e:
             print(f"Error fetching stats for player {player_id}: {e}")
             return {}
     
-    def fetch_all_teams(self) -> List[Dict]:
+    def _extract_current_season_stats(self, player_data: Dict) -> Dict:
         """
-        Returns information about all current NHL teams.
-        """
-        cache_file = os.path.join(self.cache_dir, "teams.json")
-        
-        if self._cache_is_valid(cache_file):
-            try:
-                with open(cache_file, 'r', encoding='utf-8') as f:
-                    return json.load(f)
-            except Exception:
-                pass
-        
-        try:
-            url = f"{self.base_url}/standings/now"
-            response = requests.get(url, timeout=10)
-            response.raise_for_status()
-            standings = response.json()
-            
-            teams = []
-            for standing in standings.get('standings', []):
-                team = {
-                    'id': standing.get('teamAbbrev', {}).get('id'),
-                    'abbrev': standing.get('teamAbbrev', {}).get('default'),
-                    'name': standing.get('teamName', {}).get('default'),
-                    'teamName': standing.get('teamCommonName', {}).get('default')
-                }
-                teams.append(team)
-            
-            # Save to cache
-            with open(cache_file, 'w', encoding='utf-8') as f:
-                json.dump(teams, f, ensure_ascii=False, indent=2)
-                
-            return teams
-        except requests.exceptions.RequestException as e:
-            print(f"Error fetching teams: {e}")
-            # Return static team list as fallback
-            return [
-                {'abbrev': abbr} for abbr in [
-                    'ANA', 'BOS', 'BUF', 'CAR', 'CBJ', 'CGY', 'CHI', 'COL',
-                    'DAL', 'DET', 'EDM', 'FLA', 'LAK', 'MIN', 'MTL', 'NJD',
-                    'NSH', 'NYI', 'NYR', 'OTT', 'PHI', 'PIT', 'SEA', 'SJS',
-                    'STL', 'TBL', 'TOR', 'UTA', 'VAN', 'VGK', 'WPG', 'WSH'
-                ]
-            ]
-    
-    def load_from_csv(self, filepath: str) -> List[Dict]:
-        """
-        Loads player data from a CSV file as an alternative to API fetching.
-        
-        Expected CSV columns:
-        - player_id, name, team, position, price (cena), and various stat columns
+        Extract and flatten current season statistics from complex API response.
         
         Args:
-            filepath: Path to the CSV file
+            player_data: Raw player data from API
             
         Returns:
-            List of player dictionaries
+            Simplified dictionary with current season stats
         """
-        players = []
-        try:
-            with open(filepath, 'r', encoding='utf-8') as file:
-                reader = csv.DictReader(file)
-                for row in reader:
-                    # Convert numeric fields to appropriate types
-                    player_data = dict(row)
-                    # Convert price to float if present
-                    if 'cena' in player_data:
-                        player_data['cena'] = float(player_data['cena'])
-                    players.append(player_data)
-            print(f"Successfully loaded {len(players)} players from {filepath}")
-            return players
-        except FileNotFoundError:
-            print(f"Error: File {filepath} not found")
-            return []
-        except Exception as e:
-            print(f"Error loading CSV: {e}")
-            return []
-    
-    def load_from_json(self, filepath: str) -> List[Dict]:
-        """
-        Loads player data from a JSON file.
+        current_season = self.current_season
+        current_stats = {}
         
-        Args:
-            filepath: Path to the JSON file
-            
-        Returns:
-            List of player dictionaries
-        """
-        try:
-            with open(filepath, 'r', encoding='utf-8') as file:
-                data = json.load(file)
-                # Handle both array format and object format
-                if isinstance(data, list):
-                    players = data
-                elif isinstance(data, dict) and 'players' in data:
-                    players = data['players']
-                else:
-                    players = [data]
-                print(f"Successfully loaded {len(players)} players from {filepath}")
-                return players
-        except FileNotFoundError:
-            print(f"Error: File {filepath} not found")
-            return []
-        except json.JSONDecodeError as e:
-            print(f"Error parsing JSON: {e}")
-            return []
-    
-    def parse_player_prices_from_text(self, filepath: str) -> Dict[str, float]:
-        """
-        Parses player prices from a text file.
-        Handles the specific format from Tipsport fantasy hockey platform.
+        # Try to get from featuredStats first (most recent data)
+        if 'featuredStats' in player_data:
+            featured = player_data['featuredStats']
+            if 'regularSeason' in featured:
+                reg_season = featured['regularSeason']
+                if 'subSeason' in reg_season:
+                    current_stats = reg_season['subSeason']
         
-        Args:
-            filepath: Path to the text file
-            
-        Returns:
-            Dictionary mapping player names to their prices
-        """
-        player_prices = {}
-        player_data_list = []
+        # If not found, look in seasonTotals array
+        if not current_stats and 'seasonTotals' in player_data:
+            for season_data in player_data['seasonTotals']:
+                if (season_data.get('season') == current_season and 
+                    season_data.get('leagueAbbrev') == 'NHL' and
+                    season_data.get('gameTypeId') == 2):  # Regular season
+                    current_stats = season_data
+                    break
         
-        try:
-            with open(filepath, 'r', encoding='utf-8') as file:
-                content = file.read()
-                lines = content.strip().split('\n')
-                
-                i = 0
-                while i < len(lines):
-                    line = lines[i].strip()
-                    
-                    # Skip empty lines and headers
-                    if not line or 'Hráč' in line or 'NHL' in line or 'Môj tím' in line:
-                        i += 1
-                        continue
-                    
-                    # Look for player name pattern: "LastName F." or "LastName F. J."
-                    # Pattern: Name followed by position indicator (O or Ú) and team
-                    player_name_match = re.match(r'^([A-ZČĎŇŠŤŽ][a-zčďňšťž]+(?:\s+[A-ZČĎŇŠŤŽ]\.)+)', line)
-                    
-                    if player_name_match:
-                        player_name = player_name_match.group(1).strip()
-                        
-                        # Next line should contain position and team info
-                        if i + 1 < len(lines):
-                            i += 1
-                            pos_team_line = lines[i].strip()
-                            
-                            # Extract position (O for defender, Ú for attacker, B for goalkeeper)
-                            position = None
-                            team = None
-                            
-                            # Pattern: "O | TeamName" or "Ú | TeamName"
-                            pos_team_match = re.match(r'^([OÚB])\s*\|\s*(.+)$', pos_team_line)
-                            if pos_team_match:
-                                position = pos_team_match.group(1)
-                                team = pos_team_match.group(2).strip()
-                            
-                            # Next line should be the price (Cena column)
-                            if i + 1 < len(lines):
-                                i += 1
-                                price_line = lines[i].strip()
-                                
-                                # Extract price - format: "30,9" or "24,5"
-                                price_match = re.match(r'^(\d+),(\d+)$', price_line)
-                                if price_match:
-                                    # Convert comma decimal to dot decimal
-                                    price = float(f"{price_match.group(1)}.{price_match.group(2)}")
-                                    
-                                    # Store the data
-                                    player_prices[player_name] = price
-                                    player_data_list.append({
-                                        'name': player_name,
-                                        'position': position,
-                                        'team': team,
-                                        'price': price
-                                    })
-                                    
-                                    print(f"Parsed: {player_name} ({position} | {team}) - {price}M")
-                    
-                    i += 1
-            
-            print(f"\n✓ Successfully parsed {len(player_prices)} player prices from {filepath}")
-            
-            # Save parsed data for debugging
-            debug_file = filepath.replace('.txt', '_parsed.json')
-            with open(debug_file, 'w', encoding='utf-8') as f:
-                json.dump(player_data_list, f, ensure_ascii=False, indent=2)
-            print(f"✓ Saved parsed data to {debug_file} for verification")
-            
-            return player_prices
-            
-        except FileNotFoundError:
-            print(f"Error: File {filepath} not found")
-            return {}
-        except Exception as e:
-            print(f"Error parsing player prices: {e}")
-            import traceback
-            traceback.print_exc()
-            return {}
-    
-    def parse_tipsport_format(self, filepath: str) -> List[Dict]:
-        """
-        Parses the complete Tipsport format with all statistics.
-        Handles columnar table layout from Tipsport fantasy hockey.
-        """
-        players = []
-        
-        try:
-            with open(filepath, 'r', encoding='utf-8') as file:
-                content = file.read()
-                lines = [line.strip() for line in content.strip().split('\n')]
-            
-            # PASS 1: Extract player names and positions
-            player_info = []
-            i = 0
-            
-            while i < len(lines):
-                line = lines[i]
-                
-                # Skip headers and navigation
-                if not line or any(keyword in line for keyword in [
-                    'NHL', 'Môj tím', 'Rebríčky', 'Štatistiky', 'Podmienky', 
-                    'Ceny', 'Radiť podľa', 'Pozícia', 'Všetky', 'Tím', 
-                    'Hľadať', 'Vymazať', 'Fantasy', 'Ligové', 'undefined', 
-                    ' - ?', 'Hráč', 'Cena'
-                ]):
-                    i += 1
-                    continue
-                
-                # Detect player name
-                player_name_match = re.match(r'^([A-ZČĎŇŠŤŽ][a-zčďňšťž]+(?:\s+[A-ZČĎŇŠŤŽ]\.)+)\s*$', line)
-                
-                if player_name_match:
-                    player_name = player_name_match.group(1).strip()
-                    position = 'F'
-                    team = '???'
-                    
-                    # Next line: position and team
-                    if i + 1 < len(lines):
-                        next_line = lines[i + 1]
-                        pos_team_match = re.match(r'^([OÚB])\s*\|\s*(.+)$', next_line)
-                        if pos_team_match:
-                            position_code = pos_team_match.group(1)
-                            position = self._convert_position_code(position_code)
-                            team = pos_team_match.group(2).strip()
-                            i += 1
-                    
-                    player_info.append({
-                        'name': player_name,
-                        'position': position,
-                        'team': team
-                    })
-                
-                i += 1
-            
-            print(f"✓ Found {len(player_info)} players")
-            
-            # PASS 2: Extract all numeric columns
-            # Columns: Price, Games, FB, Z(?), G, PPG, SHG, GWG, HAT, A, PPA, SHA, 2min, 5min, 10min, GAM, S, BS, H, +/-
-            all_numbers = []
-            for line in lines:
-                # Match numbers (including negative and decimals with comma)
-                if re.match(r'^[-+]?\d+(?:,\d+)?$', line):
-                    # Convert comma to dot for decimals
-                    num_str = line.replace(',', '.')
-                    try:
-                        num = float(num_str)
-                        all_numbers.append(num)
-                    except ValueError:
-                        pass
-            
-            print(f"✓ Found {len(all_numbers)} numeric values")
-            
-            # Based on image: columns are Price, C, FB, Z, G, PPG, SHG, GWG, HAT, A, PPA, SHA, 2min, 5min, 10min, GAM, S, BS, H, +/-
-            # That's 20 columns per player
-            columns_per_player = 20;
-            
-            # PASS 3: Map data to players
-            for idx, player in enumerate(player_info):
-                start_idx = idx * columns_per_player
-                
-                if start_idx + columns_per_player <= len(all_numbers):
-                    player_data = all_numbers[start_idx:start_idx + columns_per_player]
-                    
-                    player_dict = {
-                        'name': player['name'],
-                        'position': player['position'],
-                        'team': player['team'],
-                        'cena': player_data[0],  # Price (Cena)
-                        'stats': {
-                            'games': int(player_data[1]),  # C (games played)
-                            'fantasy_points': player_data[2],  # FB
-                            # player_data[3] is Z (unknown column)
-                            'goals': int(player_data[4]),  # G
-                            'power_play_goals': int(player_data[5]),  # PPG
-                            'short_handed_goals': int(player_data[6]),  # SHG
-                            'game_winning_goals': int(player_data[7]),  # GWG
-                            'hat_tricks': int(player_data[8]),  # HAT
-                            'assists': int(player_data[9]),  # A
-                            'power_play_assists': int(player_data[10]),  # PPA
-                            'short_handed_assists': int(player_data[11]),  # SHA
-                            'penalty_minutes_2': int(player_data[12]),  # 2min
-                            'penalty_minutes_5': int(player_data[13]),  # 5min
-                            'penalty_minutes_10': int(player_data[14]),  # 10min (major)
-                            # player_data[15] is GAM
-                            'shots': int(player_data[16]),  # S
-                            'blocked_shots': int(player_data[17]),  # BS
-                            'hits': int(player_data[18]),  # H
-                            'plus_minus': int(player_data[19])  # +/-
-                        }
-                    }
-                    
-                    players.append(player_dict)
-                    print(f"Mapped: {player_dict['name']} ({player_dict['position']}) - {player_dict['cena']}M - {player_dict['stats']['goals']}G {player_dict['stats']['assists']}A")
-            
-            # Remove duplicates by name (keep first occurrence)
-            seen_names = set()
-            unique_players = []
-            for player in players:
-                if player['name'] not in seen_names:
-                    seen_names.add(player['name'])
-                    unique_players.append(player)
-            
-            print(f"\n✓ Parsed {len(unique_players)} unique players (removed {len(players) - len(unique_players)} duplicates)")
-            
-            # Save debug file
-            debug_file = filepath.replace('.txt', '_parsed.json')
-            with open(debug_file, 'w', encoding='utf-8') as f:
-                json.dump(unique_players, f, ensure_ascii=False, indent=2)
-            print(f"✓ Saved to {debug_file}")
-            
-            return unique_players
-            
-        except Exception as e:
-            print(f"Error parsing Tipsport format: {e}")
-            import traceback
-            traceback.print_exc()
-            return {}
-    
-    def _convert_position_code(self, code: str) -> str:
-        """
-        Converts Tipsport position codes to standard NHL codes.
-        O = Obránce (Defender) = D
-        Ú = Útočník (Attacker) = F
-        B = Brankář (Goalkeeper) = G
-        """
-        position_map = {
-            'O': 'D',
-            'Ú': 'F',
-            'B': 'G'
+        # Build simplified result
+        result = {
+            'current_season': current_stats if current_stats else {},
+            'playerId': player_data.get('playerId'),
+            'position': player_data.get('position'),
+            'currentTeamAbbrev': player_data.get('currentTeamAbbrev'),
+            'fullName': f"{player_data.get('firstName', {}).get('default', '')} {player_data.get('lastName', {}).get('default', '')}".strip()
         }
-        return position_map.get(code, 'F')
-    
+        
+        return result
+
     def fetch_all_players(self) -> List[Dict]:
         """
         Fetches all active NHL players by combining rosters from all teams.
+        Returns simplified player data with current season stats.
         
         Returns:
-            List of player dictionaries with basic info
+            List of player dictionaries with basic info and stats
         """
         all_players = []
         teams = self.fetch_all_teams()
@@ -578,20 +379,39 @@ class NHLDataFetcher:
             print(f"[{i+1}/{len(teams)}] Fetching roster for {team_abbr}...")
             roster = self.fetch_team_roster(team_abbr)
             
-            # Some APIs return different formats, handle both common ones
+            # Handle different roster formats
+            roster_players = []
             if 'forwards' in roster and 'defensemen' in roster and 'goalies' in roster:
-                # Format with position-grouped players
-                for pos_group in ['forwards', 'defensemen', 'goalies']:
-                    for player in roster.get(pos_group, []):
-                        player['team'] = team_abbr
-                        all_players.append(player)
+                # Grouped format
+                roster_players.extend(roster.get('forwards', []))
+                roster_players.extend(roster.get('defensemen', []))
+                roster_players.extend(roster.get('goalies', []))
             elif isinstance(roster, list):
-                # Format with flat list of players
-                for player in roster:
-                    player['team'] = team_abbr
-                    all_players.append(player)
+                # Flat list format
+                roster_players = roster
+            
+            # Process each player
+            for player in roster_players:
+                player_id = player.get('id')
+                if not player_id:
+                    continue
+                
+                # Build simplified player object
+                player_obj = {
+                    'id': player_id,
+                    'name': player.get('name', {}).get('default', '') if isinstance(player.get('name'), dict) else player.get('name', ''),
+                    'firstName': player.get('firstName', {}).get('default', '') if isinstance(player.get('firstName'), dict) else player.get('firstName', ''),
+                    'lastName': player.get('lastName', {}).get('default', '') if isinstance(player.get('lastName'), dict) else player.get('lastName', ''),
+                    'position': player.get('positionCode', player.get('position', 'F')),
+                    'team': team_abbr,
+                    'sweaterNumber': player.get('sweaterNumber', player.get('jerseyNumber', ''))
+                }
+                
+                all_players.append(player_obj)
         
-        print(f"✓ Successfully fetched {len(all_players)} players from {len(teams)} teams")
+        print(f"✓ Fetched {len(all_players)} players from {len(teams)} teams")
+        print(f"  (Stats will be loaded as needed)")
+        
         return all_players
     
     def save_to_json(self, data: List[Dict], filepath: str) -> bool:
@@ -831,27 +651,37 @@ class NHLDataFetcher:
         
         # Try common fallbacks if primary is empty
         if not name:
-            # Try different name fields from API
-            name = player.get('fullName', player.get('full_name', player.get('firstName', {}).get('default', '') + ' ' + player.get('lastName', {}).get('default', '')))
+            # Try fullName
+            name = player.get('fullName', '')
+            if not name:
+                name = player.get('full_name', '')
             
-        # If we still don't have a name, try getting first and last name separately
-        if not name or name.strip() == '':
-            first_name = ''
-            last_name = ''
-            
-            # Try API format with nested dictionaries
-            if 'firstName' in player and isinstance(player['firstName'], dict):
-                first_name = player['firstName'].get('default', '')
-            elif 'first_name' in player:
-                first_name = player['first_name']
+            # If still no name, try building from first and last name
+            if not name:
+                first_name = ''
+                last_name = ''
                 
-            if 'lastName' in player and isinstance(player['lastName'], dict):
-                last_name = player['lastName'].get('default', '')
-            elif 'last_name' in player:
-                last_name = player['last_name']
+                # Try API format with nested dictionaries
+                firstName_obj = player.get('firstName')
+                if isinstance(firstName_obj, dict):
+                    first_name = firstName_obj.get('default', '')
+                elif isinstance(firstName_obj, str):
+                    first_name = firstName_obj
                 
-            if first_name and last_name:
-                name = f"{first_name} {last_name}"
+                lastName_obj = player.get('lastName')
+                if isinstance(lastName_obj, dict):
+                    last_name = lastName_obj.get('default', '')
+                elif isinstance(lastName_obj, str):
+                    last_name = lastName_obj
+                
+                # Try alternative keys
+                if not first_name:
+                    first_name = player.get('first_name', '')
+                if not last_name:
+                    last_name = player.get('last_name', '')
+                
+                if first_name and last_name:
+                    name = f"{first_name} {last_name}"
         
         # Now convert to "LastName FirstInitial." format for matching with price file
         if name and ' ' in name:
@@ -1176,4 +1006,3 @@ class NHLDataFetcher:
         
         print(f"Filtered to {len(filtered)} players from teams: {', '.join(teams)}")
         return filtered
-    
